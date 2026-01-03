@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'includes/sidebar.html' %}
+{% include 'includes/topbar.html' %}
+
+<body class="bodydashboard-container">
+
+    {% include 'nav/nav.html' %}
+
+    <!-- ====================================================== -->
+    <!--                             KPIs                        -->
+    <!-- ====================================================== -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-[1rem] text-center">
+
+        <!-- KPI 1 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Total de Recien Nacidos sin complicaciones
+            </h3>
+            <p id="kpi_rn_1" data-value="{{ kpirn1 |default:25 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+        <!-- KPI 2 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Recien Nacidos con APGAR ≥7 al minuto 5
+            </h3>
+            <p id="kpi_rn_2" data-value="{{kpirn2|default:50 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+        <!-- KPI 3 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Recien Nacidos que requirieron reanimación
+            </h3>
+            <p id="kpi_rn_3" data-value="{{ kpirn3|default:10 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+    </section>
+
+<!-- ====================================================== -->
+<!--           GRÁFICOS        -->
+<!-- ====================================================== -->
+    <section class="grid grid-cols-2 gap-[1rem]">
+        <div class="grid grid-row-1 gap-[1rem]">
+<!-- 1 -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c] border border-white/10">
+                <h2 class="text-[1rem] font-semibold text-center">
+                    Complicaciones durante el mes:<br/>Diciembre
+                </h2>
+                <div id="chart_rn_1" 
+                     data-value='{{ chartrn1|safe }}'
+                    class="w-full h-80 rounded-xl"></div>
+            </div>
+<!-- 2 -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c]  border border-white/10">
+                <h2 class="text-[1rem] font-semibold text-center">
+                    APGAR al minuto 5
+                </h2>
+                <div id="chart_rn_2" 
+                    data-value='{{ chartrn2 |safe }}'
+                    class="w-full h-80 rounded-xl"></div>
+            </div>
+        </div>
+<!-- 3 -->
+        <div class="grid grid-row-1 h-50">
+            <div class="rounded-2xl shadow-xl bg-[#9471712c] border border-white/10">
+                <h2 class="text-[1rem] font-semibold text-center">
+                    Intervenciones Neonatales
+                </h2>
+                <div id="chart_rn_3" 
+                    data-value='{{ chartrn3|safe }}'
+                    class="w-full h-80 rounded-xl"></div>
+            </div>
+            <!--TABLA -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c]   border border-white/10 mt-6">
+                <h2 class="text-[1rem] font-semibold  text-center border-2 rounded-t-xl">
+                    Últimos Recien Nacidos Registrados
+                </h2>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto rounded-xl text-[1rem] text-left">
+                        <thead class="bg-[#9471712c] text-[1rem] font-bold">
+                            <tr>
+                                <th class="p-3 border-x-2 text-center">Nombre RN</th>
+                                <th class="p-3 border-x-2 text-center">Peso</th>
+                                <th class="p-3 border-x-2 text-center">edad gestacional</th>
+                                <th class="p-3 border-x-2 text-center">APGAR</th>
+                                <th class="p-3 border-x-2 text-center">Reanimacion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla_rn" data-value='{{ tablarn }}'
+                                class="border-b-1 text-center">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ====================================================== -->
+    <!--                   DATOS EMBEBIDOS                      -->
+    <!-- ====================================================== -->
+    <div id="data-values"
+         data-kpi1='{{ kpirn1| safe}}'
+         data-kpi2='{{ kpirn2| safe}}'
+         data-kpi3='{{ kpirn3| safe}}'
+         data-tabla='{{ tablarn| safe }}'
+         data-chart1='{{ chartrn1| safe }}'
+         data-chart2='{{ chartrn2| safe }}'
+         data-chart3='{{ chartrn3| safe }}'>
+    </div>
+
+</body>
+
+{% block scripts %}
+<script src="{% static 'dashboard/js/recien_nacidos.js' %}"></script>
+{% endblock scripts %}
+
+{% endblock %}

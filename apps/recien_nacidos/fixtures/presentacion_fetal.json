@@ -1,0 +1,34 @@
+[
+  {
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 1,
+    "fields": {
+      "nombre": "Cefálica",
+      "descripcion": "Presentación en la que la cabeza del feto se encuentra dirigida hacia el canal de parto, siendo la más frecuente y favorable para parto vaginal."
+    }
+  },
+  {
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 2,
+    "fields": {
+      "nombre": "Podálica",
+      "descripcion": "Presentación en la que uno o ambos pies del feto se presentan primero en el canal de parto, conocida como presentación de nalgas."
+    }
+  },
+  {
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 3,
+    "fields": {
+      "nombre": "Transversa",
+      "descripcion": "Presentación en la que el feto se encuentra acostado de lado en el útero, lo que impide el parto vaginal espontáneo sin maniobra o cesárea."
+    }
+  },
+  {
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 4,
+    "fields": {
+      "nombre": "Oblicua",
+      "descripcion": "Presentación en la que el eje del feto está inclinado respecto al eje del canal de parto, parcialmente transversal, generalmente requiere cesárea."
+    }
+  }
+]

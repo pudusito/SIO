@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block title %}{{form.instance.pk|yesno:"Actualizar Paciente, Añadir Nuevo Paciente"}}{% endblock title %}
+
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+{% endblock estilos_personalizados %}
+
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+    
+
+
+{% block content %}
+<main class="main-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+        <a href="{% url 'paciente:listar_pacientes' %}" class="link-color">Pacientes</a>
+        <span>›</span>
+        <span>{{form.instance.pk|yesno:"Actualizar, Añadir"}}</span>
+    </nav>
+
+<section class="form-card">
+    
+    <div class="form-header">
+        <h2 class="form-title">Nuevo Paciente</h2>
+        <p class="form-subtitle">Complete la ficha clínica. Los campos marcados con (*) son obligatorios.</p>
+    </div>
+    {{form.errors}}
+    <form method="POST" class="main-form">
+        {% csrf_token %}
+        
+        {% if form.instance.pk %}
+            <fieldset class="form-section">
+                <legend class="section-legend">Justificar Actualizacion</legend>
+                <div class="form-group {% if form.motivo.errors %} has-error {% endif %}">
+                    <label for="{{form.motivo.id_for_label}}">Motivo de actualización</label>
+                    {{form.motivo}}
+                {% if form.motivo.errors %}
+                        <div class="error-message">
+                        {% for error in form.motivo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+            </fieldset>
+        {% endif %}
+        
+        <fieldset class="form-section">
+            <legend class="section-legend">Identificación Personal</legend>
+            
+            <div class="form-row three-cols">
+                <div class="form-group {% if form.nombre.errors %} has-error{% endif %}">
+                    <label for="nombre">{{form.nombre.label}}s <span class="obligatorio">*</span></label>
+                    {{form.nombre}}
+                    {% if form.nombre.errors %}
+                        <div class="error-message">
+                        {% for error in form.nombre.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+                <div class="form-group {% if form.primer_apellido.errors %} has-error{% endif %}">
+                    <label for="primer_apellido">{{form.primer_apellido.label}} <span class="obligatorio">*</span></label>
+                    {{form.primer_apellido}}
+                     {% if form.primer_apellido.errors %}
+                        <div class="error-message">
+                        {% for error in form.primer_apellido.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+
+                <div class="form-group {% if form.segundo_apellido.errors %} has-error{% endif %}" >
+                    <label for="segundo_apellido">{{form.segundo_apellido.label}} <span class="obligatorio">*</span></label>
+                    {{form.segundo_apellido}}
+                    {% if form.segundo_apellido.errors %}
+                        <div class="error-message">
+                        {% for error in form.segundo_apellido.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group {% if form.documento.errors %}has-error{% endif %}">
+                    <label for="documento">{{form.documento.label}} <span class="obligatorio">*</span></label>
+                    {{form.documento}}
+                    {% if form.documento.errors %}
+                        <div class="error-message">
+                        {% for error in form.documento.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+                <div class="form-group {% if form.identificacion.errors %} has-error{% endif %}">
+                    <label for="identificacion">{{form.identificacion.label}} <span class="obligatorio">*</span></label>
+                    {{form.identificacion}}
+                    <span class="field-help">{{form.identificacion.help_text}}</span>
+                    {% if form.identificacion.errors %}
+                        <div class="error-message">
+                        {% for error in form.identificacion.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group {% if form.fecha_nacimiento.errors %} has-error{% endif %}">
+                    <label for="id_fecha_nacimiento">{{form.fecha_nacimiento.label}} <span class="obligatorio">*</span></label>
+                    {{form.fecha_nacimiento}}
+                    {% if form.fecha_nacimiento.errors %}
+                        <div class="error-message">
+                        {% for error in form.fecha_nacimiento.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+                <div class="form-group {% if form.nacionalidad.errors %} has-error{% endif %}">
+                    <label for="nacionalidad">{{form.nacionalidad.label}} <span class="obligatorio">*</span></label>
+                    {{form.nacionalidad}}
+                    <span class="field-help">{{form.nacionalidad.help_text}}</span> 
+                    {% if form.nacionalidad.errors %}
+                        <div class="error-message">
+                        {% for error in form.nacionalidad.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group {% if form.sexo.errors %} has-error{% endif %}">
+                    <label for="nacionalidad">{{form.sexo.label}} <span class="obligatorio">*</span></label>
+                    {{form.sexo}}
+                    <span class="field-help">{{form.sexo.help_text}}</span> 
+                    {% if form.sexo.errors %}
+                        <div class="error-message">
+                        {% for error in form.sexo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Datos Clínicos y Contacto</legend>
+
+            <div class="form-row">
+                <div class="form-group {% if form.tipo.errors %} has-error{% endif %}">
+                    <label for="tipo_paciente">{{form.tipo.label}} <span class="obligatorio">*</span></label>
+                    {{form.tipo}}
+                    {% if form.tipo.errors %}
+                        <div class="error-message">
+                        {% for error in form.tipo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+                <div class="form-group {% if form.telefono.errors %} has-error{% endif %}">
+                    <label for="telefono">{{form.telefono.label}}</label>
+                    {{form.telefono}}
+                    <span class="field-help">{{form.telefono.help_text}}</span>
+                    {% if form.telefono.errors %}
+                        <div class="error-message">
+                        {% for error in form.telefono.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group {% if form.comuna.errors %} has-error{% endif %}">
+                    <label for="comuna">{{form.comuna.label}}</label>
+                    {{form.comuna}}
+                    <span class="field-help">{{form.comuna.help_text}}</span>
+                    {% if form.comuna.errors %}
+                        <div class="error-message">
+                        {% for error in form.comuna.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+                <div class="form-group {% if form.cesfam.errors %} has-error{% endif %}">
+                    <label for="cesfam">CESFAM</label>
+                    {{form.cesfam}}
+                    <span class="field-help">{{form.cesfam.help_text}}</span>
+                    {% if form.cesfam.errors %}
+                        <div class="error-message">
+                        {% for error in form.cesfam.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+
+                </div>
+            </div>
+
+            <div class="form-group {% if form.direccion.errors %} has-error{% endif %}">
+                <label for="direccion">{{form.direccion.label}}</label>
+                {{form.direccion}}
+                <span class="field-help">{{form.direccion.help_text}}</span>
+                {% if form.direccion.errors %}
+                    <div class="error-message">
+                    {% for error in form.direccion.errors %}
+                        <p>{{ error }}</p> 
+                    {% endfor %}
+                    </div>                   
+                {% endif %} 
+            
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Métricas Físicas</legend>
+            <div class="form-row three-cols">
+                <div class="form-group {% if form.peso.errors %} has-error{% endif %}">
+                    <label for="peso">{{form.peso.label}} (Kilogramos)</label>
+                    {{form.peso}}
+                    <span class="field-help">{{form.peso.help_text}}</span>
+                    {% if form.peso.errors %}
+                        <div class="error-message">
+                        {% for error in form.peso.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+                <div class="form-group {% if form.altura.errors %} has-error{% endif %}">
+                    <label for="altura">{{form.altura.label}} (Centimetros)</label>
+                    {{form.altura}}
+                    <span class="field-help">{{form.altura.help_text}}</span>
+                    {% if form.altura.errors %}
+                        <div class="error-message">
+                        {% for error in form.altura.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+                <div class="form-group {% if form.actividad.errors %} has-error{% endif %}">
+                    <label for="actividad">{{form.actividad.label}} Fisica</label>
+                    {{form.actividad}}
+                    {% if form.actividad.errors %}
+                        <div class="error-message">
+                        {% for error in form.actividad.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Características Especiales</legend>
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    {{form.descapacitado}}
+                    <span class="checkbox-text">Discapacidad</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.pueblo_originario}}
+                    <span class="checkbox-text">Pueblo Originario</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.privada_de_libertad}}
+                    <span class="checkbox-text">Privada de Libertad</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.transexual}}
+                    <span class="checkbox-text">Transexual</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.visita_guiada}}
+                    <span class="checkbox-text">Visita Guiada</span>
+                </label>
+                
+                <label class="checkbox-card">
+                    {{form.plan_de_parto}}
+                    <span class="checkbox-text">Plan de Parto</span>
+                </label>
+            </div>
+            <span class="field-help">Marque las opciones que correspondan con el paciente</span>
+        </fieldset>
+
+        <div class="form-actions">
+            <a type="button" class="btn-secondary" href="{{request.META.HTTP_REFERER}}">Cancelar</a>
+            <button type="submit" class="btn-primary">Guardar Paciente</button>
+        </div>
+
+    </form>
+</section>
+
+</main>
+
+{% endblock content %}  
+    
+
+
+
+{% block scripts %}
+    <script src="{% static 'js/deshabilitador-input.js' %}"></script>
+    <script src="{% static 'js/manejo-error-form.js' %}"></script>
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+    {% include 'includes/script_mensajes.html' %}
+{% endblock scripts %}
+    

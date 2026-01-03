@@ -1,0 +1,14 @@
+[
+  { "model": "partos.complicacion", "pk": 1, "fields": { "nombre": "Hemorragia post parto - Inercia", "descripcion": "Hemorragia post parto causada por inercia uterina" } },
+  { "model": "partos.complicacion", "pk": 2, "fields": { "nombre": "Hemorragia post parto - Restos", "descripcion": "Hemorragia post parto causada por restos placentarios" } },
+  { "model": "partos.complicacion", "pk": 3, "fields": { "nombre": "Hemorragia post parto - Trauma", "descripcion": "Hemorragia post parto causada por trauma" } },
+  { "model": "partos.complicacion", "pk": 4, "fields": { "nombre": "Hemorragia post parto - Desgarros III y IV", "descripcion": "Hemorragia post parto causada por desgarros de tercer y cuarto grado" } },
+  { "model": "partos.complicacion", "pk": 5, "fields": { "nombre": "Hemorragia post parto - Alteraciones de la coagulación", "descripcion": "Hemorragia post parto causada por alteraciones de la coagulación" } },
+  
+  { "model": "partos.complicacion", "pk": 6, "fields": { "nombre": "Preeclampsia severa", "descripcion": "Preeclampsia con síntomas graves y riesgo para la madre y el feto" } },
+  { "model": "partos.complicacion", "pk": 7, "fields": { "nombre": "Eclampsia", "descripcion": "Convulsiones asociadas a preeclampsia durante el embarazo" } },
+  { "model": "partos.complicacion", "pk": 8, "fields": { "nombre": "Sepsis o infección sistémica grave", "descripcion": "Infección sistémica grave con riesgo vital" } },
+  { "model": "partos.complicacion", "pk": 9, "fields": { "nombre": "Manejo quirúrgico de la inercia uterina", "descripcion": "Procedimiento quirúrgico para tratar la inercia uterina" } },
+  { "model": "partos.complicacion", "pk": 10, "fields": { "nombre": "Histerectomía obstétrica", "descripcion": "Extirpación del útero por complicaciones obstétricas" } },
+  { "model": "partos.complicacion", "pk": 11, "fields": { "nombre": "Anemia severa postmetrorragia que requiere transfusión", "descripcion": "Anemia grave después de hemorragia post parto que requiere transfusión de sangre" } }
+]

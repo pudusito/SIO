@@ -1,0 +1,97 @@
+[
+  {
+    "model": "partos.puerperio",
+    "pk": 1,
+    "fields": {
+      "estado_perine": "indemne",
+      "esterilizacion": false,
+      "revision": true,
+      "inercia_uterina": false,
+      "restos_placenta": false,
+      "trauma": false,
+      "alteracion_coagulacion": false,
+      "manejo_qirurgico_inercia_ut": false,
+      "created_at": "2025-12-02T14:00:00Z",
+      "created_by": 1,
+      "updated_at": "2025-12-02T14:00:00Z",
+      "updated_by": 1,
+      "parto": 1
+    }
+  },
+  {
+    "model": "partos.puerperio",
+    "pk": 2,
+    "fields": {
+      "estado_perine": "g1",
+      "esterilizacion": false,
+      "revision": true,
+      "inercia_uterina": false,
+      "restos_placenta": false,
+      "trauma": true,
+      "alteracion_coagulacion": false,
+      "manejo_qirurgico_inercia_ut": false,
+      "created_at": "2025-12-02T14:30:00Z",
+      "created_by": 1,
+      "updated_at": "2025-12-02T14:30:00Z",
+      "updated_by": 1,
+      "parto": 2
+    }
+  },
+  {
+    "model": "partos.puerperio",
+    "pk": 3,
+    "fields": {
+      "estado_perine": "g2",
+      "esterilizacion": true,
+      "revision": true,
+      "inercia_uterina": true,
+      "restos_placenta": false,
+      "trauma": false,
+      "alteracion_coagulacion": false,
+      "manejo_qirurgico_inercia_ut": true,
+      "created_at": "2025-12-02T15:00:00Z",
+      "created_by": 1,
+      "updated_at": "2025-12-02T15:00:00Z",
+      "updated_by": 1,
+      "parto": 3
+    }
+  },
+  {
+    "model": "partos.puerperio",
+    "pk": 4,
+    "fields": {
+      "estado_perine": "g3a",
+      "esterilizacion": false,
+      "revision": true,
+      "inercia_uterina": true,
+      "restos_placenta": true,
+      "trauma": true,
+      "alteracion_coagulacion": false,
+      "manejo_qirurgico_inercia_ut": true,
+      "created_at": "2025-12-02T15:30:00Z",
+      "created_by": 1,
+      "updated_at": "2025-12-02T15:30:00Z",
+      "updated_by": 1,
+      "parto": 4
+    }
+  },
+  {
+    "model": "partos.puerperio",
+    "pk": 5,
+    "fields": {
+      "estado_perine": "fisura",
+      "esterilizacion": false,
+      "revision": true,
+      "inercia_uterina": false,
+      "restos_placenta": false,
+      "trauma": false,
+      "alteracion_coagulacion": true,
+      "manejo_qirurgico_inercia_ut": false,
+      "created_at": "2025-12-02T16:00:00Z",
+      "created_by": 1,
+      "updated_at": "2025-12-02T16:00:00Z",
+      "updated_by": 1,
+      "parto": 5
+    }
+  }
+]

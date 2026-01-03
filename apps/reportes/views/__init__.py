@@ -1,0 +1,11 @@
+from .enviar_reportes_views import GenerarReporteCesarea
+from .enviar_reportes_views import GenerarReporteCaracteristicasParto
+from .enviar_reportes_views import GenerarReporteD1
+from .enviar_reportes_views import GenerarReporteD2
+from .enviar_reportes_views import GenerarReporteEsterilizacionesQuirurgicas
+from .enviar_reportes_views import GenerarReporteEutocicoDistocico
+from .enviar_reportes_views import GenerarReporteHepatitisB
+from .enviar_reportes_views import GenerarReporteModeloAtencion
+from .enviar_reportes_views import GenerarReporteProfilaxisGonorrea
+
+from .excel import parto_csv, paciente_csv

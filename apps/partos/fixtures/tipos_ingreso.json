@@ -1,0 +1,7 @@
+[
+  { "model": "partos.tipodeingreso", "pk": 1, "fields": { "nombre": "Parto espontáneo" } },
+  { "model": "partos.tipodeingreso", "pk": 2, "fields": { "nombre": "Cesárea programada" } },
+  { "model": "partos.tipodeingreso", "pk": 3, "fields": { "nombre": "Cesárea de urgencia" } },
+  { "model": "partos.tipodeingreso", "pk": 4, "fields": { "nombre": "Remisión desde otro centro de salud" } },
+  { "model": "partos.tipodeingreso", "pk": 5, "fields": { "nombre": "Consulta externa/parto domiciliario trasladado" } }
+]

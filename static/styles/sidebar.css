@@ -1,0 +1,124 @@
+/* SIDEBAR BASE */
+.sidebar {
+    position: fixed;
+    /* 1. DESPEGAR DE LOS BORDES (El truco de la cápsula) */
+    top: 5.5rem;          /* Separación superior */
+    left: 1.5rem;            /* Separación izquierda */
+    
+    /* 2. ALTURA "FLOTANTE" */
+    height: fit-content; /* Se adapta al contenido interno */
+    max-height: calc(100vh - 6rem);
+    border-radius: 3rem;  
+    
+    background: var(--bg-panel); /* Asegúrate que este color sea blanco o muy claro */
+    padding: 1rem 0.6rem; /* Ajusté el padding lateral para que los botones respiren */
+    box-shadow: var(--shadow-m);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Suaviza la animación */
+    z-index: 1000;
+}
+
+/* Sidebar colapsado */
+.sidebar.collapsed {
+    width: 5rem; 
+}
+
+/* Hover expansión */
+.sidebar.collapsed:hover {
+    width: 15rem; /* Un poco más ancho para que el texto respire mejor */
+}
+
+/* ESTILO DE LOS BOTONES (LAS PÍLDORAS) */
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;            /* Más espacio entre icono y texto */
+    padding: 0.75rem 1rem; /* Más "gorditos" verticalmente */
+    
+    /* 4. BOTONES EN FORMA DE PÍLDORA PERFECTA */
+    border-radius: 60px;  /* Esto fuerza que sean redondos sin importar el ancho */
+    cursor: pointer;
+    color: var(--text-muted);
+    text-decoration: none;
+    font: var(--p);
+    transition: all 0.3s ease; /* Transición suave para color y fondo */
+    white-space: nowrap;
+    margin-bottom: 0.5rem; /* Separación entre botones */
+}
+
+/* Hover */
+.nav-link:hover {
+    background: #FFF0EB; /* Un tono muy suave de tu naranja para el hover */
+    color: var(--primary); /* Tu naranja vibrante */
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.2); /* Sombra suave del mismo color (Glow) */}
+
+/* Activo (El botón seleccionado) */
+.nav-link.active {
+    background: var(--primary); /* Tu naranja o el Negro de la referencia */
+    color: #FFFFFF; /* Texto blanco para contraste */
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3); /* Sombra suave del mismo color (Glow) */
+}
+
+/* Quitar margen al último elemento para que el borde cierre justo después */
+.nav-container .nav-link:last-child {
+    margin-bottom: 0;
+}
+
+nav .nav-btn {
+    margin-top: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;  /* Espacio entre icono y texto */
+    padding: 0.75rem 0.90rem;
+    border-radius: 0.8rem;
+    color: var(--text-muted);
+    font: var(--p);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+/* ============================================
+   ICONOS
+============================================ */
+:root {
+    --icon-filter: brightness(0);
+}
+
+body.dark {
+    --icon-filter: brightness(0) invert(1);
+}
+
+.nav-svg {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    filter: var(--icon-filter);
+    fill: currentColor;
+}
+
+/* ============================================
+   COLAPSADO → Ocultar texto
+============================================ */
+.sidebar.collapsed .nav-text {
+    display: none;
+}
+
+/* Cuando se hace hover estando colapsado → mostrar texto */
+.sidebar.collapsed:hover .nav-text {
+    display: inline;
+}
+
+/* ============================================
+   AJUSTE DEL CONTENIDO PRINCIPAL
+============================================ */
+body {
+    padding-left: 6.5rem;
+}
+
+body.sidebar-collapsed {
+    padding-left: 4.5rem; /* Ajuste cuando el sidebar está colapsado */
+}

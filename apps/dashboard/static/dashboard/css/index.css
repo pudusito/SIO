@@ -1,0 +1,16 @@
+ /* COMANDO ANTI CHAMO */
+* {
+    all: revert-layer;
+}
+
+/*-------------------------------------------------------------------------------------------------
+*/
+/* Aplica el fondo y ajustes solo al área del dashboard */
+.bodydashboard-container {
+    background: #f5f5f5
+  }
+
+.bodydashboard-container.dark {
+    background: #030303
+  }
+

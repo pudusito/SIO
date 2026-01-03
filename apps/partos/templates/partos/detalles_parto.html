@@ -1,0 +1,402 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Detalles Parto
+{% endblock title %}
+    
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/detail.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+    
+
+
+{% block content %}
+     <main class="main-container main-content-detail">
+
+        <nav class="breadcrumbs breadcrumbs-margin">
+            <a href="{% url 'parto:inicio' %}" class="link-color">Inicio</a> <span>›</span>
+            <a href="{% url 'parto:listar_partos' %}" class="link-color">Partos</a> <span>›</span>
+            <span>Ficha Clínica #854</span>
+        </nav>
+
+        <div class="layout-grid">
+            
+            <div class="cards-container detail-flow"> 
+                
+                <div class="form-header">
+                    <h2 class="form-title">Registro de Parto</h2>
+                    <div class="form-subtitle">
+                        <span class="chip-dato active">Estado/{{object.estado|capfirst}}</span> 
+                        <span class="ficha-id-number">ID: #{{object.pk}}</span> 
+                    </div>
+                </div>
+
+                <div class="details-form-wrapper">
+                    
+                    <div class="section-header">
+                        <h3 class="section-title">1. Antecedentes Obstétricos</h3>
+                    </div>
+                    
+                    <div class="detalle-grid-3">
+                        <div class="dato-box">
+                            <span class="dato-label">Paciente</span>
+                            <span class="dato-valor">{{object.gestacion.paciente.obtener_nombre_completo}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Edad Madre</span>
+                            <span class="dato-valor">{{object.edad_madre}} años</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Tipo de Ingreso</span>
+                            <span class="dato-valor">{{object.tipo_de_ingreso}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Fecha Inicio</span>
+                            <span class="dato-valor">{{object.hora_inicio.date}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Hora Inicio</span>
+                            <span class="dato-valor">{{object.hora_inicio.time}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Edad Gestacional</span>
+                            <span class="dato-big">{{object.semanas_gestacion}}</span>
+                            <span class="dato-label" style="margin-top:0;">Semanas</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Via de Nacimiento/Tipo de Parto</span>
+                            <span class="dato-valor">{{object.via_nacimiento}}</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="section-header" style="margin-top: 2rem;">
+                        <h3 class="section-title">2. Evolución del Trabajo de Parto</h3>
+                    </div>
+                   
+
+                    <div class="detalle-grid-3">
+
+                        <div class="dato-box">
+                            <span class="dato-label">Rotura de Membrana</span>
+                            <span class="dato-valor">{{object.rotura_membrana|capfirst}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Nº Tactos Vaginales</span>
+                            <span class="dato-valor">{{object.n_tactos_vaginales}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Posicion</span>
+                            <span class="dato-valor">{{object.posicion}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Tipo de Regimen</span>
+                            <span class="dato-valor">{{object.tipo_regimen|capfirst}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Tipo de Inicio de Parto</span>
+                            <span class="dato-valor">
+                            
+                            {% if object.inicio_parto == 'inducido_far' %}
+                                Inducido Farmacologicamente
+                            {% elif object.inicio_parto == 'inducido_mec' %}
+                                Inducido Mecanicamente
+                            {% else %}
+                                {{object.inicio_parto}}
+                            {% endif %}
+                                
+
+
+                            </span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Tipo de Acompañante</span>
+                            <span class="dato-valor">{{object.tipo_acompaniante}}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Tiempo Dilatación</span>
+                            <span class="dato-valor">{{object.tiempo_dilatacion}}</span>
+                            <span class="dato-label">min</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Tiempo Membrana Rota</span>
+                            <span class="dato-valor">{{object.tiempo_membrana_rota}}</span>
+                            <span class="dato-label">min</span>
+
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Tiempo Expulsivo</span>
+                            <span class="dato-valor">{{object.tiempo_expulsivo}}</span>
+                            <span class="dato-label">min</span>
+
+                        </div>
+                    </div>
+
+            
+                    <div class="section-header" style="margin-top: 2rem;">
+                        <h3 class="section-title">3. Bienestar Fetal</h3>
+                    </div>
+
+                    <div class="detalle-grid-3">
+                        <div class="dato-box">
+                            <span class="dato-label">LCF (Latidos)</span>
+                            <span class="dato-big" style="color:var(--primary);">142</span>
+                            <span class="dato-label">lpm</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Presentación</span>
+                            <span class="dato-valor">Cefálica</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Posición</span>
+                            <span class="dato-valor">OIIA</span>
+                        </div>
+                    </div>
+
+                    <div class="section-header" style="margin-top: 2rem;">
+                        <h3 class="section-title">4. Procedimientos y Complicaciones</h3>
+                                                <span class="dato-label">Solo los marcados son los aplicados</span>
+
+                    </div>
+                    
+                    <div class="procedimientos-wrapper" style="margin-bottom: 0;">
+
+                        {% for complicacion in object.complicaciones.all %}
+                            <span class="chip-dato active">{{complicacion}}</span>     
+                        {% endfor %}
+
+                         <span class="chip-dato 
+                         {% if object.monitor %}
+                            active
+                         {% endif %}
+                             ">Monitor</span>
+                         <span class="chip-dato 
+                         {% if object.libertad_movimiento %}
+                            active
+                         {% endif %}
+                             ">Libertad Movimiento</span>
+                         <span class="chip-dato 
+                         {% if object.uso_sala_saip %}
+                            active
+                         {% endif %}
+                             ">Uso de Sala Saip</span>
+                         <span class="chip-dato 
+                         {% if object.entrega_placenta %}
+                            active
+                         {% endif %}
+                             ">Entrega de Placenta</span>
+                    </div>
+
+                </div> <h3 class="audit-title" style="margin-top: 2rem;">Registros Asociados</h3>
+
+
+
+                <details class="finexy-accordion" id="acc-puerperio">
+                    <summary class="finexy-summary">
+                        <span>👶 Puerperio Inmediato</span>
+                    </summary>
+                    
+                        
+                    <div class="accordion-content" id="content-puerperio">
+                        {% if object.puerperio %}
+                            <div class="detalle-grid-3">
+                            <!-- Ejemplo de bloque de datos para Puerperio -->
+                                <div class="dato-box">
+                                    <span class="dato-label">Estado Perine</span>
+                                    <span class="dato-valor">{{object.puerperio.estado_perine}}</span>
+                                </div>
+                                <div class="dato-box">
+                                    <span class="dato-label">Creado por</span>
+                                    <span class="dato-valor">{{object.puerperio.created_by}}</span>
+                                </div>
+                                <div class="dato-box">
+                                    <span class="dato-label">Creado el</span>
+                                    <span class="dato-valor">{{object.puerperio.created_at}}</span>
+                                </div>
+                                <div class="dato-box">
+                                    <span class="dato-label">Actualizado por</span>
+                                    <span class="dato-valor">{{object.puerperio.updated_by}}</span>
+                                </div>
+                                
+                                <div class="dato-box">
+                                    <span class="dato-label">Actualizado el</span>
+                                    <span class="dato-valor">{{object.puerperio.updated_at}}</span>
+                                </div>
+                                
+                            </div>
+                            <div class="procedimientos-wrapper" style="margin-bottom: 0;">
+                                <span class="chip-dato 
+                                    {% if object.puerperio.esterilizacion %}
+                                        active
+                                    {% endif %}
+                                    ">Esterilizacion</span>
+                                <span class="chip-dato 
+                                    {% if object.puerperio.revision %}
+                                        active
+                                    {% endif %}
+                                    ">Revision</span>
+                                <span class="chip-dato 
+                                    {% if object.puerperio.nercia_uterina %}
+                                        active
+                                    {% endif %}
+                                    ">Inercia Uterina</span>
+                                <span class="chip-dato 
+                                    {% if object.puerperio.restos_placenta %}
+                                        active
+                                    {% endif %}
+                                    ">Restos de placenta</span>
+                                <span class="chip-dato 
+                                    {% if object.puerperio.trauma %}
+                                        active
+                                    {% endif %}
+                                    ">Trauma</span>
+                                <span class="chip-dato 
+                                    {% if object.puerperio.alteracion_coagulacion %}
+                                        active
+                                    {% endif %}
+                                    ">Alteracion de Coagulacion</span>
+                                <span class="chip-dato 
+                                    {% if object.puerperio.manejo_qirurgico_inercia_ut %}
+                                        active
+                                    {% endif %}
+                                    ">Manejo Quirurgico Inercia Ut</span>
+                            </div>
+
+                        {% else %}
+                            <p class="text-muted" style="grid-column: 1/-1; padding: 0.5rem;">No hay Puerperio asignado</p>
+                        {% endif %}
+                    
+                        <div style="margin-top: 1rem; display: flex; justify-content: flex-end;">
+                        
+                            {% if object.puerperio %}
+                                
+                                <a class="btn-secondary" href="{% url 'parto:actualizar_puerperio' pk_parto=object.pk pk=object.puerperio.pk %}">
+                                    ~ Actualizar Puerperio
+                                </a>
+                            {% endif %}    
+                            
+                            {% if not object.puerperio %}
+                                <a class="btn-secondary" href="{% url 'parto:agregar_puerperio' pk_parto=object.pk %}">
+                                + Añadir Puerperio
+                            </a>
+                            {% endif %}
+                                
+                            
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Nuevo Acordeón para Analgesias (Conectado al modelo) -->
+                <details class="finexy-accordion" id="acc-analgesias">
+                    <summary class="finexy-summary">
+                        <span>💊 Analgesia y Anestesia</span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="detalle-grid-3">
+                            {% for analgesia in object.analgesias.all %}
+                            <div class="dato-box">
+                                <span class="dato-label">{{ analgesia.tipo.nombre }}</span>
+                                <span class="dato-valor">{{ analgesia.dosis }}</span>
+                                <span class="text-sub">Espera: {{ analgesia.tiempo_espera_minutos|default:"-" }} min</span>
+                            </div>
+                            {% empty %}
+                            <p class="text-muted" style="grid-column: 1/-1; padding: 0.5rem;">No hay analgesias registradas.</p>
+                            {% endfor %}
+                        </div>
+                        <div style="margin-top: 1rem; display: flex; justify-content: flex-end;">
+                            <button class="btn-secondary" onclick="console.log('Desplegar formulario Analgesia')">
+                                + Añadir Analgesia
+                            </button>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="finexy-accordion" id="acc-participantes">
+                    <summary class="finexy-summary">
+                        <span>🩺 Equipo Médico</span>
+                    </summary>
+                    <div class="accordion-content" id="content-participantes">
+                        
+                        {% for participante in object.participaciones.all %}
+                            <div class="dato-box">
+                                <span class="dato-label">{{ participante.profesional }}</span>
+                                <span class="dato-valor">{{ participante.profesional.rut}}</span>                            </div>
+                        {% empty %}
+                            <p class="text-muted" style="grid-column: 1/-1; padding: 0.5rem;">No hay participaciones registradas.</p>
+                        {% endfor %}
+                            
+                          <div style="margin-top: 1rem; display: flex; justify-content: flex-end;">
+                            <a class="btn-secondary" href="{% url 'profesionales:agregar_participacion' parto_id=object.pk %}">
+                                + Asignar Profesional
+                            </a>
+                        </div>
+                    </div>
+                </details>
+                
+                <div class="form-actions detail-footer"> 
+                    <button class="btn-danger" onclick="confirmarEliminacion()">Eliminar Registro</button>
+                    <div class="right-actions">
+                        <button class="btn-secondary" onclick="history.back()">Volver</button>
+                        <a href="{% url 'parto:actualizar_parto' pk=object.pk %}" class="btn-primary">Modificar Ficha</a>
+                    </div>
+                </div>
+
+            </div> 
+            
+            <div class="dashboard-panel audit-panel"> 
+                <h3 class="audit-title">Auditoría del Registro</h3> 
+                
+                <div class="stat-item">
+                    <span class="stat-label">Profesional Responsable:</span>
+                    <div class="audit-info-row"> 
+                        <img src="{% static 'icons/matronaicon.png' %}" width="35" class="audit-photo" alt="Foto"> 
+                        <div>
+                            <span class="dato-valor audit-stat-value">Dr.{{object.created_by.get_full_name}}</span> 
+                            <span class="stat-label audit-stat-date">📅 {{object.created_at.date}} • 🕒 {{object.created_at.time}}</span> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-label">Última Modificación:</span>
+                    <div class="audit-info-row"> 
+                        <div class="audit-initials-pill">SL</div> 
+                        <div>
+                            <span class="dato-valor audit-stat-value">Dr.{{object.updated_by.get_full_name}}</span> 
+                            <span class="stat-label audit-stat-date">📅 {{object.updated_at.date}} • 🕒 {{object.updated_at.time}}</span> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-item" style="margin-top: 1rem; border-top: 1px dashed var(--border-subtle); padding-top: 1rem;">
+                    <span class="stat-label">Observaciones</span>
+                    <p class="audit-obs-text">
+                        {{object.observaciones}}
+                    </p>
+                </div>
+
+            </div> 
+
+        </div> 
+
+    </main>
+{% endblock content %}
+    
+
+
+{% block scripts %}
+        {% comment %} <script src="{% static 'js/detallar.js' %}"></script> {% endcomment %}
+    <script src="{% static 'js/toastify.min.js' %}"></script>  
+    {% include 'includes/script_mensajes.html' %}
+{% endblock scripts %}
+    

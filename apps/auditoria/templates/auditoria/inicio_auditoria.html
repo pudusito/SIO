@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Auditorias
+{% endblock title %}
+
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+
+
+
+{% block content %}
+    <main class="main-container">
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+            <span>›</span>
+            <span>Auditorias</span>
+        </nav>
+
+        <nav class="welcome-header">
+            <h1 class="main-title">Ver Historial de Cambios</h1>
+            <p class="subtitle">Aquí puedes ver el historial completo de cambios ocurridos en los registros del sistema.</p>
+        </nav>
+
+        <section class="cards-container">
+            <div class="card">
+                <a href="{% url 'auditoria:historicos_pacientes' %}" class="card-button">
+                    <img alt="Imagen listado de pacientes" src="{% static 'icons/listarpacientes.png' %}" class="card-icon"/>
+                    <h3 class="third-title">Historico Paciente</h3>
+                    <p class="subtitle">Ve todo el historial de cambios ocurrido sobre los pacientes</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'auditoria:historicos_gestaciones' %}" class="card-button">
+                    <img alt="Imagen listado de pacientes" src="{% static 'icons/listargestaciones.png' %}" class="card-icon"/>
+                    <h3 class="third-title">Historico Gestaciones</h3>
+                    <p class="subtitle">Ve todo el historial de cambios ocurrido sobre los pacientes</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="{% url 'auditoria:historicos_partos' %}" class="card-button">
+                    <img alt="Imagen listado de pacientes" src="{% static 'icons/listarpartos.png' %}" class="card-icon"/>
+                    <h3 class="third-title">Historico Partos</h3>
+                    <p class="subtitle">Ve todo el historial de cambios ocurrido sobre los pacientes</p>
+                </a>
+            </div>
+
+        <div class="card">
+            <a href="{% url 'auditoria:historicos_recien_nacidos' %}" class="card-button">
+                <img alt="Imagen listado de pacientes" src="{% static 'icons/listarreciennacidos.png' %}" class="card-icon"/>
+                <h3 class="third-title">Historico Recien Nacidos</h3>
+            <p class="subtitle">Ve todo el historial de cambios ocurrido sobre los pacientes</p>
+            </a>
+        </div>
+        </section>
+    </main>
+
+{% endblock content %}
+    
+    
+    

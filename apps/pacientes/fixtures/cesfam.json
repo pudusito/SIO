@@ -1,0 +1,21 @@
+[
+  { "model": "pacientes.cesfam", "pk": 1,  "fields": { "nombre": "CESFAM Ultraestación", "comuna": 2 } },
+  { "model": "pacientes.cesfam", "pk": 2,  "fields": { "nombre": "CESFAM San Ramón Nonato", "comuna": 2 } },
+  { "model": "pacientes.cesfam", "pk": 3,  "fields": { "nombre": "CESFAM Violeta Parra", "comuna": 2 } },
+  { "model": "pacientes.cesfam", "pk": 4,  "fields": { "nombre": "CESFAM Los Volcanes", "comuna": 2 } },
+  { "model": "pacientes.cesfam", "pk": 5,  "fields": { "nombre": "CESFAM Barros", "comuna": 2 } },
+  { "model": "pacientes.cesfam", "pk": 6,  "fields": { "nombre": "CESFAM Chillán Viejo", "comuna": 3 } },
+  { "model": "pacientes.cesfam", "pk": 7,  "fields": { "nombre": "CESFAM San Carlos Centro", "comuna": 16 } },
+  { "model": "pacientes.cesfam", "pk": 8,  "fields": { "nombre": "CESFAM Teresa Baldecchi", "comuna": 16 } },
+  { "model": "pacientes.cesfam", "pk": 9,  "fields": { "nombre": "CESFAM Yungay", "comuna": 9 } },
+  { "model": "pacientes.cesfam", "pk": 10, "fields": { "nombre": "CESFAM Bulnes", "comuna": 1 } },
+  { "model": "pacientes.cesfam", "pk": 11, "fields": { "nombre": "CESFAM Quillón", "comuna": 7 } },
+  { "model": "pacientes.cesfam", "pk": 12, "fields": { "nombre": "CESFAM Coelemu", "comuna": 11 } },
+  { "model": "pacientes.cesfam", "pk": 13, "fields": { "nombre": "CESFAM Quirihue", "comuna": 14 } },
+  { "model": "pacientes.cesfam", "pk": 14, "fields": { "nombre": "CESFAM Ninhue", "comuna": 12 } },
+  { "model": "pacientes.cesfam", "pk": 15, "fields": { "nombre": "CESFAM San Ignacio", "comuna": 8 } },
+  { "model": "pacientes.cesfam", "pk": 16, "fields": { "nombre": "CESFAM El Carmen", "comuna": 4 } },
+  { "model": "pacientes.cesfam", "pk": 17, "fields": { "nombre": "CESFAM Coihueco", "comuna": 16 } },
+  { "model": "pacientes.cesfam", "pk": 18, "fields": { "nombre": "CESFAM San Fabián", "comuna": 18 } },
+  { "model": "pacientes.cesfam", "pk": 19, "fields": { "nombre": "CESFAM San Nicolás", "comuna": 19 } }
+]

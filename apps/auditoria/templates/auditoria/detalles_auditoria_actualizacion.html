@@ -1,0 +1,77 @@
+<div class="modal-header">
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 1.5rem;">📋</span>
+        <h3 class="modal-title"><span class="id-badge">#{{object.history_id}}</span> Actualizacion del {{ model_name|capfirst }} con identificador <a href="{% url 'paciente:listar_pacientes' %}"><span class="id-badge">#{{object.id}}</span></a></h3>
+    </div>
+    <button class="modal-close" type="button" data-modal-close>&times;</button>
+</div>
+
+<div class="modal-body">
+    <!-- Tarjeta de Información del Cambio -->
+    <div style="background-color: #f8fafc; border-left: 4px solid #3182ce; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+        <div style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <span style="font-weight: 600; color: #2d3748;">Usuario:</span> 
+                <span style="color: #4a5568;">                
+                {% if object.history_user %}
+                    {{ object.history_user.get_full_name|default:object.history_user.username|default:"Sistema" }}
+                {% else %}
+                  Usuario no encontrado en el sistema
+                {% endif %}
+              </span>
+            </div>
+            <span style="color: #718096; font-size: 0.875rem; background: #edf2f7; padding: 2px 8px; border-radius: 12px;">
+                {{ object.history_date|date:"d M Y, H:i" }}
+            </span>
+        </div>
+        <div>
+            <span style="font-weight: 600; color: #2d3748; display: block; margin-bottom: 0.25rem;">Motivo del cambio:</span>
+            <p style="margin: 0; color: #4a5568; font-style: italic; background: white; padding: 0.5rem; border-radius: 0.25rem; border: 1px solid #e2e8f0;">
+                "{{ object.history_change_reason|default:'Sin motivo especificado' }}"
+            </p>
+        </div>
+    </div>
+
+    <!-- Tabla Comparativa -->
+    {% if delta.changes %}
+    <div style="overflow-x: auto; border-radius: 0.5rem; border: 1px solid #e2e8f0;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+            <thead>
+                <tr style="background-color: #edf2f7; color: #4a5568; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
+                    <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700;">Campo</th>
+                    <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; width: 35%;">Valor Anterior</th>
+                    <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; width: 35%;">Valor Nuevo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cambio in delta.changes %}
+                <tr style="border-top: 1px solid #e2e8f0;">
+                    <td style="padding: 0.75rem 1rem; font-weight: 600; color: #2d3748;">
+                        {{ cambio.field|capfirst }}
+                    </td>
+                    <td style="padding: 0.75rem 1rem;">
+                        <div style="background-color: #fff5f5; color: #c53030; padding: 0.25rem 0.5rem; border-radius: 0.375rem; display: inline-block; font-family: monospace; font-size: 0.9em;">
+                            <span style="font-weight: bold; margin-right: 4px;">-</span>{{ cambio.old|default:"Vacío" }}
+                        </div>
+                    </td>
+                    <td style="padding: 0.75rem 1rem;">
+                        <div style="background-color: #f0fff4; color: #2f855a; padding: 0.25rem 0.5rem; border-radius: 0.375rem; display: inline-block; font-family: monospace; font-size: 0.9em;">
+                            <span style="font-weight: bold; margin-right: 4px;">+</span>{{ cambio.new|default:"Vacío" }}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <div style="text-align: center; padding: 2rem; color: #718096; background: #f7fafc; border-radius: 0.5rem;">
+            <p>No se detectaron cambios en campos específicos.</p>
+        </div>
+    {% endif %}
+</div>
+
+<div class="modal-footer">
+    <button class="btn-secondary" data-modal-close>Cerrar</button>
+    <a href="{% url 'auditoria:restaurar_objeto' model_name=model_name history_id=object.history_id%}">Restaurar</a>
+</div>

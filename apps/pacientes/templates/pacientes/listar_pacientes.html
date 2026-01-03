@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Pacientes
+{% endblock title %}
+    
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/table.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+    
+
+
+{% block content %}
+
+<main class="main-container">
+
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+        <a href="{% url 'paciente:inicio' %}" class="link-color">Pacientes</a>
+        <span>›</span>
+        <span>Listar pacientes</span>
+    </nav>
+
+    <div class="welcome-header">
+        <h1 class="main-title">Listado de Pacientes</h1>
+        <p class="subtitle">Gestione los expedientes clínicos registrados en el sistema. Resultados: {{page_obj.paginator.count}} pacientes totales</p>
+    </div>
+
+    <div class="layout-split">
+
+        <aside class="filter-sidebar">
+            <div class="filter-card">
+                <h3 class="third-title">Búsquedas Recientes</h3>
+                <ul class="recent-list">
+                    <li><a href="#">Dale Daniel</a></li>
+                    <li><a href="#">Aqui añades la funcion</a></li>
+                    <li><a href="#">Para que te salgan</a></li>
+                    <li><a href="#">Los ultimos objetos</a></li>
+                    <li><a href="#">Que se buscaron en el sistema</a></li>
+                    <!-- Te recomiendo maximo cinco para no romper el diseño  -->
+                    <button class="btn-primary">Limpiar todo</button>
+                </ul>
+            </div>
+
+            <div class="filter-card">
+                <h3 class="third-title">Filtrar por Estado</h3>
+
+                <label class="checkbox-card small">
+                    <input type="checkbox" name="plan"><span>Plan de Parto</span>
+                </label>
+                <label class="checkbox-card small">
+                    <input type="checkbox"> <span>Puérperas</span>
+                </label>
+                </form>
+            </div>
+        </aside>
+
+    <section class="list-content">
+
+        <div class="table-actions-bar">
+            <div class="search-pill">
+                <form class="form-flexbox">
+                    <input type="text" class="search-input" name="query" placeholder="Filtre por Identificacion del paciente o Nombre completo del paciente"
+                    {% if query %}
+                        value="{{query}}"
+                    {% endif %}>
+                    
+                    <button type="submit" class="btn-reset"><img src="{% static 'svg/buscar.svg' %}" class="nav-svg" alt="Buscar"/></button>
+                </form>
+                
+            </div>
+
+            <a href="{% url 'paciente:agregar_paciente' %}"
+            class="btn-primary">Agregar Paciente</a>
+        </div>
+
+        <div class="table-container">
+            <table class="smart-table">
+                <thead>
+                    <tr>
+                        <th>Codigo Objeto</th>
+                        <th>Identificación</th>
+                        <th>Nombre Completo</th>
+                        <th>Tipo paciente</th>
+                        <th>Nacionalidad</th>
+                        <th>Fecha Registro</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                   {% for paciente in  pacientes%}
+                        <tr>
+                            <td>
+                               <span class="id-badge"  style="font-weight: 500; color: #2d3748;"> #{{paciente.pk}}</span> 
+                            </td>
+                            <td>
+                                <span class="text-sub">{{paciente.documento}}</span>
+                                <span class="text-bold">{{paciente.identificacion}}</span>
+                            </td>
+                            <td>
+                                {{paciente.nombre_completo}}
+                            </td>
+                            <td>
+                                {{paciente.tipo}}
+                            </td>
+                            <td>
+                                {{paciente.nacionalidad}}
+                            </td>
+                            <td>
+                                {{paciente.created_at}}
+                            </td>
+                            <td class="action-group">
+                                <div class="action-buttons">
+                                <a href="{% url 'paciente:detalle_paciente' pk=paciente.pk %}" class="action-btn" title="Ver Ficha">
+                                    <img src="{% static 'svg/view.svg' %}" alt="Ver" class="nav-svg">
+                                </a>
+                            </div>
+                            </td>
+                        </tr>
+                   {% endfor %}
+                    
+                </tbody>
+            </table>
+            
+        <div class="table-pagination">
+           {% if is_paginated %}
+                 {% include 'includes/paginacion.html' with page_obj=page_obj query_string=query_string%}
+            {% endif %}
+           </div>
+    </section>
+    </div>
+
+</main>
+
+
+
+
+
+{% endblock content %}
+    
+
+
+{% block scripts %}
+<script src="{% static 'js/htmx.min.js' %}"></script>
+<script src="{% static 'js/toastify.min.js' %}"></script>
+{% include 'includes/script_mensajes.html' %}
+
+{% endblock scripts %}
+    
+

@@ -1,0 +1,28 @@
+/* Clase base que define el tiempo de la transición */
+.fade-transition {
+    /* Aplica transición a la opacidad */
+    transition: opacity 300ms ease-in-out; 
+}
+
+/* Clase de SALIDA: El elemento original se vuelve transparente */
+.fade-out {
+    opacity: 0;
+}
+
+/* Clase de ENTRADA: El elemento nuevo comienza transparente */
+.fade-in-start {
+    opacity: 0;
+}
+
+/* Clase de ACTIVACIÓN: El elemento nuevo se vuelve visible */
+.fade-in-end {
+    opacity: 1;
+}
+/* Salida: Se aplica antes de que se reemplace el contenido */
+#menu-inicio.htmx-swapping {
+    opacity: 0;
+}
+
+/* Entrada: El nuevo contenido (que ya reemplazó al anterior) */
+/* Añade aquí la animación de entrada si quieres que el nuevo contenido "vuele" */
+/* Por ejemplo: @keyframes slideIn { ... } */

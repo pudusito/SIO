@@ -1,0 +1,91 @@
+Paciente:
+
+KPI (3)
+pacientes en riesgo activos
+pacientes atendidos este año
+tiempo de estancia promedio
+
+GRAFICOS(3)
+barra:cantidad de embarazos durante el año
+circular:complicaciones por tipo
+barra:distribucion por edad
+
+TABLA(1)
+ultimos 10 pacientes nombre/edad
+
+-------------------------------------------------------------------------------
+Partos:
+
+Gráficos (máx. 3)
+
+Serie temporal (líneas) — número de partos por mes 
+Distribución por tipo de parto (barra o pastel) — %/conteo de vaginal vs cesárea vs instrumentado.
+Uso de analgesias (barra apilada) — tipos de analgesia y su frecuencia.
+
+3 KPI
+Total de partos en el período (conteo de registros parto).
+Tasa de cesáreas (%) = (nº cesáreas / total partos) × 100.
+Tasa de complicaciones (%) = (nº partos con complicación materna o neonatal en detalle_parto/puerperio / total partos) × 100.
+2 tablas
+
+Últimos 20 partos — columnas: ID, fecha/hora, edad madre, edad gestacional, tipo de parto, peso RN, APGAR (1/5), analgesia usada, profesional a cargo, complicaciones.
+Resumen por profesional — columnas: profesional, rol, # partos, % cesáreas, # complicaciones, tasa de complicaciones.
+-------------------------------------------------------------------------------
+RN:
+
+Gráficos (máx. 3)
+Serie temporal (línea) — número de recién nacidos por mes (eje X: fecha de nacimiento, eje Y: conteo). Opcional: apilar por condición inicial (reanimación requerida / no requerida).
+Distribución por APGAR a 5 minutos (histograma o barras) — conteo o % por rango (0–3, 4–6, 7–10) y comparación por tipo de parto.
+Intervenciones neonatales (barras apiladas) — tipos de reanimación/procedimientos y vacunaciones (BCG/HepB) por frecuencia.
+
+3 KPI
+Total de recién nacidos en el período.
+% de RN con APGAR < 7 a los 5 minutos.
+% de RN que recibieron reanimación neonatal (cualquier tipo).
+
+2 tablas
+Últimos 20 RN — columnas sugeridas: ID, fecha/hora nacimiento, sexo, peso al nacer, edad gestacional, APGAR 1/5, reanimación (sí/no + tipo), vacunaciones iniciales, complicaciones neonatales, parto_id/profesional.
+Resumen de eventos neonatales — filas por evento (reanimación por tipo, complicación neonatal principal, vacunación administrada), columnas: conteo, % sobre total RN, tendencia (últimos 3/12 meses).
+
+
+-------------------------------------------------------------------------------
+REPORTES:
+
+3 gráficos (máx. 3)
+
+Serie temporal (línea apilada) — número de ejecuciones de reportes por mes, apilado por estado (éxito / error).
+Top reports (barra) — top 10 reportes por cantidad de ejecuciones en el período.
+Latencia de generación (boxplot o barras) — distribución o tiempo medio de ejecución por reporte (o percentiles).
+3 KPIs
+
+Total de ejecuciones de reportes en el período.
+Tasa de éxito (%) = ejecuciones exitosas / total ejecuciones.
+Tiempo medio de generación (segundos/minutos).
+2 tablas
+
+Últimas 20 ejecuciones de reportes — columnas: fecha, report_name, executed_by, status, duration, rows_exported, parámetros clave.
+Resumen por reporte — columnas: report_name, # ejecuciones, % éxito, duración media, última ejecución, destinatarios frecuentes.
+Integración con dashboards existentes (partos / recién nacidos)
+
+Filtrar/segmentar reportes por tipo (p.ej. reportes de partos vs RN) y mostrar su uso/tasa de éxito.
+Añadir columna en las tablas de partos/RN indicando si hubo exportación/report generado para ese registro.
+
+-------------------------------------------------------------------------------
+Profesionales:
+
+Gráficos (máx. 3)
+
+Barras — número de partos por profesional (ordenado; opción: apilar por tipo de parto).
+Barras apiladas — distribución (%) de tipo de parto por profesional (cesárea vs vaginal vs instrumentado).
+Mapa de calor — actividad por profesional vs día/turno (carga laboral / horarios de atención).
+3 KPIs
+
+Profesionales activos en el período.
+Promedio de partos por profesional (total partos / profesionales activos).
+Tasa media de complicaciones por profesional (%) (complicaciones maternas/neonatales / partos atendidos).
+2 tablas
+
+Resumen por profesional — columnas: nombre, rol, área/turno, # partos, % cesáreas, # complicaciones, tasa de complicaciones, última actividad.
+Últimos 20 partos con profesional — columnas: parto_id, fecha/hora, profesional (nombre + rol), tipo de parto, edad gestacional, peso RN, APGAR 1/5, analgesia, complicaciones.
+
+-------------------------------------------------------------------------------

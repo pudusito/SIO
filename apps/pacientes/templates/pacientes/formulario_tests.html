@@ -1,0 +1,10 @@
+<form method="POST" 
+    hx-post="{% url 'test:crear_test_vih' %}" 
+    hx-target="#resultado"           
+    hx-swap="innerHTML" >
+    {% csrf_token %}
+    {{form.as_div}}
+    
+    
+    <button type="submit">Añadir</button>
+</form>

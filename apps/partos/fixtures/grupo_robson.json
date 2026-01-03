@@ -1,0 +1,14 @@
+[
+  { "model": "partos.gruporobson", "pk": 1, "fields": { "grupo": "Grupo 1", "descripcion": "Nulíparas, embarazo único, cefálica, ≥37 semanas en trabajo de parto espontáneo" } },
+  { "model": "partos.gruporobson", "pk": 2, "fields": { "grupo": "Grupo 2.a", "descripcion": "Nulíparas, embarazo único, cefálica, ≥37 semanas, cesárea programada o con inducción de trabajo de parto. Total cesáreas grupo 2" } },
+  { "model": "partos.gruporobson", "pk": 3, "fields": { "grupo": "Grupo 2.b", "descripcion": "Nulíparas, embarazo único, cefálica, ≥37 semanas, por requerimiento materno" } },
+  { "model": "partos.gruporobson", "pk": 4, "fields": { "grupo": "Grupo 3", "descripcion": "Multípara, sin cesárea previa, embarazo único, cefálica, ≥37 semanas en trabajo de parto espontáneo" } },
+  { "model": "partos.gruporobson", "pk": 5, "fields": { "grupo": "Grupo 4", "descripcion": "Multípara, sin cesárea previa, embarazo único, cefálica, ≥37 semanas, cesárea programada o con inducción de trabajo de parto" } },
+  { "model": "partos.gruporobson", "pk": 6, "fields": { "grupo": "Grupo 5.1", "descripcion": "Multíparas con 1 cesárea previa, embarazo único, cefálica, ≥37 semanas" } },
+  { "model": "partos.gruporobson", "pk": 7, "fields": { "grupo": "Grupo 5.2", "descripcion": "Multíparas con 2 o más cesáreas previas, embarazo único, cefálica, ≥37 semanas" } },
+  { "model": "partos.gruporobson", "pk": 8, "fields": { "grupo": "Grupo 6", "descripcion": "Nulíparas, embarazo único, podálica" } },
+  { "model": "partos.gruporobson", "pk": 9, "fields": { "grupo": "Grupo 7", "descripcion": "Multíparas, embarazo único, podálica, con 1 o más cesáreas previas" } },
+  { "model": "partos.gruporobson", "pk": 10, "fields": { "grupo": "Grupo 8", "descripcion": "Todas las mujeres con embarazo múltiple, incluidas las que tienen 1 o más cesáreas previas" } },
+  { "model": "partos.gruporobson", "pk": 11, "fields": { "grupo": "Grupo 9", "descripcion": "Embarazo único, transverso y oblicuo, incluidas las que tienen una o más cesáreas previas" } },
+  { "model": "partos.gruporobson", "pk": 12, "fields": { "grupo": "Grupo 10", "descripcion": "Todas las mujeres con embarazo único, cefálica, <37 semanas, incluidas las que tienen 1 o más cesáreas" } }
+]

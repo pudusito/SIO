@@ -1,0 +1,67 @@
+{% load static %}
+<header class="top-header">
+    
+    <a href="{% url 'pantalla_principal' %}" class="nav__logo header-pill">
+        <img src="{% static 'icons/logo.png' %}" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
+
+    <div class="topbar-search header-pill">
+        <img src="{% static 'svg/buscar.svg' %}" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
+
+    <div class="actions-group header-pill" style="display:flex;">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="{% static 'svg/moon.svg' %}" alt="Tema" />
+        </button>
+
+        <a class="action-btn" aria-label="Correo TI" href="#">
+            <img src="{% static 'svg/correo.svg' %}" alt="Correo TI" class="nav-svg"/>
+        </a>
+
+        <form action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <button class="action-btn" aria-label="Cerrar sesión">
+                <img src="{% static 'svg/salir.svg' %}" alt="Cerrar sesión" class="nav-svg"/>
+            </button>
+        </form>
+        
+    </div>
+
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="
+        {% if request.user.es_matrona %}
+            {% static 'icons/matronaicon.png' %}
+        {% elif request.user.es_supervisor %}
+            {% static 'icons/supervisoricon.png' %}
+        {% else %}
+            {% static 'icons/administrador.png' %}
+        {% endif %}
+            "/>
+
+        <div class="profile-text">
+            <span class="profile-name">
+            {% if request.user.es_supervisor %}
+                Supervisor
+            {% elif request.user.es_matrona %}
+                Matrona
+            {% else %}
+                Administrador
+            {% endif %}
+                 {{request.user.get_full_name}}</span>
+            <span class="profile-email">{{request.user.email}}</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="{% static 'svg/flechaabajo.svg' %}" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
+</header>

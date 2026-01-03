@@ -1,0 +1,202 @@
+/* =========================================
+   1. SISTEMA DE VARIABLES (CLARO / OSCURO)
+   ========================================= */
+:root {
+    /* --- MODO CLARO (Por defecto) --- */
+    --bg-body: #F4F7FE;         /* Fondo detrás de las islas */
+    --bg-panel: #FFFFFF;        /* Color de las "cápsulas" (Header/Sidebar) */
+    --bg-input: #F7F9FC;        /* Color fondo del buscador */
+    --text-main: #2D3748;       /* Color texto principal */
+    --text-muted: #A0AEC0;      /* Color texto secundario (placeholders, emails) */
+    --border-subtle: #EDF2F7;   /* Líneas divisorias sutiles */
+    --shadow-m: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    --icon-filter: none;        /* Los iconos se ven normal */
+    --hover-bg: #FFF0EB;        /* Fondo naranja suave para hover */
+}
+
+/* --- MODO OSCURO (Se activa con JS) --- */
+body.dark {
+    --bg-body: #0F1115;         /* Fondo muy oscuro (casi negro) */
+    --bg-panel: #1E2228;        /* Gris oscuro elegante para los paneles */
+    --bg-input: #2D323C;        /* Buscador un poco más claro que el panel */
+    --text-main: #E2E8F0;       /* Texto blanco suave (no quemante) */
+    --text-muted: #718096;      /* Texto secundario gris medio */
+    --border-subtle: #2D3748;   /* Líneas divisorias oscuras */
+    --shadow-m: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra más fuerte para profundidad */
+    --icon-filter: brightness(0) invert(1); /* INVIERTE LOS ICONOS NEGROS A BLANCOS */
+    --hover-bg: rgba(255, 87, 34, 0.15); /* Naranja transparente para hover oscuro */
+}
+
+/* =========================================
+   2. ESTILOS DEL TOP HEADER
+   ========================================= */
+
+.top-header {
+    /* Posicionamiento y Layout */
+    position: fixed;
+    top: 0.8rem;
+    left: 1.5rem;   /* Ajusta según tu sidebar colapsado */
+    right: 1.5rem;
+    height: 3.8rem;
+    
+    /* Estética (Usando Variables) */
+    background: var(--bg-panel);
+    border-radius: 2rem;
+    box-shadow: var(--shadow-m);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 900;
+    transition: all 0.4s ease; /* Suaviza el cambio de color Claro/Oscuro */
+}
+
+/* --- LOGO --- */
+.nav__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+/* --- BUSCADOR --- */
+.topbar-search {
+    flex: 1;
+    max-width: 500px;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    
+    background: var(--bg-input); /* Variable */
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Icono dentro del buscador */
+.topbar-search img {
+    filter: var(--icon-filter); /* Magia: se vuelve blanco en modo noche */
+    opacity: 0.6;
+}
+
+.topbar-search:focus-within {
+    background: var(--bg-panel);
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    color: var(--text-main); /* Variable: Texto se vuelve blanco en dark */
+}
+
+.search-input::placeholder {
+    color: var(--text-muted); /* Variable */
+}
+
+
+/* --- PERFIL --- */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 2px solid var(--border-subtle); /* Variable: Línea divisoria */
+    height: 60%;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--bg-panel); /* El anillo coincide con el fondo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-main); /* Variable: Blanco en modo noche */
+}
+
+.profile-email {
+    font-size: 0.75rem;
+    color: var(--text-muted); /* Variable */
+}
+
+/* =========================================
+   DROPDOWN PERFIL (Estilo Pastilla)
+   ========================================= */
+
+/* Contenedor del Dropdown (El panel flotante) */
+.profile-dropdown {
+    position: absolute;
+    top: 130%; /* Un poco separado del header para que "flote" */
+    right: 0;
+    width: 220px;
+    
+    background: var(--bg-panel);
+    padding: 0.8rem; /* Padding interno para que los botones no toquen el borde */
+    border-radius: 1.5rem; /* Bordes muy redondeados (coherencia con sidebar/header) */
+    box-shadow: var(--shadow-l); /* Sombra difusa para elevación */
+    border: 1px solid var(--border-subtle);
+    
+    /* Animación de entrada (Estado inicial oculto) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.98); /* Ligeramente desplazado y pequeño */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); /* Efecto "Spring" muy suave */
+    z-index: 1000;
+}
+
+/* Estado ACTIVO (Clase agregada por JS) */
+.profile-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* --- ENLACES INTERNOS (Estilo Botón Pastilla) --- */
+/* topbar.css (Añadir/Verificar esto antes de tus clases .active) */
+
+.profile-dropdown {
+    /* POSICIONAMIENTO */
+    position: absolute;
+    top: 115%;              /* Un poco más abajo para que no toque el header */
+    z-index: 1000;
+    right: 0;
+    
+    /* ESTÉTICA (Cápsula Flotante) */
+    width: 160px;
+    background: var(--bg-panel);
+    border-radius: 1.5rem;   /* Bordes redondeados consistentes */
+    padding: 0.8rem;
+    box-shadow: var(--shadow-l); /* Sombra difusa para que destaque */
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font: var(--p);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropdown-btn.active img {
+    transform: rotate(180deg); /* La flecha gira suavemente hacia arriba */
+}

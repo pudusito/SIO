@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Confirmar Restauración{% endblock title %}
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <style>
+        /* Estilo tipo 'Ticket' para el ID */
+        .id-badge {
+            background-color: #edf2f7;
+            color: #4a5568;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace; /* Fuente monoespaciada para IDs */
+            font-weight: 700;
+            border: 1px solid #cbd5e0;
+            font-size: 0.9rem;
+        }
+        .restore-card {
+            max-width: 500px;
+            margin: 4rem auto;
+            text-align: center;
+            border-top: 4px solid #38a169;
+            padding-bottom: 2rem;
+        }
+
+        .restore-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+            animation: pulse 2s infinite;
+        }
+
+        .restore-message {
+            color: #4a5568;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .object-name {
+            font-weight: bold;
+            color: #22543d;
+            background-color: #f0fff4;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #9ae6b4;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .btn-success {
+            background-color: #38a169;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-success:hover {
+            background-color: #2f855a;
+        }
+        
+        .form-actions-center {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+{% endblock estilos_personalizados %}
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+{% block content %}
+<main class="main-container">
+
+    <nav class="breadcrumbs">
+        <a href="javascript:history.back()">Volver</a>
+        <span>›</span>
+        <span>Confirmar Restauración</span>
+    </nav>
+
+    <section class="form-card restore-card">
+        <div class="form-header">
+            <span class="restore-icon">♻️</span>
+            <h2 class="form-title" style="color: #2f855a;">¿Restaurar Registro?</h2>
+            <p class="form-subtitle">El registro volverá a estar activo en el sistema</p>
+        </div>
+
+        <div class="restore-message">
+            <p>Estás a punto de restaurar el siguiente registro u objeto:</p>
+            <div class="object-name id-badge">#{{ object.history_id }}</div>
+            <p>¿Deseas continuar?</p>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group {% if form.motivo.errors %} has-error {%endif%}">
+                <label for="{{form.motivo.id_for_label}}">Motivo de Restauración</label>
+                {{form.motivo}}
+                {% if form.motivo.errors %}
+                    <div class="error-message">
+                    {% for error in  form.motivo.errors %}
+                        <p>{{error}}</p>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="form-actions-center">
+                <a class="btn-secondary" href="{{ request.META.HTTP_REFERER|default:'../' }}">Cancelar</a>
+                <button type="submit" class="btn-success">Sí, Restaurar</button>
+            </div>
+        </form>
+    </section>
+
+</main>
+{% endblock content %}
+
+
+
+{% block scripts %}
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+    {% include 'includes/script_mensajes.html' %}
+{% endblock scripts %}
+    

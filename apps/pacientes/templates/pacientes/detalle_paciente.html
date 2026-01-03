@@ -1,0 +1,350 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Ficha del Paciente
+{% endblock title %}
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/detail.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+{% endblock estilos_personalizados %}
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+
+{% block content %}
+    <main class="main-container main-content-detail">
+
+        <nav class="breadcrumbs breadcrumbs-margin">
+            <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a> <span>›</span>
+            <a href="{% url 'paciente:listar_pacientes' %}" class="link-color">Pacientes</a> <span>›</span>
+            <span>Ficha #{{ paciente.pk }}</span>
+        </nav>
+
+        <div class="layout-grid">
+            
+            <div class="cards-container detail-flow"> 
+                
+                <div class="form-header">
+                    <h2 class="form-title">Ficha Clínica de Paciente</h2>
+                    <div class="form-subtitle">
+                        <span class="chip-dato active">{{ paciente.tipo.nombre|default:"Sin Previsión" }}</span> 
+                        <span class="ficha-id-number">{{ paciente.get_documento_display }}: {{ paciente.identificacion }}</span> 
+                    </div>
+                </div>
+
+                <div class="details-form-wrapper">
+                    
+                    <div class="section-header">
+                        <h3 class="section-title">1. Identificación Personal</h3>
+                    </div>
+                    
+                    <div class="detalle-grid-3">
+                        <div class="dato-box">
+                            <span class="dato-label">Nombre Completo</span>
+                            <span class="dato-valor">{{ paciente.obtener_nombre_completo }}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Fecha Nacimiento</span>
+                            <span class="dato-valor">{{ paciente.fecha_nacimiento|date:"d/m/Y" }}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Edad Actual</span>
+                            <span class="dato-big">{{ paciente.calcular_edad_paciente }}</span>
+                            <span class="dato-label" style="margin-top:0;">Años</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Nacionalidad</span>
+                            <span class="dato-valor">{{ paciente.nacionalidad|default:"No informada" }}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Sexo Biológico</span>
+                            <span class="dato-valor">{{ paciente.get_sexo_display }}</span>
+                        </div>
+                         <div class="dato-box">
+                            <span class="dato-label">Identidad de Género</span>
+                            <span class="dato-valor">
+                                {% if paciente.transexual %}Transgénero{% else %}Cisgénero{% endif %}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="section-header" style="margin-top: 2rem;">
+                        <h3 class="section-title">2. Ubicación y Contacto</h3>
+                    </div>
+
+                    <div class="detalle-grid-3">
+                        <div class="dato-box">
+                            <span class="dato-label">Teléfono</span>
+                            <span class="dato-valor">{{ paciente.telefono|default:"-- --" }}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Comuna</span>
+                            <span class="dato-valor">{{ paciente.comuna|default:"No informada" }}</span>
+                        </div>
+                         <div class="dato-box">
+                            <span class="dato-label">CESFAM Inscrito</span>
+                            <span class="dato-valor">{{ paciente.cesfam|default:"Sin inscripción vigente" }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detalle-grid-3" style="margin-top: 1rem; grid-template-columns: 1fr;">
+                        <div class="dato-box" style="align-items: flex-start; text-align: left;">
+                            <span class="dato-label">Dirección de Residencia</span>
+                            <span class="dato-valor">{{ paciente.direccion|default:"Sin dirección registrada" }}</span>
+                        </div>
+                    </div>
+
+                    <div class="section-header" style="margin-top: 2rem;">
+                        <h3 class="section-title">3. Datos Biométricos</h3>
+                    </div>
+
+                    <div class="detalle-grid-3">
+                        <div class="dato-box">
+                            <span class="dato-label">Peso / Altura</span>
+                            <span class="dato-valor">{{ paciente.peso }} kg / {{ paciente.altura }} cm</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">IMC Calculado</span>
+                            <span class="dato-big" style="color: var(--primary);">{{ paciente.calcular_imc|default:"-" }}</span>
+                        </div>
+                        <div class="dato-box">
+                            <span class="dato-label">Nivel Actividad</span>
+                            <span class="dato-valor">{{ paciente.get_actividad_display }}</span>
+                        </div>
+                    </div>
+
+                    <div class="section-header" style="margin-top: 2rem;">
+                        <h3 class="section-title">4. Antecedentes Sociales y Programas</h3>
+                    </div>
+                    
+                    <div class="procedimientos-wrapper" style="margin-bottom: 0;">
+                        <span class="chip-dato {% if paciente.pueblo_originario %}active{% endif %}">
+                            Pueblo Originario
+                        </span>
+                        <span class="chip-dato {% if paciente.descapacitado %}active{% endif %}">
+                            Discapacidad
+                        </span>
+                        <span class="chip-dato {% if paciente.privada_de_libertad %}active{% endif %}">
+                            Privada de Libertad
+                        </span>
+                        <span class="chip-dato {% if paciente.plan_de_parto %}active{% endif %}">
+                            Plan de Parto Vigente
+                        </span>
+                        <span class="chip-dato {% if paciente.visita_guiada %}active{% endif %}">
+                            Visita Guiada Realizada
+                        </span>
+                    </div>
+
+                </div> <h3 class="audit-title">Historial Clínico</h3>
+
+                <details class="finexy-accordion" id="acc-gestaciones" open>
+                    <summary class="finexy-summary">
+                        <span>Gestaciones {{ paciente.gestacion_set.count }}</span>
+                    </summary>
+                    <div class="accordion-content" id="content-gestaciones">
+                        
+                        {% if paciente.gestacion_set.exists %}
+                            <div class="table-container">
+                                <table class="smart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha Ingreso</th>
+                                            <th>Semanas</th>
+                                            <th>Estado</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for gestacion in paciente.gestacion_set.all %}
+                                        <tr>
+                                            <td>{{ gestacion.created_at|date:"d/m/Y" }}</td>
+                                            <td>{{ gestacion.semanas_gestacion|default:"-" }} sem</td>
+                                            <td>
+                                                <span class="role-badge" style="background:var(--bg-input);">{{ gestacion.estado|capfirst }}</span>
+                                            </td>
+                                            <td>
+                                                <a href="{% url 'gestacion:detalle_gestacion' gestacion.pk %}" class="link-color" style="font-weight:600;">Ver Ficha</a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div style="padding: 1.5rem; text-align: center; color: var(--text-muted);">
+                                <p>No hay gestaciones registradas para esta paciente.</p>
+                                <a href="{% url 'gestacion:agregar_gestacion' %}?paciente={{ paciente.pk }}" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                                    Iniciar Gestación
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </details>
+
+                <details class="finexy-accordion" id="acc-gestaciones" open>
+                    <summary class="finexy-summary">
+                        <span>Alta {{ paciente.gestacion_set.count }}</span>
+                    </summary>
+                    <div class="accordion-content" id="content-gestaciones">
+                        
+                        {% if paciente.gestacion_set.exists %}
+                            <div class="table-container">
+                                <table class="smart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha Ingreso</th>
+                                            <th>Semanas</th>
+                                            <th>Estado</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for gestacion in paciente.gestacion_set.all %}
+                                        <tr>
+                                            <td>{{ gestacion.created_at|date:"d/m/Y" }}</td>
+                                            <td>{{ gestacion.semanas_gestacion|default:"-" }} sem</td>
+                                            <td>
+                                                <span class="role-badge" style="background:var(--bg-input);">{{ gestacion.estado|capfirst }}</span>
+                                            </td>
+                                            <td>
+                                                <a href="{% url 'gestacion:detalle_gestacion' gestacion.pk %}" class="link-color" style="font-weight:600;">Ver Ficha</a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div style="padding: 1.5rem; text-align: center; color: var(--text-muted);">
+                                <p>No se encuentran altas asociadas a esta paciente.</p>
+                                <a href="{% url 'gestacion:agregar_gestacion' %}?paciente={{ paciente.pk }}" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                                    Dar de alta
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </details>
+
+                <details class="finexy-accordion" id="acc-gestaciones" open>
+                    <summary class="finexy-summary">
+                        <span>Test {{ paciente.gestacion_set.count }}</span>
+                    </summary>
+                    <div class="accordion-content" id="content-gestaciones">
+                        
+                        {% if paciente.gestacion_set.exists %}
+                            <div class="table-container">
+                                <table class="smart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha Ingreso</th>
+                                            <th>Semanas</th>
+                                            <th>Estado</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for gestacion in paciente.gestacion_set.all %}
+                                        <tr>
+                                            <td>{{ gestacion.created_at|date:"d/m/Y" }}</td>
+                                            <td>{{ gestacion.semanas_gestacion|default:"-" }} sem</td>
+                                            <td>
+                                                <span class="role-badge" style="background:var(--bg-input);">{{ gestacion.estado|capfirst }}</span>
+                                            </td>
+                                            <td>
+                                                <a href="{% url 'gestacion:detalle_gestacion' gestacion.pk %}" class="link-color" style="font-weight:600;">Ver Ficha</a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div style="padding: 1.5rem; text-align: center; color: var(--text-muted);">
+                                <p>No se encuentran tests asociados a esta paciente.</p>
+                                <a href="{% url 'gestacion:agregar_gestacion' %}?paciente={{ paciente.pk }}" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                                    Generar test
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </details>
+
+                <div class="form-actions detail-footer"> 
+                    <a href="{% url 'paciente:eliminar_paciente' paciente.pk %}" class="btn-danger">
+                        Eliminar Paciente
+                    </a>
+
+                    <div class="right-actions">
+                        <a href="{% url 'paciente:listar_pacientes' %}" class="btn-secondary">Volver</a>
+                        
+                        <a href="{% url 'paciente:actualizar_paciente' paciente.pk %}" class="btn-primary">
+                            Editar Datos Personales
+                        </a>
+                    </div>
+                </div>
+
+            </div> 
+            
+            <div class="dashboard-panel audit-panel"> 
+                <h3 class="audit-title">Auditoría de Ficha</h3> 
+                
+                <div class="stat-item">
+                    <span class="stat-label">Ingresado por:</span>
+                    <div class="audit-info-row"> 
+                        <img src="{% static 'icons/matronaicon.png' %}" width="35" class="audit-photo" alt="Foto"> 
+                        <div>
+                            <span class="dato-valor audit-stat-value">
+                                {{ paciente.created_by.get_full_name|default:paciente.created_by.username|default:"Sistema" }}
+                            </span> 
+                            <span class="stat-label audit-stat-date">
+                                📅 {{ paciente.created_at|date:"d/m/Y" }} • 🕒 {{ paciente.created_at|time:"H:i" }}
+                            </span> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-label">Última Actualización:</span>
+                    <div class="audit-info-row"> 
+                        <div class="audit-initials-pill">UP</div> 
+                        <div>
+                            <span class="dato-valor audit-stat-value">
+                                {{ paciente.updated_by.get_full_name|default:paciente.updated_by.username|default:"Sistema" }}
+                            </span> 
+                            <span class="stat-label audit-stat-date">
+                                📅 {{ paciente.updated_at|date:"d/m/Y" }} • 🕒 {{ paciente.updated_at|time:"H:i" }}
+                            </span> 
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+
+        </div> 
+
+    </main>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+    <script>
+        const deleteBtn = document.querySelector('.btn-danger');
+        if(deleteBtn) {
+            deleteBtn.addEventListener('click', function(e) {
+                if(!confirm('ATENCIÓN: ¿Estás seguro de eliminar a {{ paciente.obtener_nombre_completo }}? Esta acción borrará todo su historial médico.')) {
+                    e.preventDefault();
+                }
+            });
+        }
+    </script>
+{% endblock scripts %}

@@ -1,0 +1,5135 @@
+[
+{
+    "model": "pacientes.tipopaciente",
+    "pk": 1,
+    "fields": {
+        "nombre": "Institucional"
+    }
+},
+{
+    "model": "pacientes.tipopaciente",
+    "pk": 2,
+    "fields": {
+        "nombre": "Prehospitalario"
+    }
+},
+{
+    "model": "pacientes.tipopaciente",
+    "pk": 3,
+    "fields": {
+        "nombre": "Fuera de la Red Asistencial"
+    }
+},
+{
+    "model": "pacientes.tipopaciente",
+    "pk": 4,
+    "fields": {
+        "nombre": "Domicilio con Atención Profesional"
+    }
+},
+{
+    "model": "pacientes.tipopaciente",
+    "pk": 5,
+    "fields": {
+        "nombre": "Domicilio sin  Atención Profesional"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 1,
+    "fields": {
+        "nombre": "Bulnes"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 2,
+    "fields": {
+        "nombre": "Chillán"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 3,
+    "fields": {
+        "nombre": "Chillán Viejo"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 4,
+    "fields": {
+        "nombre": "El Carmen"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 5,
+    "fields": {
+        "nombre": "Pemuco"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 6,
+    "fields": {
+        "nombre": "Pinto"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 7,
+    "fields": {
+        "nombre": "Quillón"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 8,
+    "fields": {
+        "nombre": "San Ignacio"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 9,
+    "fields": {
+        "nombre": "Yungay"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 10,
+    "fields": {
+        "nombre": "Cobquecura"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 11,
+    "fields": {
+        "nombre": "Coelemu"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 12,
+    "fields": {
+        "nombre": "Ninhue"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 13,
+    "fields": {
+        "nombre": "Portezuelo"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 14,
+    "fields": {
+        "nombre": "Quirihue"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 15,
+    "fields": {
+        "nombre": "Ránquil"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 16,
+    "fields": {
+        "nombre": "San Carlos"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 17,
+    "fields": {
+        "nombre": "Ñiquén"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 18,
+    "fields": {
+        "nombre": "San Fabián"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 19,
+    "fields": {
+        "nombre": "San Nicolás"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 20,
+    "fields": {
+        "nombre": "Treguaco"
+    }
+},
+{
+    "model": "pacientes.comuna",
+    "pk": 21,
+    "fields": {
+        "nombre": "Trehuaco"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 1,
+    "fields": {
+        "nombre": "Chile"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 2,
+    "fields": {
+        "nombre": "Argentina"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 3,
+    "fields": {
+        "nombre": "Bolivia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 4,
+    "fields": {
+        "nombre": "Brasil"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 5,
+    "fields": {
+        "nombre": "Colombia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 6,
+    "fields": {
+        "nombre": "Ecuador"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 7,
+    "fields": {
+        "nombre": "Paraguay"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 8,
+    "fields": {
+        "nombre": "Perú"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 9,
+    "fields": {
+        "nombre": "Uruguay"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 10,
+    "fields": {
+        "nombre": "Venezuela"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 11,
+    "fields": {
+        "nombre": "México"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 12,
+    "fields": {
+        "nombre": "Estados Unidos"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 13,
+    "fields": {
+        "nombre": "Canadá"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 14,
+    "fields": {
+        "nombre": "Costa Rica"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 15,
+    "fields": {
+        "nombre": "Cuba"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 16,
+    "fields": {
+        "nombre": "Panamá"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 17,
+    "fields": {
+        "nombre": "República Dominicana"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 18,
+    "fields": {
+        "nombre": "España"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 19,
+    "fields": {
+        "nombre": "Francia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 20,
+    "fields": {
+        "nombre": "Italia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 21,
+    "fields": {
+        "nombre": "Alemania"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 22,
+    "fields": {
+        "nombre": "Portugal"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 23,
+    "fields": {
+        "nombre": "Reino Unido"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 24,
+    "fields": {
+        "nombre": "Suecia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 25,
+    "fields": {
+        "nombre": "Noruega"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 26,
+    "fields": {
+        "nombre": "Finlandia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 27,
+    "fields": {
+        "nombre": "Países Bajos"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 28,
+    "fields": {
+        "nombre": "Bélgica"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 29,
+    "fields": {
+        "nombre": "Grecia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 30,
+    "fields": {
+        "nombre": "Polonia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 31,
+    "fields": {
+        "nombre": "Suiza"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 32,
+    "fields": {
+        "nombre": "OTRA"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 33,
+    "fields": {
+        "nombre": "China"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 34,
+    "fields": {
+        "nombre": "Japón"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 35,
+    "fields": {
+        "nombre": "Corea del Sur"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 36,
+    "fields": {
+        "nombre": "Corea del Norte"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 37,
+    "fields": {
+        "nombre": "India"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 38,
+    "fields": {
+        "nombre": "Pakistán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 39,
+    "fields": {
+        "nombre": "Bangladés"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 40,
+    "fields": {
+        "nombre": "Sri Lanka"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 41,
+    "fields": {
+        "nombre": "Nepal"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 42,
+    "fields": {
+        "nombre": "Bután"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 43,
+    "fields": {
+        "nombre": "Maldivas"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 44,
+    "fields": {
+        "nombre": "Vietnam"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 45,
+    "fields": {
+        "nombre": "Tailandia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 46,
+    "fields": {
+        "nombre": "Camboya"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 47,
+    "fields": {
+        "nombre": "Laos"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 48,
+    "fields": {
+        "nombre": "Myanmar"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 49,
+    "fields": {
+        "nombre": "Filipinas"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 50,
+    "fields": {
+        "nombre": "Indonesia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 51,
+    "fields": {
+        "nombre": "Malasia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 52,
+    "fields": {
+        "nombre": "Singapur"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 53,
+    "fields": {
+        "nombre": "Brunéi"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 54,
+    "fields": {
+        "nombre": "Arabia Saudita"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 55,
+    "fields": {
+        "nombre": "Emiratos Árabes Unidos"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 56,
+    "fields": {
+        "nombre": "Qatar"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 57,
+    "fields": {
+        "nombre": "Baréin"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 58,
+    "fields": {
+        "nombre": "Kuwait"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 59,
+    "fields": {
+        "nombre": "Omán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 60,
+    "fields": {
+        "nombre": "Yemen"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 61,
+    "fields": {
+        "nombre": "Irán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 62,
+    "fields": {
+        "nombre": "Irak"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 63,
+    "fields": {
+        "nombre": "Siria"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 64,
+    "fields": {
+        "nombre": "Jordania"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 65,
+    "fields": {
+        "nombre": "Líbano"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 66,
+    "fields": {
+        "nombre": "Israel"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 67,
+    "fields": {
+        "nombre": "Palestina"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 68,
+    "fields": {
+        "nombre": "Turquía"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 69,
+    "fields": {
+        "nombre": "Azerbaiyán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 70,
+    "fields": {
+        "nombre": "Armenia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 71,
+    "fields": {
+        "nombre": "Georgia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 72,
+    "fields": {
+        "nombre": "Kazajistán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 73,
+    "fields": {
+        "nombre": "Uzbekistán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 74,
+    "fields": {
+        "nombre": "Turkmenistán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 75,
+    "fields": {
+        "nombre": "Kirguistán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 76,
+    "fields": {
+        "nombre": "Tayikistán"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 77,
+    "fields": {
+        "nombre": "Mongolia"
+    }
+},
+{
+    "model": "pacientes.nacionalidad",
+    "pk": 78,
+    "fields": {
+        "nombre": "Chipre"
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 1,
+    "fields": {
+        "nombre": "CESFAM Ultraestación",
+        "comuna": 2
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 2,
+    "fields": {
+        "nombre": "CESFAM San Ramón Nonato",
+        "comuna": 2
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 3,
+    "fields": {
+        "nombre": "CESFAM Violeta Parra",
+        "comuna": 2
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 4,
+    "fields": {
+        "nombre": "CESFAM Los Volcanes",
+        "comuna": 2
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 5,
+    "fields": {
+        "nombre": "CESFAM Barros",
+        "comuna": 2
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 6,
+    "fields": {
+        "nombre": "CESFAM Chillán Viejo",
+        "comuna": 3
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 7,
+    "fields": {
+        "nombre": "CESFAM San Carlos Centro",
+        "comuna": 16
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 8,
+    "fields": {
+        "nombre": "CESFAM Teresa Baldecchi",
+        "comuna": 16
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 9,
+    "fields": {
+        "nombre": "CESFAM Yungay",
+        "comuna": 9
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 10,
+    "fields": {
+        "nombre": "CESFAM Bulnes",
+        "comuna": 1
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 11,
+    "fields": {
+        "nombre": "CESFAM Quillón",
+        "comuna": 7
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 12,
+    "fields": {
+        "nombre": "CESFAM Coelemu",
+        "comuna": 11
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 13,
+    "fields": {
+        "nombre": "CESFAM Quirihue",
+        "comuna": 14
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 14,
+    "fields": {
+        "nombre": "CESFAM Ninhue",
+        "comuna": 12
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 15,
+    "fields": {
+        "nombre": "CESFAM San Ignacio",
+        "comuna": 8
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 16,
+    "fields": {
+        "nombre": "CESFAM El Carmen",
+        "comuna": 4
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 17,
+    "fields": {
+        "nombre": "CESFAM Coihueco",
+        "comuna": 16
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 18,
+    "fields": {
+        "nombre": "CESFAM San Fabián",
+        "comuna": 18
+    }
+},
+{
+    "model": "pacientes.cesfam",
+    "pk": 19,
+    "fields": {
+        "nombre": "CESFAM San Nicolás",
+        "comuna": 19
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 5,
+    "fields": {
+        "id": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Av. Libertad 123",
+        "telefono": "+56912345678",
+        "nombre": "Juan",
+        "primer_apellido": "Pérez",
+        "segundo_apellido": "González",
+        "documento": "RUT",
+        "identificacion": "12345678-9",
+        "fecha_nacimiento": "1985-06-15",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "72.50",
+        "altura": "175.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 1,
+        "nacionalidad": 1,
+        "comuna": 2,
+        "cesfam": 1,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 6,
+    "fields": {
+        "id": 2,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Calle Los Álamos 45",
+        "telefono": "+56987654321",
+        "nombre": "María",
+        "primer_apellido": "López",
+        "segundo_apellido": "Ramírez",
+        "documento": "RUT",
+        "identificacion": "23456789-0",
+        "fecha_nacimiento": "1990-03-22",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "60.00",
+        "altura": "162.00",
+        "actividad": "alta",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 2,
+        "nacionalidad": 2,
+        "comuna": 3,
+        "cesfam": 6,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 7,
+    "fields": {
+        "id": 3,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Pasaje Las Rosas 12",
+        "telefono": "+56911223344",
+        "nombre": "Carlos",
+        "primer_apellido": "Soto",
+        "segundo_apellido": "Fernández",
+        "documento": "RUT",
+        "identificacion": "34567890-1",
+        "fecha_nacimiento": "1978-11-05",
+        "descapacitado": true,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": true,
+        "peso": "85.00",
+        "altura": "180.00",
+        "actividad": "baja",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 3,
+        "nacionalidad": 3,
+        "comuna": 1,
+        "cesfam": 10,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 8,
+    "fields": {
+        "id": 4,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Av. Los Pinos 78",
+        "telefono": "+56955667788",
+        "nombre": "Andrea",
+        "primer_apellido": "Morales",
+        "segundo_apellido": "Castillo",
+        "documento": "PAS",
+        "identificacion": "A9876543",
+        "fecha_nacimiento": "1988-01-12",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": true,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "68.00",
+        "altura": "168.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 4,
+        "nacionalidad": 4,
+        "comuna": 16,
+        "cesfam": 7,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 9,
+    "fields": {
+        "id": 5,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Calle Los Robles 33",
+        "telefono": "+56966778899",
+        "nombre": "Patricio",
+        "primer_apellido": "Vargas",
+        "segundo_apellido": "Hernández",
+        "documento": "RUT",
+        "identificacion": "45678901-2",
+        "fecha_nacimiento": "1995-07-30",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": true,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "90.00",
+        "altura": "178.00",
+        "actividad": "alta",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 5,
+        "nacionalidad": 5,
+        "comuna": 7,
+        "cesfam": 11,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 10,
+    "fields": {
+        "id": 6,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Av. Los Robles 44",
+        "telefono": "+56999887766",
+        "nombre": "Fernanda",
+        "primer_apellido": "Rojas",
+        "segundo_apellido": "Silva",
+        "documento": "RUT",
+        "identificacion": "56789012-3",
+        "fecha_nacimiento": "2000-05-14",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": true,
+        "peso": "55.00",
+        "altura": "160.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 1,
+        "nacionalidad": 6,
+        "comuna": 12,
+        "cesfam": 14,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 11,
+    "fields": {
+        "id": 7,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Pasaje Los Olmos 77",
+        "telefono": "+56933445566",
+        "nombre": "Sebastián",
+        "primer_apellido": "Fuentes",
+        "segundo_apellido": "Molina",
+        "documento": "RUT",
+        "identificacion": "67890123-4",
+        "fecha_nacimiento": "1982-09-18",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "80.00",
+        "altura": "182.00",
+        "actividad": "alta",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 2,
+        "nacionalidad": 7,
+        "comuna": 8,
+        "cesfam": 15,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 12,
+    "fields": {
+        "id": 8,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Calle Las Camelias 11",
+        "telefono": "+56922334455",
+        "nombre": "Valentina",
+        "primer_apellido": "Vega",
+        "segundo_apellido": "Castro",
+        "documento": "RUT",
+        "identificacion": "78901234-5",
+        "fecha_nacimiento": "1992-12-02",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "62.00",
+        "altura": "165.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 3,
+        "nacionalidad": 8,
+        "comuna": 4,
+        "cesfam": 16,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 13,
+    "fields": {
+        "id": 9,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Av. Los Cipreses 5",
+        "telefono": "+56955669988",
+        "nombre": "Rodrigo",
+        "primer_apellido": "Navarro",
+        "segundo_apellido": "Ortiz",
+        "documento": "RUT",
+        "identificacion": "89012345-6",
+        "fecha_nacimiento": "1987-08-20",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": true,
+        "peso": "78.00",
+        "altura": "176.00",
+        "actividad": "baja",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 4,
+        "nacionalidad": 9,
+        "comuna": 19,
+        "cesfam": 19,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 14,
+    "fields": {
+        "id": 10,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "direccion": "Calle Los Almendros 22",
+        "telefono": "+56944556677",
+        "nombre": "Isabel",
+        "primer_apellido": "Márquez",
+        "segundo_apellido": "Gutiérrez",
+        "documento": "RUT",
+        "identificacion": "90123456-7",
+        "fecha_nacimiento": "1998-04-11",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "59.00",
+        "altura": "163.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": null,
+        "tipo": 5,
+        "nacionalidad": 10,
+        "comuna": 9,
+        "cesfam": 9,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 15,
+    "fields": {
+        "id": 11,
+        "created_at": "2025-12-06T17:18:24.926Z",
+        "updated_at": "2025-12-06T17:18:24.926Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fasdfdsaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "TMP",
+        "identificacion": "TMP-20251206-40867880559694207817",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "83.00",
+        "altura": "174.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 78,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 16,
+    "fields": {
+        "id": 12,
+        "created_at": "2025-12-06T17:36:26.361Z",
+        "updated_at": "2025-12-06T17:36:26.361Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fsdafsdaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "EXT",
+        "identificacion": "123213213213",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": true,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 5,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 17,
+    "fields": {
+        "id": 13,
+        "created_at": "2025-12-07T05:40:43.626Z",
+        "updated_at": "2025-12-07T05:40:43.626Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fsasada",
+        "segundo_apellido": "valdebenito",
+        "documento": "EXT",
+        "identificacion": "21232132",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": true,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "174.00",
+        "actividad": "alta",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 1,
+        "nacionalidad": 1,
+        "comuna": 19,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 18,
+    "fields": {
+        "id": 14,
+        "created_at": "2025-12-07T05:42:40.302Z",
+        "updated_at": "2025-12-07T05:42:40.302Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "dafdf",
+        "primer_apellido": "dfdaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "RUT",
+        "identificacion": "20111922-7",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 1,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 19,
+    "fields": {
+        "id": 15,
+        "created_at": "2025-12-07T05:44:40.186Z",
+        "updated_at": "2025-12-11T04:58:34.753Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "Boliviano Boliviano",
+        "primer_apellido": "Riquelme",
+        "segundo_apellido": "Llanos",
+        "documento": "PAS",
+        "identificacion": "20111922-7",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 3,
+        "comuna": 19,
+        "cesfam": 19,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 20,
+    "fields": {
+        "id": 16,
+        "created_at": "2025-12-07T05:46:57.490Z",
+        "updated_at": "2025-12-07T05:46:57.490Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "dsfdasf",
+        "primer_apellido": "dafdf",
+        "segundo_apellido": "dafdaf",
+        "documento": "TMP",
+        "identificacion": "TMP-20251207-21709499358054215508",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": true,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 3,
+        "nacionalidad": 1,
+        "comuna": 18,
+        "cesfam": 17,
+        "history_date": "2025-12-11T18:32:11.381Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 21,
+    "fields": {
+        "id": 17,
+        "created_at": "2025-12-07T05:49:00.134Z",
+        "updated_at": "2025-12-07T05:49:00.134Z",
+        "direccion": "",
+        "telefono": "",
+        "nombre": "23213213",
+        "primer_apellido": "2313213",
+        "segundo_apellido": "213213",
+        "documento": "TMP",
+        "identificacion": "TMP-20251207-32368652863557587046",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 78,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.382Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 22,
+    "fields": {
+        "id": 18,
+        "created_at": "2025-12-08T05:25:13.051Z",
+        "updated_at": "2025-12-08T05:25:13.051Z",
+        "direccion": "",
+        "telefono": "",
+        "nombre": "Daniel",
+        "primer_apellido": "Valdebenito",
+        "segundo_apellido": "Jara",
+        "documento": "EXT",
+        "identificacion": "20111922-7",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": true,
+        "pueblo_originario": false,
+        "privada_de_libertad": true,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "80.00",
+        "altura": "175.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 8,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.382Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 23,
+    "fields": {
+        "id": 19,
+        "created_at": "2025-12-09T04:25:19.188Z",
+        "updated_at": "2025-12-09T04:25:19.188Z",
+        "direccion": "",
+        "telefono": "",
+        "nombre": "Daniela",
+        "primer_apellido": "gutierrez",
+        "segundo_apellido": "valdebenito",
+        "documento": "RUT",
+        "identificacion": "122049477",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 1,
+        "nacionalidad": 13,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.382Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 24,
+    "fields": {
+        "id": 20,
+        "created_at": "2025-12-11T05:48:22.412Z",
+        "updated_at": "2025-12-11T05:48:22.412Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fsdafsdaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "TMP",
+        "identificacion": "20.111.922-7",
+        "fecha_nacimiento": "2025-12-11",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 5,
+        "updated_by": 1,
+        "tipo": 3,
+        "nacionalidad": 69,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T18:32:11.382Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 25,
+    "fields": {
+        "id": 17,
+        "created_at": "2025-12-07T05:49:00.134Z",
+        "updated_at": "2025-12-11T22:30:33.711Z",
+        "direccion": "",
+        "telefono": "",
+        "nombre": "CONCHETUMARE",
+        "primer_apellido": "CONCHETUMARE",
+        "segundo_apellido": "213213",
+        "documento": "TMP",
+        "identificacion": "TMP-20251207-32368652863557587046",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 78,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-11T22:30:33.713Z",
+        "history_change_reason": null,
+        "history_type": "~",
+        "history_user": 5
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 26,
+    "fields": {
+        "id": 16,
+        "created_at": "2025-12-07T05:46:57.490Z",
+        "updated_at": "2025-12-07T05:46:57.490Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "dsfdasf",
+        "primer_apellido": "dafdf",
+        "segundo_apellido": "dafdaf",
+        "documento": "TMP",
+        "identificacion": "TMP-20251207-21709499358054215508",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": true,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 3,
+        "nacionalidad": 1,
+        "comuna": 18,
+        "cesfam": 17,
+        "history_date": "2025-12-11T23:09:09.073Z",
+        "history_change_reason": null,
+        "history_type": "-",
+        "history_user": 5
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 27,
+    "fields": {
+        "id": 17,
+        "created_at": "2025-12-07T05:49:00.134Z",
+        "updated_at": "2025-12-11T22:30:33.711Z",
+        "direccion": "",
+        "telefono": "",
+        "nombre": "CONCHETUMARE",
+        "primer_apellido": "CONCHETUMARE",
+        "segundo_apellido": "213213",
+        "documento": "TMP",
+        "identificacion": "TMP-20251207-32368652863557587046",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 78,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-12T19:11:45.843Z",
+        "history_change_reason": "Si para probar el sistema de auditoria ante una eliminacion",
+        "history_type": "-",
+        "history_user": 2
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 28,
+    "fields": {
+        "id": 20,
+        "created_at": "2025-12-11T05:48:22.412Z",
+        "updated_at": "2025-12-11T05:48:22.412Z",
+        "direccion": "francisco bilbao 0351",
+        "telefono": "920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fsdafsdaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "TMP",
+        "identificacion": "20.111.922-7",
+        "fecha_nacimiento": "2025-12-11",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja",
+        "created_by": 5,
+        "updated_by": 1,
+        "tipo": 3,
+        "nacionalidad": 69,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-12T19:14:54.406Z",
+        "history_change_reason": "Lo elimino porque me equivoque al registrar a es eperuano",
+        "history_type": "-",
+        "history_user": 2
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 29,
+    "fields": {
+        "id": 18,
+        "created_at": "2025-12-08T05:25:13.051Z",
+        "updated_at": "2025-12-08T05:25:13.051Z",
+        "direccion": "",
+        "telefono": "",
+        "nombre": "Daniel",
+        "primer_apellido": "Valdebenito",
+        "segundo_apellido": "Jara",
+        "documento": "EXT",
+        "identificacion": "20111922-7",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": true,
+        "pueblo_originario": false,
+        "privada_de_libertad": true,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "80.00",
+        "altura": "175.00",
+        "actividad": "baja",
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo": 2,
+        "nacionalidad": 8,
+        "comuna": null,
+        "cesfam": null,
+        "history_date": "2025-12-12T19:42:32.871Z",
+        "history_change_reason": "Bueno este es un mensaje para probar la auditoria",
+        "history_type": "-",
+        "history_user": 2
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 30,
+    "fields": {
+        "id": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-12T22:08:58.555Z",
+        "direccion": "Av. Libertad 123",
+        "telefono": "+56920036589",
+        "nombre": "Juana",
+        "primer_apellido": "Pérez",
+        "segundo_apellido": "Juana",
+        "documento": "PAS",
+        "identificacion": "1111111111123",
+        "fecha_nacimiento": "2000-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "72.50",
+        "altura": "175.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": 2,
+        "tipo": 1,
+        "nacionalidad": 21,
+        "comuna": 2,
+        "cesfam": 1,
+        "history_date": "2025-12-12T22:08:58.565Z",
+        "history_change_reason": "LO ESTOY ACTUALIZANDO PARA PROBAR LA AUDITORIA PO LOCO PERRO",
+        "history_type": "~",
+        "history_user": 2
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 31,
+    "fields": {
+        "id": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-13T00:23:05.154Z",
+        "direccion": "Av. Libertad 123",
+        "telefono": "+56920036589",
+        "nombre": "Juana",
+        "primer_apellido": "Pérez",
+        "segundo_apellido": "Juana",
+        "documento": "PAS",
+        "identificacion": "1111111111123",
+        "fecha_nacimiento": "1999-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "72.50",
+        "altura": "175.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": 2,
+        "tipo": 1,
+        "nacionalidad": 21,
+        "comuna": 2,
+        "cesfam": 1,
+        "history_date": "2025-12-13T00:23:05.163Z",
+        "history_change_reason": "Quiero probar mas cosas de la auditoria",
+        "history_type": "~",
+        "history_user": 2
+    }
+},
+{
+    "model": "pacientes.historicalpaciente",
+    "pk": 32,
+    "fields": {
+        "id": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-13T00:25:20.530Z",
+        "direccion": "Av. Libertad 123",
+        "telefono": "+56920036589",
+        "nombre": "Juana",
+        "primer_apellido": "Pérez",
+        "segundo_apellido": "Juana",
+        "documento": "PAS",
+        "identificacion": "1111111111123",
+        "fecha_nacimiento": "2000-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "72.50",
+        "altura": "175.00",
+        "actividad": "moderada",
+        "created_by": null,
+        "updated_by": 2,
+        "tipo": 1,
+        "nacionalidad": 21,
+        "comuna": 2,
+        "cesfam": 1,
+        "history_date": "2025-12-13T00:25:20.540Z",
+        "history_change_reason": "Restaurandolo a la version de nacio en el año 2000 el 30 de diciembre",
+        "history_type": "~",
+        "history_user": 3
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 1,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-13T00:25:20.530Z",
+        "tipo": 1,
+        "nacionalidad": 21,
+        "comuna": 2,
+        "cesfam": 1,
+        "direccion": "Av. Libertad 123",
+        "telefono": "+56920036589",
+        "nombre": "Juana",
+        "primer_apellido": "Pérez",
+        "segundo_apellido": "Juana",
+        "documento": "PAS",
+        "identificacion": "1111111111123",
+        "fecha_nacimiento": "2000-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "72.50",
+        "altura": "175.00",
+        "actividad": "moderada"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 2,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 2,
+        "nacionalidad": 2,
+        "comuna": 3,
+        "cesfam": 6,
+        "direccion": "Calle Los Álamos 45",
+        "telefono": "+56987654321",
+        "nombre": "María",
+        "primer_apellido": "López",
+        "segundo_apellido": "Ramírez",
+        "documento": "RUT",
+        "identificacion": "23456789-0",
+        "fecha_nacimiento": "1990-03-22",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "60.00",
+        "altura": "162.00",
+        "actividad": "alta"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 3,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 3,
+        "nacionalidad": 3,
+        "comuna": 1,
+        "cesfam": 10,
+        "direccion": "Pasaje Las Rosas 12",
+        "telefono": "+56911223344",
+        "nombre": "Carlos",
+        "primer_apellido": "Soto",
+        "segundo_apellido": "Fernández",
+        "documento": "RUT",
+        "identificacion": "34567890-1",
+        "fecha_nacimiento": "1978-11-05",
+        "descapacitado": true,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": true,
+        "peso": "85.00",
+        "altura": "180.00",
+        "actividad": "baja"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 4,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 4,
+        "nacionalidad": 4,
+        "comuna": 16,
+        "cesfam": 7,
+        "direccion": "Av. Los Pinos 78",
+        "telefono": "+56955667788",
+        "nombre": "Andrea",
+        "primer_apellido": "Morales",
+        "segundo_apellido": "Castillo",
+        "documento": "PAS",
+        "identificacion": "A9876543",
+        "fecha_nacimiento": "1988-01-12",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": true,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "68.00",
+        "altura": "168.00",
+        "actividad": "moderada"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 5,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 5,
+        "nacionalidad": 5,
+        "comuna": 7,
+        "cesfam": 11,
+        "direccion": "Calle Los Robles 33",
+        "telefono": "+56966778899",
+        "nombre": "Patricio",
+        "primer_apellido": "Vargas",
+        "segundo_apellido": "Hernández",
+        "documento": "RUT",
+        "identificacion": "45678901-2",
+        "fecha_nacimiento": "1995-07-30",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": true,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "90.00",
+        "altura": "178.00",
+        "actividad": "alta"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 6,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 1,
+        "nacionalidad": 6,
+        "comuna": 12,
+        "cesfam": 14,
+        "direccion": "Av. Los Robles 44",
+        "telefono": "+56999887766",
+        "nombre": "Fernanda",
+        "primer_apellido": "Rojas",
+        "segundo_apellido": "Silva",
+        "documento": "RUT",
+        "identificacion": "56789012-3",
+        "fecha_nacimiento": "2000-05-14",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": true,
+        "peso": "55.00",
+        "altura": "160.00",
+        "actividad": "moderada"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 7,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 2,
+        "nacionalidad": 7,
+        "comuna": 8,
+        "cesfam": 15,
+        "direccion": "Pasaje Los Olmos 77",
+        "telefono": "+56933445566",
+        "nombre": "Sebastián",
+        "primer_apellido": "Fuentes",
+        "segundo_apellido": "Molina",
+        "documento": "RUT",
+        "identificacion": "67890123-4",
+        "fecha_nacimiento": "1982-09-18",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "80.00",
+        "altura": "182.00",
+        "actividad": "alta"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 8,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 3,
+        "nacionalidad": 8,
+        "comuna": 4,
+        "cesfam": 16,
+        "direccion": "Calle Las Camelias 11",
+        "telefono": "+56922334455",
+        "nombre": "Valentina",
+        "primer_apellido": "Vega",
+        "segundo_apellido": "Castro",
+        "documento": "RUT",
+        "identificacion": "78901234-5",
+        "fecha_nacimiento": "1992-12-02",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "62.00",
+        "altura": "165.00",
+        "actividad": "moderada"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 9,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 4,
+        "nacionalidad": 9,
+        "comuna": 19,
+        "cesfam": 19,
+        "direccion": "Av. Los Cipreses 5",
+        "telefono": "+56955669988",
+        "nombre": "Rodrigo",
+        "primer_apellido": "Navarro",
+        "segundo_apellido": "Ortiz",
+        "documento": "RUT",
+        "identificacion": "89012345-6",
+        "fecha_nacimiento": "1987-08-20",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": true,
+        "peso": "78.00",
+        "altura": "176.00",
+        "actividad": "baja"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 10,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo": 5,
+        "nacionalidad": 10,
+        "comuna": 9,
+        "cesfam": 9,
+        "direccion": "Calle Los Almendros 22",
+        "telefono": "+56944556677",
+        "nombre": "Isabel",
+        "primer_apellido": "Márquez",
+        "segundo_apellido": "Gutiérrez",
+        "documento": "RUT",
+        "identificacion": "90123456-7",
+        "fecha_nacimiento": "1998-04-11",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": true,
+        "visita_guiada": false,
+        "peso": "59.00",
+        "altura": "163.00",
+        "actividad": "moderada"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 11,
+    "fields": {
+        "created_by": 2,
+        "created_at": "2025-12-06T17:18:24.926Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-06T17:18:24.926Z",
+        "tipo": 2,
+        "nacionalidad": 78,
+        "comuna": null,
+        "cesfam": null,
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fasdfdsaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "TMP",
+        "identificacion": "TMP-20251206-40867880559694207817",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "83.00",
+        "altura": "174.00",
+        "actividad": "baja"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 12,
+    "fields": {
+        "created_by": 2,
+        "created_at": "2025-12-06T17:36:26.361Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-06T17:36:26.361Z",
+        "tipo": 2,
+        "nacionalidad": 5,
+        "comuna": null,
+        "cesfam": null,
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fsdafsdaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "EXT",
+        "identificacion": "123213213213",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": true,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 13,
+    "fields": {
+        "created_by": 2,
+        "created_at": "2025-12-07T05:40:43.626Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-07T05:40:43.626Z",
+        "tipo": 1,
+        "nacionalidad": 1,
+        "comuna": 19,
+        "cesfam": null,
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "daniel",
+        "primer_apellido": "fsasada",
+        "segundo_apellido": "valdebenito",
+        "documento": "EXT",
+        "identificacion": "21232132",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": false,
+        "privada_de_libertad": false,
+        "transexual": true,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "174.00",
+        "actividad": "alta"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 14,
+    "fields": {
+        "created_by": 2,
+        "created_at": "2025-12-07T05:42:40.302Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-07T05:42:40.302Z",
+        "tipo": 2,
+        "nacionalidad": 1,
+        "comuna": null,
+        "cesfam": null,
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "dafdf",
+        "primer_apellido": "dfdaf",
+        "segundo_apellido": "valdebenito",
+        "documento": "RUT",
+        "identificacion": "20111922-7",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 15,
+    "fields": {
+        "created_by": 2,
+        "created_at": "2025-12-07T05:44:40.186Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-11T04:58:34.753Z",
+        "tipo": 2,
+        "nacionalidad": 3,
+        "comuna": 19,
+        "cesfam": 19,
+        "direccion": "francisco bilbao 0351",
+        "telefono": "+56920036589",
+        "nombre": "Boliviano Boliviano",
+        "primer_apellido": "Riquelme",
+        "segundo_apellido": "Llanos",
+        "documento": "PAS",
+        "identificacion": "20111922-7",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja"
+    }
+},
+{
+    "model": "pacientes.paciente",
+    "pk": 19,
+    "fields": {
+        "created_by": 2,
+        "created_at": "2025-12-09T04:25:19.188Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-09T04:25:19.188Z",
+        "tipo": 1,
+        "nacionalidad": 13,
+        "comuna": null,
+        "cesfam": null,
+        "direccion": "",
+        "telefono": "",
+        "nombre": "Daniela",
+        "primer_apellido": "gutierrez",
+        "segundo_apellido": "valdebenito",
+        "documento": "RUT",
+        "identificacion": "122049477",
+        "fecha_nacimiento": "1998-12-30",
+        "descapacitado": false,
+        "pueblo_originario": true,
+        "privada_de_libertad": false,
+        "transexual": false,
+        "plan_de_parto": false,
+        "visita_guiada": false,
+        "peso": "0.00",
+        "altura": "0.00",
+        "actividad": "baja"
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 1,
+    "fields": {
+        "id": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-01",
+        "fecha_eco": "2025-04-01",
+        "semanas_eco": 6,
+        "dias_eco": 0,
+        "fecha_inicio_gestacion": "2025-03-01",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 1,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 2,
+    "fields": {
+        "id": 2,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-02-15",
+        "fecha_eco": "2025-03-15",
+        "semanas_eco": 5,
+        "dias_eco": 3,
+        "fecha_inicio_gestacion": "2025-02-15",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": true,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 2,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 3,
+    "fields": {
+        "id": 3,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 2,
+        "riesgo": "alto",
+        "estado": "curso",
+        "origen_datacion": "fur",
+        "fur": "2025-01-20",
+        "fecha_eco": "2025-02-20",
+        "semanas_eco": 4,
+        "dias_eco": 6,
+        "fecha_inicio_gestacion": "2025-01-20",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": true,
+        "hipertension": false,
+        "diabetes": true,
+        "multiple": true,
+        "paciente": 3,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 4,
+    "fields": {
+        "id": 4,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-10",
+        "fecha_eco": "2025-04-10",
+        "semanas_eco": 5,
+        "dias_eco": 0,
+        "fecha_inicio_gestacion": "2025-03-10",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 4,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 5,
+    "fields": {
+        "id": 5,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-02-28",
+        "fecha_eco": "2025-03-28",
+        "semanas_eco": 4,
+        "dias_eco": 5,
+        "fecha_inicio_gestacion": "2025-02-28",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 5,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 6,
+    "fields": {
+        "id": 6,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "fur",
+        "fur": "2025-03-05",
+        "fecha_eco": "2025-04-05",
+        "semanas_eco": 5,
+        "dias_eco": 1,
+        "fecha_inicio_gestacion": "2025-03-05",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 6,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 7,
+    "fields": {
+        "id": 7,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "alto",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-01-30",
+        "fecha_eco": "2025-03-01",
+        "semanas_eco": 6,
+        "dias_eco": 2,
+        "fecha_inicio_gestacion": "2025-01-30",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": true,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 7,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 8,
+    "fields": {
+        "id": 8,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-12",
+        "fecha_eco": "2025-04-12",
+        "semanas_eco": 4,
+        "dias_eco": 3,
+        "fecha_inicio_gestacion": "2025-03-12",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 8,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 9,
+    "fields": {
+        "id": 9,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "fur",
+        "fur": "2025-02-20",
+        "fecha_eco": "2025-03-20",
+        "semanas_eco": 5,
+        "dias_eco": 0,
+        "fecha_inicio_gestacion": "2025-02-20",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 9,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 10,
+    "fields": {
+        "id": 10,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-01",
+        "fecha_eco": "2025-04-01",
+        "semanas_eco": 4,
+        "dias_eco": 4,
+        "fecha_inicio_gestacion": "2025-03-01",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 10,
+        "created_by": null,
+        "updated_by": null,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 11,
+    "fields": {
+        "id": 11,
+        "created_at": "2025-12-07T19:55:38.906Z",
+        "updated_at": "2025-12-07T19:55:38.906Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "sin",
+        "fur": null,
+        "fecha_eco": null,
+        "semanas_eco": null,
+        "dias_eco": null,
+        "fecha_inicio_gestacion": null,
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": true,
+        "multiple": false,
+        "paciente": 11,
+        "created_by": 2,
+        "updated_by": 2,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 12,
+    "fields": {
+        "id": 12,
+        "created_at": "2025-12-08T05:26:13.500Z",
+        "updated_at": "2025-12-08T05:26:13.500Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "sin",
+        "fur": null,
+        "fecha_eco": null,
+        "semanas_eco": null,
+        "dias_eco": null,
+        "fecha_inicio_gestacion": null,
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 18,
+        "created_by": 2,
+        "updated_by": 2,
+        "history_date": "2025-12-11T18:31:24.794Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "pacientes.historicalgestacion",
+    "pk": 13,
+    "fields": {
+        "id": 12,
+        "created_at": "2025-12-08T05:26:13.500Z",
+        "updated_at": "2025-12-08T05:26:13.500Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "sin",
+        "fur": null,
+        "fecha_eco": null,
+        "semanas_eco": null,
+        "dias_eco": null,
+        "fecha_inicio_gestacion": null,
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false,
+        "paciente": 18,
+        "created_by": 2,
+        "updated_by": 2,
+        "history_date": "2025-12-12T19:42:32.878Z",
+        "history_change_reason": null,
+        "history_type": "-",
+        "history_user": 2
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 1,
+    "fields": {
+        "paciente": 1,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-01",
+        "fecha_eco": "2025-04-01",
+        "semanas_eco": 6,
+        "dias_eco": 0,
+        "fecha_inicio_gestacion": "2025-03-01",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 2,
+    "fields": {
+        "paciente": 2,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-02-15",
+        "fecha_eco": "2025-03-15",
+        "semanas_eco": 5,
+        "dias_eco": 3,
+        "fecha_inicio_gestacion": "2025-02-15",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": true,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 3,
+    "fields": {
+        "paciente": 3,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 2,
+        "riesgo": "alto",
+        "estado": "curso",
+        "origen_datacion": "fur",
+        "fur": "2025-01-20",
+        "fecha_eco": "2025-02-20",
+        "semanas_eco": 4,
+        "dias_eco": 6,
+        "fecha_inicio_gestacion": "2025-01-20",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": true,
+        "hipertension": false,
+        "diabetes": true,
+        "multiple": true
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 4,
+    "fields": {
+        "paciente": 4,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-10",
+        "fecha_eco": "2025-04-10",
+        "semanas_eco": 5,
+        "dias_eco": 0,
+        "fecha_inicio_gestacion": "2025-03-10",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 5,
+    "fields": {
+        "paciente": 5,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-02-28",
+        "fecha_eco": "2025-03-28",
+        "semanas_eco": 4,
+        "dias_eco": 5,
+        "fecha_inicio_gestacion": "2025-02-28",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 6,
+    "fields": {
+        "paciente": 6,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "fur",
+        "fur": "2025-03-05",
+        "fecha_eco": "2025-04-05",
+        "semanas_eco": 5,
+        "dias_eco": 1,
+        "fecha_inicio_gestacion": "2025-03-05",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 7,
+    "fields": {
+        "paciente": 7,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "alto",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-01-30",
+        "fecha_eco": "2025-03-01",
+        "semanas_eco": 6,
+        "dias_eco": 2,
+        "fecha_inicio_gestacion": "2025-01-30",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": true,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 8,
+    "fields": {
+        "paciente": 8,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-12",
+        "fecha_eco": "2025-04-12",
+        "semanas_eco": 4,
+        "dias_eco": 3,
+        "fecha_inicio_gestacion": "2025-03-12",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 9,
+    "fields": {
+        "paciente": 9,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "fur",
+        "fur": "2025-02-20",
+        "fecha_eco": "2025-03-20",
+        "semanas_eco": 5,
+        "dias_eco": 0,
+        "fecha_inicio_gestacion": "2025-02-20",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 10,
+    "fields": {
+        "paciente": 10,
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "numero_fetos": 1,
+        "riesgo": "medio",
+        "estado": "curso",
+        "origen_datacion": "eco",
+        "fur": "2025-03-01",
+        "fecha_eco": "2025-04-01",
+        "semanas_eco": 4,
+        "dias_eco": 4,
+        "fecha_inicio_gestacion": "2025-03-01",
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": false,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.gestacion",
+    "pk": 11,
+    "fields": {
+        "paciente": 11,
+        "created_by": 2,
+        "created_at": "2025-12-07T19:55:38.906Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-07T19:55:38.906Z",
+        "numero_fetos": 1,
+        "riesgo": "bajo",
+        "estado": "curso",
+        "origen_datacion": "sin",
+        "fur": null,
+        "fecha_eco": null,
+        "semanas_eco": null,
+        "dias_eco": null,
+        "fecha_inicio_gestacion": null,
+        "numero_gestacion": 1,
+        "enfermedad_cardiaca": false,
+        "hipertension": false,
+        "diabetes": true,
+        "multiple": false
+    }
+},
+{
+    "model": "pacientes.testvih",
+    "pk": 1,
+    "fields": {
+        "gestacion": 1,
+        "resultado": "negativo",
+        "fecha_toma": "2025-03-05",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": false,
+        "durante_parto": false,
+        "observaciones": "Primer test rutinario",
+        "orden": 1,
+        "n_aro": 10001,
+        "trimestre": "1"
+    }
+},
+{
+    "model": "pacientes.testvih",
+    "pk": 5,
+    "fields": {
+        "gestacion": 3,
+        "resultado": "negativo",
+        "fecha_toma": "2025-01-15",
+        "created_at": null,
+        "lugar_toma": "urgencia",
+        "antibiotico": false,
+        "durante_parto": false,
+        "observaciones": "Primer trimestre",
+        "orden": 1,
+        "n_aro": 10002,
+        "trimestre": "1"
+    }
+},
+{
+    "model": "pacientes.testvih",
+    "pk": 9,
+    "fields": {
+        "gestacion": 5,
+        "resultado": "positivo",
+        "fecha_toma": "2025-01-25",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": true,
+        "durante_parto": false,
+        "observaciones": "Primer trimestre",
+        "orden": 1,
+        "n_aro": 10003,
+        "trimestre": "1"
+    }
+},
+{
+    "model": "pacientes.testsgb",
+    "pk": 2,
+    "fields": {
+        "gestacion": 1,
+        "resultado": "positivo",
+        "fecha_toma": "2025-04-10",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": true,
+        "durante_parto": false,
+        "observaciones": "Control de rutina",
+        "orden": 2
+    }
+},
+{
+    "model": "pacientes.testsgb",
+    "pk": 6,
+    "fields": {
+        "gestacion": 3,
+        "resultado": "negativo",
+        "fecha_toma": "2025-03-05",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": false,
+        "durante_parto": false,
+        "observaciones": "Segundo control",
+        "orden": 2
+    }
+},
+{
+    "model": "pacientes.testsgb",
+    "pk": 10,
+    "fields": {
+        "gestacion": 5,
+        "resultado": "negativo",
+        "fecha_toma": "2025-03-01",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": false,
+        "durante_parto": false,
+        "observaciones": "Segundo control",
+        "orden": 2
+    }
+},
+{
+    "model": "pacientes.testvdrl",
+    "pk": 3,
+    "fields": {
+        "gestacion": 2,
+        "resultado": "negativo",
+        "fecha_toma": "2025-02-20",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": false,
+        "durante_parto": false,
+        "observaciones": "Control inicial",
+        "orden": 1
+    }
+},
+{
+    "model": "pacientes.testvdrl",
+    "pk": 7,
+    "fields": {
+        "gestacion": 4,
+        "resultado": "positivo",
+        "fecha_toma": "2025-04-01",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": true,
+        "durante_parto": false,
+        "observaciones": "Control inicial",
+        "orden": 1
+    }
+},
+{
+    "model": "pacientes.testhepatitisb",
+    "pk": 4,
+    "fields": {
+        "gestacion": 2,
+        "resultado": "positivo",
+        "fecha_toma": "2025-02-25",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": false,
+        "durante_parto": false,
+        "observaciones": "Se deriva a especialista",
+        "orden": 2,
+        "derivacion_especialista": true
+    }
+},
+{
+    "model": "pacientes.testhepatitisb",
+    "pk": 8,
+    "fields": {
+        "gestacion": 4,
+        "resultado": "negativo",
+        "fecha_toma": "2025-04-10",
+        "created_at": null,
+        "lugar_toma": "preparto",
+        "antibiotico": false,
+        "durante_parto": false,
+        "observaciones": "Segundo control",
+        "orden": 2,
+        "derivacion_especialista": false
+    }
+},
+{
+    "model": "partos.tipodeingreso",
+    "pk": 1,
+    "fields": {
+        "nombre": "Parto espontáneo"
+    }
+},
+{
+    "model": "partos.tipodeingreso",
+    "pk": 2,
+    "fields": {
+        "nombre": "Cesárea programada"
+    }
+},
+{
+    "model": "partos.tipodeingreso",
+    "pk": 3,
+    "fields": {
+        "nombre": "Cesárea de urgencia"
+    }
+},
+{
+    "model": "partos.tipodeingreso",
+    "pk": 4,
+    "fields": {
+        "nombre": "Remisión desde otro centro de salud"
+    }
+},
+{
+    "model": "partos.tipodeingreso",
+    "pk": 5,
+    "fields": {
+        "nombre": "Consulta externa/parto domiciliario trasladado"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 1,
+    "fields": {
+        "grupo": "Grupo 1",
+        "descripcion": "Nulíparas, embarazo único, cefálica, ≥37 semanas en trabajo de parto espontáneo"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 2,
+    "fields": {
+        "grupo": "Grupo 2.a",
+        "descripcion": "Nulíparas, embarazo único, cefálica, ≥37 semanas, cesárea programada o con inducción de trabajo de parto. Total cesáreas grupo 2"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 3,
+    "fields": {
+        "grupo": "Grupo 2.b",
+        "descripcion": "Nulíparas, embarazo único, cefálica, ≥37 semanas, por requerimiento materno"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 4,
+    "fields": {
+        "grupo": "Grupo 3",
+        "descripcion": "Multípara, sin cesárea previa, embarazo único, cefálica, ≥37 semanas en trabajo de parto espontáneo"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 5,
+    "fields": {
+        "grupo": "Grupo 4",
+        "descripcion": "Multípara, sin cesárea previa, embarazo único, cefálica, ≥37 semanas, cesárea programada o con inducción de trabajo de parto"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 6,
+    "fields": {
+        "grupo": "Grupo 5.1",
+        "descripcion": "Multíparas con 1 cesárea previa, embarazo único, cefálica, ≥37 semanas"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 7,
+    "fields": {
+        "grupo": "Grupo 5.2",
+        "descripcion": "Multíparas con 2 o más cesáreas previas, embarazo único, cefálica, ≥37 semanas"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 8,
+    "fields": {
+        "grupo": "Grupo 6",
+        "descripcion": "Nulíparas, embarazo único, podálica"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 9,
+    "fields": {
+        "grupo": "Grupo 7",
+        "descripcion": "Multíparas, embarazo único, podálica, con 1 o más cesáreas previas"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 10,
+    "fields": {
+        "grupo": "Grupo 8",
+        "descripcion": "Todas las mujeres con embarazo múltiple, incluidas las que tienen 1 o más cesáreas previas"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 11,
+    "fields": {
+        "grupo": "Grupo 9",
+        "descripcion": "Embarazo único, transverso y oblicuo, incluidas las que tienen una o más cesáreas previas"
+    }
+},
+{
+    "model": "partos.gruporobson",
+    "pk": 12,
+    "fields": {
+        "grupo": "Grupo 10",
+        "descripcion": "Todas las mujeres con embarazo único, cefálica, <37 semanas, incluidas las que tienen 1 o más cesáreas"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 1,
+    "fields": {
+        "nombre": "Hemorragia post parto - Inercia",
+        "descripcion": "Hemorragia post parto causada por inercia uterina"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 2,
+    "fields": {
+        "nombre": "Hemorragia post parto - Restos",
+        "descripcion": "Hemorragia post parto causada por restos placentarios"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 3,
+    "fields": {
+        "nombre": "Hemorragia post parto - Trauma",
+        "descripcion": "Hemorragia post parto causada por trauma"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 4,
+    "fields": {
+        "nombre": "Hemorragia post parto - Desgarros III y IV",
+        "descripcion": "Hemorragia post parto causada por desgarros de tercer y cuarto grado"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 5,
+    "fields": {
+        "nombre": "Hemorragia post parto - Alteraciones de la coagulación",
+        "descripcion": "Hemorragia post parto causada por alteraciones de la coagulación"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 6,
+    "fields": {
+        "nombre": "Preeclampsia severa",
+        "descripcion": "Preeclampsia con síntomas graves y riesgo para la madre y el feto"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 7,
+    "fields": {
+        "nombre": "Eclampsia",
+        "descripcion": "Convulsiones asociadas a preeclampsia durante el embarazo"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 8,
+    "fields": {
+        "nombre": "Sepsis o infección sistémica grave",
+        "descripcion": "Infección sistémica grave con riesgo vital"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 9,
+    "fields": {
+        "nombre": "Manejo quirúrgico de la inercia uterina",
+        "descripcion": "Procedimiento quirúrgico para tratar la inercia uterina"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 10,
+    "fields": {
+        "nombre": "Histerectomía obstétrica",
+        "descripcion": "Extirpación del útero por complicaciones obstétricas"
+    }
+},
+{
+    "model": "partos.complicacion",
+    "pk": 11,
+    "fields": {
+        "nombre": "Anemia severa postmetrorragia que requiere transfusión",
+        "descripcion": "Anemia grave después de hemorragia post parto que requiere transfusión de sangre"
+    }
+},
+{
+    "model": "partos.vianacimiento",
+    "pk": 1,
+    "fields": {
+        "tipo": "CES.ELECTIVA",
+        "descripcion": "Cesárea electiva programada"
+    }
+},
+{
+    "model": "partos.vianacimiento",
+    "pk": 2,
+    "fields": {
+        "tipo": "CES. URGENCIA",
+        "descripcion": "Cesárea de urgencia"
+    }
+},
+{
+    "model": "partos.vianacimiento",
+    "pk": 3,
+    "fields": {
+        "tipo": "EUTOCICO",
+        "descripcion": "Parto vaginal normal sin complicaciones"
+    }
+},
+{
+    "model": "partos.vianacimiento",
+    "pk": 4,
+    "fields": {
+        "tipo": "DISTOCICO",
+        "descripcion": "Parto vaginal con dificultades o instrumental"
+    }
+},
+{
+    "model": "partos.historicalparto",
+    "pk": 1,
+    "fields": {
+        "id": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "hora_inicio": "2025-12-02T08:30:00Z",
+        "numero_aro": 1,
+        "n_tactos_vaginales": 2,
+        "rotura_membrana": "espontanea",
+        "estado": "activo",
+        "posicion": "semisentada",
+        "tipo_regimen": "comun",
+        "observaciones": "Parto normal sin complicaciones",
+        "tiempo_membrana_rota": "01:30:00",
+        "tiempo_dilatacion": "04:00:00",
+        "tiempo_expulsivo": "00:40:00",
+        "edad_madre": 28,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": true,
+        "ttc": false,
+        "induccion": false,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": false,
+        "created_by": null,
+        "updated_by": null,
+        "tipo_de_ingreso": 1,
+        "grupo_robson": 1,
+        "via_nacimiento": 1,
+        "gestacion": 1,
+        "history_date": "2025-12-11T18:31:24.808Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "partos.historicalparto",
+    "pk": 2,
+    "fields": {
+        "id": 2,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "hora_inicio": "2025-12-02T09:15:00Z",
+        "numero_aro": 2,
+        "n_tactos_vaginales": 1,
+        "rotura_membrana": "artificial",
+        "estado": "expulsivo",
+        "posicion": "litotomia",
+        "tipo_regimen": "liquido",
+        "observaciones": "Cesárea electiva por grupo 2a",
+        "tiempo_membrana_rota": "00:50:00",
+        "tiempo_dilatacion": "03:00:00",
+        "tiempo_expulsivo": "00:00:00",
+        "edad_madre": 32,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": false,
+        "ttc": true,
+        "induccion": true,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": true,
+        "created_by": null,
+        "updated_by": null,
+        "tipo_de_ingreso": 2,
+        "grupo_robson": 2,
+        "via_nacimiento": 2,
+        "gestacion": 2,
+        "history_date": "2025-12-11T18:31:24.808Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "partos.historicalparto",
+    "pk": 3,
+    "fields": {
+        "id": 3,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "hora_inicio": "2025-12-02T10:00:00Z",
+        "numero_aro": 1,
+        "n_tactos_vaginales": 3,
+        "rotura_membrana": "espontanea",
+        "estado": "alumbramiento",
+        "posicion": "cuadrupeda",
+        "tipo_regimen": "comun",
+        "observaciones": "Parto eutócico con leve distocia",
+        "tiempo_membrana_rota": "02:00:00",
+        "tiempo_dilatacion": "05:00:00",
+        "tiempo_expulsivo": "00:50:00",
+        "edad_madre": 25,
+        "monitor": false,
+        "entrega_placenta": true,
+        "acompaniante": true,
+        "ttc": false,
+        "induccion": false,
+        "aceleracion": true,
+        "oxitocina_profilactica": false,
+        "uso_sala_saip": false,
+        "created_by": null,
+        "updated_by": null,
+        "tipo_de_ingreso": 3,
+        "grupo_robson": 3,
+        "via_nacimiento": 3,
+        "gestacion": 3,
+        "history_date": "2025-12-11T18:31:24.808Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "partos.historicalparto",
+    "pk": 4,
+    "fields": {
+        "id": 4,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "hora_inicio": "2025-12-02T11:30:00Z",
+        "numero_aro": 2,
+        "n_tactos_vaginales": 1,
+        "rotura_membrana": "artificial",
+        "estado": "terminado",
+        "posicion": "litotomia",
+        "tipo_regimen": "comun",
+        "observaciones": "Cesárea programada, multipara",
+        "tiempo_membrana_rota": "01:20:00",
+        "tiempo_dilatacion": "04:30:00",
+        "tiempo_expulsivo": "00:00:00",
+        "edad_madre": 34,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": false,
+        "ttc": false,
+        "induccion": true,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": true,
+        "created_by": null,
+        "updated_by": null,
+        "tipo_de_ingreso": 1,
+        "grupo_robson": 4,
+        "via_nacimiento": 2,
+        "gestacion": 4,
+        "history_date": "2025-12-11T18:31:24.808Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "partos.historicalparto",
+    "pk": 5,
+    "fields": {
+        "id": 5,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "hora_inicio": "2025-12-02T12:00:00Z",
+        "numero_aro": 3,
+        "n_tactos_vaginales": 2,
+        "rotura_membrana": "espontanea",
+        "estado": "expulsivo",
+        "posicion": "sentada",
+        "tipo_regimen": "liquido",
+        "observaciones": "Parto con cesárea previa, multipara",
+        "tiempo_membrana_rota": "01:10:00",
+        "tiempo_dilatacion": "03:45:00",
+        "tiempo_expulsivo": "00:30:00",
+        "edad_madre": 30,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": true,
+        "ttc": true,
+        "induccion": false,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": false,
+        "created_by": null,
+        "updated_by": null,
+        "tipo_de_ingreso": 2,
+        "grupo_robson": 5,
+        "via_nacimiento": 1,
+        "gestacion": 5,
+        "history_date": "2025-12-11T18:31:24.808Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "partos.historicalparto",
+    "pk": 6,
+    "fields": {
+        "id": 6,
+        "created_at": "2025-12-08T03:05:02.730Z",
+        "updated_at": "2025-12-08T03:05:02.730Z",
+        "hora_inicio": "1998-12-30T15:00:00Z",
+        "numero_aro": 0,
+        "n_tactos_vaginales": 0,
+        "rotura_membrana": "espontanea",
+        "estado": "ingreso",
+        "posicion": "otro",
+        "tipo_regimen": "cero",
+        "observaciones": "",
+        "tiempo_membrana_rota": "00:01:00",
+        "tiempo_dilatacion": "00:01:00",
+        "tiempo_expulsivo": "00:01:00",
+        "edad_madre": 26,
+        "monitor": false,
+        "entrega_placenta": false,
+        "acompaniante": false,
+        "ttc": false,
+        "induccion": false,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": false,
+        "created_by": 2,
+        "updated_by": 2,
+        "tipo_de_ingreso": 1,
+        "grupo_robson": 6,
+        "via_nacimiento": 1,
+        "gestacion": 11,
+        "history_date": "2025-12-11T18:31:24.808Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "partos.parto",
+    "pk": 1,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo_de_ingreso": 1,
+        "grupo_robson": 1,
+        "via_nacimiento": 1,
+        "gestacion": 1,
+        "hora_inicio": "2025-12-02T08:30:00Z",
+        "numero_aro": 1,
+        "n_tactos_vaginales": 2,
+        "rotura_membrana": "espontanea",
+        "estado": "activo",
+        "posicion": "semisentada",
+        "tipo_regimen": "comun",
+        "observaciones": "Parto normal sin complicaciones",
+        "tiempo_membrana_rota": "01:30:00",
+        "tiempo_dilatacion": "04:00:00",
+        "tiempo_expulsivo": "00:40:00",
+        "edad_madre": 28,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": true,
+        "ttc": false,
+        "induccion": false,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": false,
+        "complicaciones": []
+    }
+},
+{
+    "model": "partos.parto",
+    "pk": 2,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo_de_ingreso": 2,
+        "grupo_robson": 2,
+        "via_nacimiento": 2,
+        "gestacion": 2,
+        "hora_inicio": "2025-12-02T09:15:00Z",
+        "numero_aro": 2,
+        "n_tactos_vaginales": 1,
+        "rotura_membrana": "artificial",
+        "estado": "expulsivo",
+        "posicion": "litotomia",
+        "tipo_regimen": "liquido",
+        "observaciones": "Cesárea electiva por grupo 2a",
+        "tiempo_membrana_rota": "00:50:00",
+        "tiempo_dilatacion": "03:00:00",
+        "tiempo_expulsivo": "00:00:00",
+        "edad_madre": 32,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": false,
+        "ttc": true,
+        "induccion": true,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": true,
+        "complicaciones": []
+    }
+},
+{
+    "model": "partos.parto",
+    "pk": 3,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo_de_ingreso": 3,
+        "grupo_robson": 3,
+        "via_nacimiento": 3,
+        "gestacion": 3,
+        "hora_inicio": "2025-12-02T10:00:00Z",
+        "numero_aro": 1,
+        "n_tactos_vaginales": 3,
+        "rotura_membrana": "espontanea",
+        "estado": "alumbramiento",
+        "posicion": "cuadrupeda",
+        "tipo_regimen": "comun",
+        "observaciones": "Parto eutócico con leve distocia",
+        "tiempo_membrana_rota": "02:00:00",
+        "tiempo_dilatacion": "05:00:00",
+        "tiempo_expulsivo": "00:50:00",
+        "edad_madre": 25,
+        "monitor": false,
+        "entrega_placenta": true,
+        "acompaniante": true,
+        "ttc": false,
+        "induccion": false,
+        "aceleracion": true,
+        "oxitocina_profilactica": false,
+        "uso_sala_saip": false,
+        "complicaciones": []
+    }
+},
+{
+    "model": "partos.parto",
+    "pk": 4,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo_de_ingreso": 1,
+        "grupo_robson": 4,
+        "via_nacimiento": 2,
+        "gestacion": 4,
+        "hora_inicio": "2025-12-02T11:30:00Z",
+        "numero_aro": 2,
+        "n_tactos_vaginales": 1,
+        "rotura_membrana": "artificial",
+        "estado": "terminado",
+        "posicion": "litotomia",
+        "tipo_regimen": "comun",
+        "observaciones": "Cesárea programada, multipara",
+        "tiempo_membrana_rota": "01:20:00",
+        "tiempo_dilatacion": "04:30:00",
+        "tiempo_expulsivo": "00:00:00",
+        "edad_madre": 34,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": false,
+        "ttc": false,
+        "induccion": true,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": true,
+        "complicaciones": []
+    }
+},
+{
+    "model": "partos.parto",
+    "pk": 5,
+    "fields": {
+        "created_by": null,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": null,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "tipo_de_ingreso": 2,
+        "grupo_robson": 5,
+        "via_nacimiento": 1,
+        "gestacion": 5,
+        "hora_inicio": "2025-12-02T12:00:00Z",
+        "numero_aro": 3,
+        "n_tactos_vaginales": 2,
+        "rotura_membrana": "espontanea",
+        "estado": "expulsivo",
+        "posicion": "sentada",
+        "tipo_regimen": "liquido",
+        "observaciones": "Parto con cesárea previa, multipara",
+        "tiempo_membrana_rota": "01:10:00",
+        "tiempo_dilatacion": "03:45:00",
+        "tiempo_expulsivo": "00:30:00",
+        "edad_madre": 30,
+        "monitor": true,
+        "entrega_placenta": true,
+        "acompaniante": true,
+        "ttc": true,
+        "induccion": false,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": false,
+        "complicaciones": []
+    }
+},
+{
+    "model": "partos.parto",
+    "pk": 6,
+    "fields": {
+        "created_by": 2,
+        "created_at": "2025-12-08T03:05:02.730Z",
+        "updated_by": 2,
+        "updated_at": "2025-12-08T03:05:02.730Z",
+        "tipo_de_ingreso": 1,
+        "grupo_robson": 6,
+        "via_nacimiento": 1,
+        "gestacion": 11,
+        "hora_inicio": "1998-12-30T15:00:00Z",
+        "numero_aro": 0,
+        "n_tactos_vaginales": 0,
+        "rotura_membrana": "espontanea",
+        "estado": "ingreso",
+        "posicion": "otro",
+        "tipo_regimen": "cero",
+        "observaciones": "",
+        "tiempo_membrana_rota": "00:01:00",
+        "tiempo_dilatacion": "00:01:00",
+        "tiempo_expulsivo": "00:01:00",
+        "edad_madre": 26,
+        "monitor": false,
+        "entrega_placenta": false,
+        "acompaniante": false,
+        "ttc": false,
+        "induccion": false,
+        "aceleracion": false,
+        "oxitocina_profilactica": true,
+        "uso_sala_saip": false,
+        "complicaciones": [
+            6
+        ]
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 1,
+    "fields": {
+        "nombre": "Ana",
+        "primer_apellido": "Gonzalez",
+        "segundo_apellido": "Perez",
+        "rut": "12345678-9",
+        "tipo": "matrona",
+        "telefono": "+56911111111",
+        "correo": "ana.gonzalez@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 2,
+    "fields": {
+        "nombre": "Carlos",
+        "primer_apellido": "Sanchez",
+        "segundo_apellido": "Lopez",
+        "rut": "23456789-0",
+        "tipo": "medico",
+        "telefono": "+56922222222",
+        "correo": "carlos.sanchez@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 3,
+    "fields": {
+        "nombre": "Marcela",
+        "primer_apellido": "Ramirez",
+        "segundo_apellido": "Diaz",
+        "rut": "34567890-1",
+        "tipo": "enfermera",
+        "telefono": "+56933333333",
+        "correo": "marcela.ramirez@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 4,
+    "fields": {
+        "nombre": "Jorge",
+        "primer_apellido": "Vega",
+        "segundo_apellido": "Torres",
+        "rut": "45678901-2",
+        "tipo": "anestesiologo",
+        "telefono": "+56944444444",
+        "correo": "jorge.vega@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 5,
+    "fields": {
+        "nombre": "Isabel",
+        "primer_apellido": "Fuentes",
+        "segundo_apellido": "Mora",
+        "rut": "56789012-3",
+        "tipo": "pediatra",
+        "telefono": "+56955555555",
+        "correo": "isabel.fuentes@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 6,
+    "fields": {
+        "nombre": "Pedro",
+        "primer_apellido": "Castro",
+        "segundo_apellido": "Navarro",
+        "rut": "67890123-4",
+        "tipo": "ayudante",
+        "telefono": "+56966666666",
+        "correo": "pedro.castro@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 7,
+    "fields": {
+        "nombre": "Luisa",
+        "primer_apellido": "Rojas",
+        "segundo_apellido": "Silva",
+        "rut": "78901234-5",
+        "tipo": "alumno",
+        "telefono": "+56977777777",
+        "correo": "luisa.rojas@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 8,
+    "fields": {
+        "nombre": "Diego",
+        "primer_apellido": "Herrera",
+        "segundo_apellido": "Cortes",
+        "rut": "89012345-6",
+        "tipo": "profesor",
+        "telefono": "+56988888888",
+        "correo": "diego.herrera@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 9,
+    "fields": {
+        "nombre": "Claudia",
+        "primer_apellido": "Mendez",
+        "segundo_apellido": "Riquelme",
+        "rut": "90123456-7",
+        "tipo": "matrona",
+        "telefono": "+56999999999",
+        "correo": "claudia.mendez@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.profesional",
+    "pk": 10,
+    "fields": {
+        "nombre": "Fernando",
+        "primer_apellido": "Salazar",
+        "segundo_apellido": "Torrealba",
+        "rut": "01234567-8",
+        "tipo": "medico",
+        "telefono": "+56910101010",
+        "correo": "fernando.salazar@partos.cl",
+        "activo": true
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 1,
+    "fields": {
+        "parto": 1,
+        "profesional": 1,
+        "created_at": "2025-11-01T10:00:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 2,
+    "fields": {
+        "parto": 1,
+        "profesional": 5,
+        "created_at": "2025-11-01T10:05:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 3,
+    "fields": {
+        "parto": 1,
+        "profesional": 8,
+        "created_at": "2025-11-01T10:10:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 4,
+    "fields": {
+        "parto": 2,
+        "profesional": 2,
+        "created_at": "2025-11-02T12:00:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 5,
+    "fields": {
+        "parto": 2,
+        "profesional": 6,
+        "created_at": "2025-11-02T12:05:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 6,
+    "fields": {
+        "parto": 3,
+        "profesional": 3,
+        "created_at": "2025-11-03T15:30:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 7,
+    "fields": {
+        "parto": 3,
+        "profesional": 1,
+        "created_at": "2025-11-03T15:35:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 8,
+    "fields": {
+        "parto": 4,
+        "profesional": 4,
+        "created_at": "2025-11-04T08:45:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 9,
+    "fields": {
+        "parto": 4,
+        "profesional": 7,
+        "created_at": "2025-11-04T08:50:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 10,
+    "fields": {
+        "parto": 5,
+        "profesional": 10,
+        "created_at": "2025-11-05T20:15:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 11,
+    "fields": {
+        "parto": 5,
+        "profesional": 9,
+        "created_at": "2025-11-05T20:20:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 12,
+    "fields": {
+        "parto": 5,
+        "profesional": 1,
+        "created_at": "2025-11-05T20:25:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 13,
+    "fields": {
+        "parto": 2,
+        "profesional": 10,
+        "created_at": "2025-11-02T12:10:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 14,
+    "fields": {
+        "parto": 4,
+        "profesional": 3,
+        "created_at": "2025-11-04T08:55:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.participacion",
+    "pk": 15,
+    "fields": {
+        "parto": 3,
+        "profesional": 9,
+        "created_at": "2025-11-03T15:40:00Z",
+        "created_by": 1
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 1,
+    "fields": {
+        "nombre": "Histerectomía Obstétrica"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 2,
+    "fields": {
+        "nombre": "Transfusión Sanguínea"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 3,
+    "fields": {
+        "nombre": "Anestesia Neuroaxial"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 4,
+    "fields": {
+        "nombre": "Óxido nitroso"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 5,
+    "fields": {
+        "nombre": "Analgesia endovenosa"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 6,
+    "fields": {
+        "nombre": "Anestesia General"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 7,
+    "fields": {
+        "nombre": "Anestesia Local"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 8,
+    "fields": {
+        "nombre": "Analgesia NO farmacológica"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 9,
+    "fields": {
+        "nombre": "Balón Kinesico"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 10,
+    "fields": {
+        "nombre": "Lenteja de Parto"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 11,
+    "fields": {
+        "nombre": "Rebozo"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 12,
+    "fields": {
+        "nombre": "Aromaterapia"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 13,
+    "fields": {
+        "nombre": "Anest. Peridural Solicitada por paciente"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 14,
+    "fields": {
+        "nombre": "Anest. Peridural indicada por médico GO"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 15,
+    "fields": {
+        "nombre": "Anest. Peridural administrada"
+    }
+},
+{
+    "model": "partos.tipoanalgesia",
+    "pk": 16,
+    "fields": {
+        "nombre": "Tiempo de espera entre indicación médica y administración Anest. Peridural"
+    }
+},
+{
+    "model": "partos.puerperio",
+    "pk": 1,
+    "fields": {
+        "estado_perine": "indemne",
+        "esterilizacion": false,
+        "revision": true,
+        "inercia_uterina": false,
+        "restos_placenta": false,
+        "trauma": false,
+        "alteracion_coagulacion": false,
+        "manejo_qirurgico_inercia_ut": false,
+        "created_at": "2025-12-02T14:00:00Z",
+        "created_by": 1,
+        "updated_at": "2025-12-02T14:00:00Z",
+        "updated_by": 1,
+        "parto": 1
+    }
+},
+{
+    "model": "partos.puerperio",
+    "pk": 2,
+    "fields": {
+        "estado_perine": "g1",
+        "esterilizacion": false,
+        "revision": true,
+        "inercia_uterina": false,
+        "restos_placenta": false,
+        "trauma": true,
+        "alteracion_coagulacion": false,
+        "manejo_qirurgico_inercia_ut": false,
+        "created_at": "2025-12-02T14:30:00Z",
+        "created_by": 1,
+        "updated_at": "2025-12-02T14:30:00Z",
+        "updated_by": 1,
+        "parto": 2
+    }
+},
+{
+    "model": "partos.puerperio",
+    "pk": 3,
+    "fields": {
+        "estado_perine": "g2",
+        "esterilizacion": true,
+        "revision": true,
+        "inercia_uterina": true,
+        "restos_placenta": false,
+        "trauma": false,
+        "alteracion_coagulacion": false,
+        "manejo_qirurgico_inercia_ut": true,
+        "created_at": "2025-12-02T15:00:00Z",
+        "created_by": 1,
+        "updated_at": "2025-12-02T15:00:00Z",
+        "updated_by": 1,
+        "parto": 3
+    }
+},
+{
+    "model": "partos.puerperio",
+    "pk": 4,
+    "fields": {
+        "estado_perine": "g3a",
+        "esterilizacion": false,
+        "revision": true,
+        "inercia_uterina": true,
+        "restos_placenta": true,
+        "trauma": true,
+        "alteracion_coagulacion": false,
+        "manejo_qirurgico_inercia_ut": true,
+        "created_at": "2025-12-02T15:30:00Z",
+        "created_by": 1,
+        "updated_at": "2025-12-02T15:30:00Z",
+        "updated_by": 1,
+        "parto": 4
+    }
+},
+{
+    "model": "partos.puerperio",
+    "pk": 5,
+    "fields": {
+        "estado_perine": "fisura",
+        "esterilizacion": false,
+        "revision": true,
+        "inercia_uterina": false,
+        "restos_placenta": false,
+        "trauma": false,
+        "alteracion_coagulacion": true,
+        "manejo_qirurgico_inercia_ut": false,
+        "created_at": "2025-12-02T16:00:00Z",
+        "created_by": 1,
+        "updated_at": "2025-12-02T16:00:00Z",
+        "updated_by": 1,
+        "parto": 5
+    }
+},
+{
+    "model": "perfiles.usuario",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$Jrl1Wdyy0uxmbh2QlihwRx$aH0Efj8ot01n/DAf/0RJlZPXWJaRToLKD54tC6Rr428=",
+        "last_login": "2025-12-06T20:16:45.382Z",
+        "is_superuser": true,
+        "username": "daniel",
+        "first_name": "daniel",
+        "last_name": "valdebenito",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-12-05T00:07:40.242Z",
+        "email": "danielvaldebenito25@gmail.com",
+        "last_name2": "",
+        "first_login": true,
+        "es_matrona": false,
+        "es_supervisor": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "perfiles.usuario",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$mGnT7GsOJofRRO94kiglgI$2WQmEy+iohOYI+9eC9LkWKoj5WVqIGHxe3OdtPW7Heo=",
+        "last_login": "2025-12-12T18:53:17.951Z",
+        "is_superuser": false,
+        "username": "jgutierrez",
+        "first_name": "Juana",
+        "last_name": "Gutierrez",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-12-05T23:07:40Z",
+        "email": "juana@gmail.com",
+        "last_name2": "",
+        "first_login": false,
+        "es_matrona": true,
+        "es_supervisor": false,
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "perfiles.usuario",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$IKrdyrxQ3mRDZtux6HXUb0$WOY2c301bwxxO9Sd0DGCGsxjVn48t8oZ1wdBia8dyGA=",
+        "last_login": "2025-12-12T22:37:49.935Z",
+        "is_superuser": false,
+        "username": "pestrella",
+        "first_name": "Patricio",
+        "last_name": "Estrella",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-12-05T23:08:12Z",
+        "email": "superstar@gmail.com",
+        "last_name2": "",
+        "first_login": false,
+        "es_matrona": false,
+        "es_supervisor": true,
+        "groups": [
+            2
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "perfiles.usuario",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$MpdlOVF39pDb3QNT5g0vt1$KRV8nJVSy4Qtqr9wTihERSD78n2ybEK1MH71RKGU5eA=",
+        "last_login": "2025-12-10T06:10:17.788Z",
+        "is_superuser": false,
+        "username": "admin",
+        "first_name": "Juan Carlos",
+        "last_name": "Bodoque",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-12-05T23:09:00Z",
+        "email": "admin@gmail.com",
+        "last_name2": "",
+        "first_login": false,
+        "es_matrona": false,
+        "es_supervisor": false,
+        "groups": [
+            3
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "perfiles.usuario",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$GvZR1IPs1p5yRvrW0Bx7RL$5dBJkhrWuyWoZBr73wH9uwXdzkJGveurgDF6LuCUv2c=",
+        "last_login": "2025-12-12T22:29:56.161Z",
+        "is_superuser": true,
+        "username": "danielv",
+        "first_name": "dainel",
+        "last_name": "valdebenito",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-12-11T04:47:05.752Z",
+        "email": "danielvaldebenito37@gmail.com",
+        "last_name2": "",
+        "first_login": false,
+        "es_matrona": false,
+        "es_supervisor": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 1,
+    "fields": {
+        "nombre": "Sufrimiento fetal que persiste",
+        "descripcion": "Condición en la que el feto continúa mostrando signos de sufrimiento durante o después del parto, evidenciado por alteraciones en el monitoreo fetal."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 2,
+    "fields": {
+        "nombre": "Asfixia perinatal",
+        "descripcion": "Falta de oxígeno al nacer que puede causar daño a órganos y requiere intervención inmediata."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 3,
+    "fields": {
+        "nombre": "Hipotermia",
+        "descripcion": "Disminución anormal de la temperatura corporal del recién nacido que requiere medidas de calentamiento."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 4,
+    "fields": {
+        "nombre": "Hipoglicemia neonatal",
+        "descripcion": "Niveles bajos de glucosa en sangre del recién nacido, con riesgo de complicaciones neurológicas si no se trata."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 5,
+    "fields": {
+        "nombre": "Ictericia",
+        "descripcion": "Coloración amarilla de piel y mucosas del recién nacido debido a niveles elevados de bilirrubina."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 6,
+    "fields": {
+        "nombre": "Malformación congénita",
+        "descripcion": "Alteraciones estructurales o funcionales presentes al nacer, congénitas o hereditarias."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 7,
+    "fields": {
+        "nombre": "Sepsis",
+        "descripcion": "Infección sistémica grave en el recién nacido que requiere tratamiento antibiótico inmediato."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 8,
+    "fields": {
+        "nombre": "Riesgo de infección",
+        "descripcion": "Condición en la que el recién nacido presenta factores que aumentan la probabilidad de desarrollar infección."
+    }
+},
+{
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 9,
+    "fields": {
+        "nombre": "Trauma neonatal",
+        "descripcion": "Lesiones físicas sufridas por el recién nacido durante el parto, como fracturas o contusiones."
+    }
+},
+{
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 1,
+    "fields": {
+        "nombre": "Cefálica",
+        "descripcion": "Presentación en la que la cabeza del feto se encuentra dirigida hacia el canal de parto, siendo la más frecuente y favorable para parto vaginal."
+    }
+},
+{
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 2,
+    "fields": {
+        "nombre": "Podálica",
+        "descripcion": "Presentación en la que uno o ambos pies del feto se presentan primero en el canal de parto, conocida como presentación de nalgas."
+    }
+},
+{
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 3,
+    "fields": {
+        "nombre": "Transversa",
+        "descripcion": "Presentación en la que el feto se encuentra acostado de lado en el útero, lo que impide el parto vaginal espontáneo sin maniobra o cesárea."
+    }
+},
+{
+    "model": "recien_nacidos.presentacionfetal",
+    "pk": 4,
+    "fields": {
+        "nombre": "Oblicua",
+        "descripcion": "Presentación en la que el eje del feto está inclinado respecto al eje del canal de parto, parcialmente transversal, generalmente requiere cesárea."
+    }
+},
+{
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 1,
+    "fields": {
+        "nombre": "Estimulación",
+        "descripcion": "Frotar suavemente al recién nacido para estimular respiración y tono muscular.",
+        "tipo": "basica"
+    }
+},
+{
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 2,
+    "fields": {
+        "nombre": "Aspiración",
+        "descripcion": "Aspirar secreciones de la vía aérea para asegurar ventilación efectiva.",
+        "tipo": "basica"
+    }
+},
+{
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 3,
+    "fields": {
+        "nombre": "Oxígeno suplementario",
+        "descripcion": "Administración de oxígeno cuando la respiración del recién nacido es insuficiente.",
+        "tipo": "basica"
+    }
+},
+{
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 4,
+    "fields": {
+        "nombre": "Ventilación / compresiones torácicas",
+        "descripcion": "Uso de ventilación con presión positiva y compresiones torácicas si no hay respiración efectiva o bradicardia.",
+        "tipo": "avanzada"
+    }
+},
+{
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 5,
+    "fields": {
+        "nombre": "Medicación",
+        "descripcion": "Administración de fármacos específicos como adrenalina si persiste bradicardia o falla respiratoria.",
+        "tipo": "avanzada"
+    }
+},
+{
+    "model": "recien_nacidos.historicalreciennacido",
+    "pk": 1,
+    "fields": {
+        "id": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_at": "2025-12-02T10:00:00Z",
+        "fecha_hora": "2025-12-02T10:00:00Z",
+        "nombre_completo_madre": "Juan Pérez López",
+        "peso": 3200,
+        "talla": "50.0",
+        "apgar_1": 8,
+        "apgar_5": 9,
+        "codigo": "RN20251202001",
+        "perimetro_cefalico": "34.5",
+        "perimetro_toraxico": "32.0",
+        "c_2480": 0,
+        "destino_rn": "Alojamiento conjunto",
+        "observaciones": "",
+        "alojamiento_conjunto": true,
+        "apego_canguro": true,
+        "lactante_60": true,
+        "apego_tunel": true,
+        "gases_de_cordon": true,
+        "destino": "alojamiento",
+        "sexo": "o",
+        "parto": 1,
+        "created_by": 1,
+        "updated_by": 1,
+        "presentacion_fetal": 1,
+        "history_date": "2025-12-11T18:31:24.817Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "recien_nacidos.historicalreciennacido",
+    "pk": 2,
+    "fields": {
+        "id": 2,
+        "created_at": "2025-12-02T10:05:00Z",
+        "updated_at": "2025-12-02T10:05:00Z",
+        "fecha_hora": "2025-12-02T10:05:00Z",
+        "nombre_completo_madre": "Sofía Martínez Gómez",
+        "peso": 2800,
+        "talla": "48.5",
+        "apgar_1": 7,
+        "apgar_5": 9,
+        "codigo": "RN20251202002",
+        "perimetro_cefalico": "33.0",
+        "perimetro_toraxico": "31.5",
+        "c_2480": 0,
+        "destino_rn": "UCI Neonatal",
+        "observaciones": "Necesitó oxígeno suplementario",
+        "alojamiento_conjunto": false,
+        "apego_canguro": false,
+        "lactante_60": false,
+        "apego_tunel": false,
+        "gases_de_cordon": true,
+        "destino": "uci",
+        "sexo": "o",
+        "parto": 2,
+        "created_by": 1,
+        "updated_by": 1,
+        "presentacion_fetal": 2,
+        "history_date": "2025-12-11T18:31:24.817Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "recien_nacidos.historicalreciennacido",
+    "pk": 3,
+    "fields": {
+        "id": 3,
+        "created_at": "2025-12-02T10:10:00Z",
+        "updated_at": "2025-12-02T10:10:00Z",
+        "fecha_hora": "2025-12-02T10:10:00Z",
+        "nombre_completo_madre": "Camila Rojas Díaz",
+        "peso": 3500,
+        "talla": "51.0",
+        "apgar_1": 9,
+        "apgar_5": 10,
+        "codigo": "RN20251202003",
+        "perimetro_cefalico": "35.0",
+        "perimetro_toraxico": "33.0",
+        "c_2480": 0,
+        "destino_rn": "Alojamiento conjunto",
+        "observaciones": "",
+        "alojamiento_conjunto": true,
+        "apego_canguro": true,
+        "lactante_60": true,
+        "apego_tunel": true,
+        "gases_de_cordon": true,
+        "destino": "alojamiento",
+        "sexo": "o",
+        "parto": 3,
+        "created_by": 1,
+        "updated_by": 1,
+        "presentacion_fetal": 1,
+        "history_date": "2025-12-11T18:31:24.817Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "recien_nacidos.historicalreciennacido",
+    "pk": 4,
+    "fields": {
+        "id": 4,
+        "created_at": "2025-12-02T10:15:00Z",
+        "updated_at": "2025-12-02T10:15:00Z",
+        "fecha_hora": "2025-12-02T10:15:00Z",
+        "nombre_completo_madre": "Matías Fernández Herrera",
+        "peso": 3000,
+        "talla": "49.0",
+        "apgar_1": 6,
+        "apgar_5": 8,
+        "codigo": "RN20251202004",
+        "perimetro_cefalico": "33.5",
+        "perimetro_toraxico": "32.5",
+        "c_2480": 0,
+        "destino_rn": "UTI Neonatal",
+        "observaciones": "Hipoglicemia neonatal",
+        "alojamiento_conjunto": false,
+        "apego_canguro": false,
+        "lactante_60": false,
+        "apego_tunel": false,
+        "gases_de_cordon": true,
+        "destino": "uti",
+        "sexo": "o",
+        "parto": 4,
+        "created_by": 1,
+        "updated_by": 1,
+        "presentacion_fetal": 3,
+        "history_date": "2025-12-11T18:31:24.817Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "recien_nacidos.historicalreciennacido",
+    "pk": 5,
+    "fields": {
+        "id": 5,
+        "created_at": "2025-12-02T10:20:00Z",
+        "updated_at": "2025-12-02T10:20:00Z",
+        "fecha_hora": "2025-12-02T10:20:00Z",
+        "nombre_completo_madre": "Valentina Soto Miranda",
+        "peso": 3100,
+        "talla": "50.5",
+        "apgar_1": 8,
+        "apgar_5": 9,
+        "codigo": "RN20251202005",
+        "perimetro_cefalico": "34.0",
+        "perimetro_toraxico": "32.0",
+        "c_2480": 0,
+        "destino_rn": "Alojamiento conjunto",
+        "observaciones": "",
+        "alojamiento_conjunto": true,
+        "apego_canguro": true,
+        "lactante_60": true,
+        "apego_tunel": true,
+        "gases_de_cordon": true,
+        "destino": "alojamiento",
+        "sexo": "o",
+        "parto": 5,
+        "created_by": 1,
+        "updated_by": 1,
+        "presentacion_fetal": 1,
+        "history_date": "2025-12-11T18:31:24.817Z",
+        "history_change_reason": "",
+        "history_type": "+",
+        "history_user": null
+    }
+},
+{
+    "model": "recien_nacidos.reciennacido",
+    "pk": 1,
+    "fields": {
+        "parto": 1,
+        "created_by": 1,
+        "created_at": "2025-12-02T10:00:00Z",
+        "updated_by": 1,
+        "updated_at": "2025-12-02T10:00:00Z",
+        "presentacion_fetal": 1,
+        "fecha_hora": "2025-12-02T10:00:00Z",
+        "nombre_completo_madre": "Juan Pérez López",
+        "peso": 3200,
+        "talla": "50.0",
+        "apgar_1": 8,
+        "apgar_5": 9,
+        "codigo": "RN20251202001",
+        "perimetro_cefalico": "34.5",
+        "perimetro_toraxico": "32.0",
+        "c_2480": 0,
+        "destino_rn": "Alojamiento conjunto",
+        "observaciones": "",
+        "alojamiento_conjunto": true,
+        "apego_canguro": true,
+        "lactante_60": true,
+        "apego_tunel": true,
+        "gases_de_cordon": true,
+        "destino": "alojamiento",
+        "sexo": "o",
+        "complicaciones_postparto": [
+            1,
+            2
+        ],
+        "reanimaciones_neonatales": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "recien_nacidos.reciennacido",
+    "pk": 2,
+    "fields": {
+        "parto": 2,
+        "created_by": 1,
+        "created_at": "2025-12-02T10:05:00Z",
+        "updated_by": 1,
+        "updated_at": "2025-12-02T10:05:00Z",
+        "presentacion_fetal": 2,
+        "fecha_hora": "2025-12-02T10:05:00Z",
+        "nombre_completo_madre": "Sofía Martínez Gómez",
+        "peso": 2800,
+        "talla": "48.5",
+        "apgar_1": 7,
+        "apgar_5": 9,
+        "codigo": "RN20251202002",
+        "perimetro_cefalico": "33.0",
+        "perimetro_toraxico": "31.5",
+        "c_2480": 0,
+        "destino_rn": "UCI Neonatal",
+        "observaciones": "Necesitó oxígeno suplementario",
+        "alojamiento_conjunto": false,
+        "apego_canguro": false,
+        "lactante_60": false,
+        "apego_tunel": false,
+        "gases_de_cordon": true,
+        "destino": "uci",
+        "sexo": "o",
+        "complicaciones_postparto": [
+            3
+        ],
+        "reanimaciones_neonatales": [
+            1,
+            3
+        ]
+    }
+},
+{
+    "model": "recien_nacidos.reciennacido",
+    "pk": 3,
+    "fields": {
+        "parto": 3,
+        "created_by": 1,
+        "created_at": "2025-12-02T10:10:00Z",
+        "updated_by": 1,
+        "updated_at": "2025-12-02T10:10:00Z",
+        "presentacion_fetal": 1,
+        "fecha_hora": "2025-12-02T10:10:00Z",
+        "nombre_completo_madre": "Camila Rojas Díaz",
+        "peso": 3500,
+        "talla": "51.0",
+        "apgar_1": 9,
+        "apgar_5": 10,
+        "codigo": "RN20251202003",
+        "perimetro_cefalico": "35.0",
+        "perimetro_toraxico": "33.0",
+        "c_2480": 0,
+        "destino_rn": "Alojamiento conjunto",
+        "observaciones": "",
+        "alojamiento_conjunto": true,
+        "apego_canguro": true,
+        "lactante_60": true,
+        "apego_tunel": true,
+        "gases_de_cordon": true,
+        "destino": "alojamiento",
+        "sexo": "o",
+        "complicaciones_postparto": [],
+        "reanimaciones_neonatales": [
+            1
+        ]
+    }
+},
+{
+    "model": "recien_nacidos.reciennacido",
+    "pk": 4,
+    "fields": {
+        "parto": 4,
+        "created_by": 1,
+        "created_at": "2025-12-02T10:15:00Z",
+        "updated_by": 1,
+        "updated_at": "2025-12-02T10:15:00Z",
+        "presentacion_fetal": 3,
+        "fecha_hora": "2025-12-02T10:15:00Z",
+        "nombre_completo_madre": "Matías Fernández Herrera",
+        "peso": 3000,
+        "talla": "49.0",
+        "apgar_1": 6,
+        "apgar_5": 8,
+        "codigo": "RN20251202004",
+        "perimetro_cefalico": "33.5",
+        "perimetro_toraxico": "32.5",
+        "c_2480": 0,
+        "destino_rn": "UTI Neonatal",
+        "observaciones": "Hipoglicemia neonatal",
+        "alojamiento_conjunto": false,
+        "apego_canguro": false,
+        "lactante_60": false,
+        "apego_tunel": false,
+        "gases_de_cordon": true,
+        "destino": "uti",
+        "sexo": "o",
+        "complicaciones_postparto": [
+            4,
+            5
+        ],
+        "reanimaciones_neonatales": [
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "recien_nacidos.reciennacido",
+    "pk": 5,
+    "fields": {
+        "parto": 5,
+        "created_by": 1,
+        "created_at": "2025-12-02T10:20:00Z",
+        "updated_by": 1,
+        "updated_at": "2025-12-02T10:20:00Z",
+        "presentacion_fetal": 1,
+        "fecha_hora": "2025-12-02T10:20:00Z",
+        "nombre_completo_madre": "Valentina Soto Miranda",
+        "peso": 3100,
+        "talla": "50.5",
+        "apgar_1": 8,
+        "apgar_5": 9,
+        "codigo": "RN20251202005",
+        "perimetro_cefalico": "34.0",
+        "perimetro_toraxico": "32.0",
+        "c_2480": 0,
+        "destino_rn": "Alojamiento conjunto",
+        "observaciones": "",
+        "alojamiento_conjunto": true,
+        "apego_canguro": true,
+        "lactante_60": true,
+        "apego_tunel": true,
+        "gases_de_cordon": true,
+        "destino": "alojamiento",
+        "sexo": "o",
+        "complicaciones_postparto": [],
+        "reanimaciones_neonatales": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "recien_nacidos.tipovacuna",
+    "pk": 1,
+    "fields": {
+        "nombre": "BCG",
+        "descripcion": "Vacuna contra tuberculosis, se aplica al nacimiento"
+    }
+},
+{
+    "model": "recien_nacidos.tipovacuna",
+    "pk": 2,
+    "fields": {
+        "nombre": "Hepatitis B",
+        "descripcion": "Vacuna contra hepatitis B, primera dosis al nacimiento"
+    }
+},
+{
+    "model": "recien_nacidos.tipovacuna",
+    "pk": 3,
+    "fields": {
+        "nombre": "Polio",
+        "descripcion": "Vacuna contra poliomielitis, primera dosis al nacimiento"
+    }
+},
+{
+    "model": "recien_nacidos.vacunacion",
+    "pk": 1,
+    "fields": {
+        "recien_nacido": 1,
+        "profesional": 6,
+        "fecha": "2025-12-02",
+        "reaccion_adversa": "Ninguna",
+        "tipo": 1,
+        "created_at": null,
+        "created_by": null,
+        "updated_at": null,
+        "updated_by": null
+    }
+},
+{
+    "model": "recien_nacidos.vacunacion",
+    "pk": 2,
+    "fields": {
+        "recien_nacido": 2,
+        "profesional": 6,
+        "fecha": "2025-12-02",
+        "reaccion_adversa": "Leve enrojecimiento",
+        "tipo": 1,
+        "created_at": null,
+        "created_by": null,
+        "updated_at": null,
+        "updated_by": null
+    }
+},
+{
+    "model": "recien_nacidos.vacunacion",
+    "pk": 3,
+    "fields": {
+        "recien_nacido": 3,
+        "profesional": 7,
+        "fecha": "2025-12-02",
+        "reaccion_adversa": "Ninguna",
+        "tipo": 2,
+        "created_at": null,
+        "created_by": null,
+        "updated_at": null,
+        "updated_by": null
+    }
+},
+{
+    "model": "recien_nacidos.vacunacion",
+    "pk": 4,
+    "fields": {
+        "recien_nacido": 4,
+        "profesional": 8,
+        "fecha": "2025-12-02",
+        "reaccion_adversa": "Fiebre leve",
+        "tipo": 2,
+        "created_at": null,
+        "created_by": null,
+        "updated_at": null,
+        "updated_by": null
+    }
+},
+{
+    "model": "recien_nacidos.vacunacion",
+    "pk": 5,
+    "fields": {
+        "recien_nacido": 5,
+        "profesional": 6,
+        "fecha": "2025-12-02",
+        "reaccion_adversa": "Ninguna",
+        "tipo": 3,
+        "created_at": null,
+        "created_by": null,
+        "updated_at": null,
+        "updated_by": null
+    }
+}
+]

@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    {{form.instance.pk|yesno:"Actualizar Profesional, Añadir Profesional"}}
+{% endblock title %}
+
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    {{form.media}}    
+
+{% endblock estilos_personalizados %}
+
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+
+
+
+
+{% block content %}
+<main class="main-container">
+
+    <section class="form-card">
+        
+        <div class="form-header">
+            <h2 class="form-title">{{form.instance.pk|yesno:"Actualizar Participacion, Añadir Participacion"}}</h2>
+            <p class="form-subtitle">Los campos marcados con <span class="obligatorio">*</span> son obligatorios</p>
+        </div>
+        {{form.errors}}
+        <form method="POST" class="main-form">
+            {% csrf_token %}
+            {% if form.instance.pk %}
+                <fieldset class="form-section">
+                    <legend class="section-legend">Justificar Actualizacion</legend>
+                    <div class="form-group {% if form.motivo.errors %} has-error {% endif %}">
+                        <label for="{{form.motivo.id_for_label}}">Motivo de actualización</label>
+                        {{form.motivo}}
+                    {% if form.motivo.errors %}
+                            <div class="error-message">
+                            {% for error in form.motivo.errors %}
+                                <p>{{ error }}</p> 
+                            {% endfor %}
+                            </div>                   
+                        {% endif %}
+                    </div>
+                </fieldset>
+            {% endif %}
+            <fieldset class="form-section">
+                <legend class="section-legend">Participacion</legend>
+
+                <div class="form-row">
+                    <div class="form-group {% if form.profesional.errors %} has-error{% endif %}">
+                        <label for="{{form.profesional.id_for_label}}">Seleccione el profesional a Asociar <span class="obligatorio">*</span></label>
+                        {{form.profesional}}
+                        <span class="field-help">{{form.profesional.help_text}}</span>
+                    {% if form.profesional.errors %}
+                        <div class="error-message">
+                        {% for error in form.profesional.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                    </div>
+                </fieldset>
+ 
+
+            <div class="form-actions">
+                <a class="btn-secondary" href="{{request.META.HTTP_REFERER}}">Cancelar</a>
+                <button type="submit" class="btn-primary">Registrar Parto</button>
+            </div>
+
+        </form>
+    </section>
+</main>
+
+{% endblock content %}
+    
+
+
+
+{% block scripts %}
+    <script src="{% static 'js/manejo-error-form.js' %}"></script>
+{% endblock scripts %}
+    
+    
+    
+    
+

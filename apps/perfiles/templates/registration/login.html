@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Login {% endblock title %}
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'perfiles/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+
+
+{% block content %}
+<main class="login-layout">
+
+    <section class="login-left">
+
+        <img src="{% static 'perfiles/img/logotext.png' %}" alt="Logo del SIO" class="welcome-logo">
+
+        <header class="left-header">
+            <div class="left-header-container">
+                <p class="welcome-subtitle">Gestionar pacientes y enviar reportes nunca fue tan<strong> fácil.</strong></p>
+            </div>
+        </header>
+
+        <footer class="left-footer">
+            <small class="left-footer-text">
+                © 2025 Clínica Herminda Martín. Departamento de Obstetricia y Ginecología.
+            </small>
+        </footer>
+
+    </section>
+
+    <!-- PANEL DERECHO -->
+    <section class="login-right">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+            <header class="login-header">
+                <img 
+                    class="login-logo"
+                    src="{% static 'perfiles/img/HermindaMartin.png' %}"
+                    width="260" 
+                    height="95"
+                    alt="Logo Herminda Martín"
+                    title="Logo Herminda Martín"
+                />
+                <h2 class="login-title">Iniciar Sesión</h2>
+            </header>
+
+            <!-- Formulario -->
+            <form class="login-form" method="post">
+                {% csrf_token %}
+                <fieldset class="form-fields">
+
+                    <div class="form-field">
+                        <label for="{{form.username.id_for_label}}">{{form.username.label}}</label>
+                        {{form.username}}
+                    </div>
+
+                    <div class="form-field">
+                       <label for="{{form.password.id_for_label}}">{{form.password.label}}</label>
+                       <div class="password-wrapper">
+                        {{form.password}}
+                       <Button type="button" id="togglePassword" class="btn-eye" title="Mostrar contraseña">
+                            <img src="{% static 'perfiles/img/view.svg' %}" class="eye-icon" alt="Mostrar/Ocultar contraseña" />
+                       </Button>
+                    </div>
+                    
+                                
+                    {% if messages %}
+                        
+                        {% for message in messages %}    
+                            <div id="login-error" class="login-error">
+                                <span>{{message}}</span>
+                            </div>
+                        {% endfor %}
+                            
+                    {% endif %}
+
+
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+
+                </fieldset>
+            </form>
+
+            
+            {% if DEBUG %}
+                 <h3>Solo en desarrollo</h3>
+                <div style="display: flex; justify-content: space-between;">
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" value="juana@gmail.com" name="username">
+                        <input type="hidden" value="Matrona123@" name="password">
+                        <button type="submit">Matrona</button>
+                    </form>
+
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" value="superstar@gmail.com" name="username">
+                        <input type="hidden" value="Matrona123@" name="password">
+                        <button type="submit">Supervisor</button>
+                    </form>
+
+
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" value="admin@gmail.com" name="username">
+                        <input type="hidden" value="Matrona123@" name="password">
+                        <button type="submit">Admin Ti</button>
+                    </form>            
+                </div>
+            {% endif %}
+                
+           
+            
+          
+        
+
+            <!-- Link recuperar contraseña -->      
+            <div class="form-options">
+                <a class="forgot-link" href="NewPW/resetPassword.html">
+                    ¿Olvidaste tu contraseña?
+                </a>
+            </div>
+
+            <footer class="login-footer">
+                <p class="login-footer-text">
+                    Acceso autorizado sólo para <strong>personal médico</strong>.
+                </p>
+                <p class="login-footer-text">Contacta a TI para soporte.</p>
+            </footer>
+
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
+    
+
+
+
+
+{% block scripts %}
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+    <script src="{% static 'perfiles/js/togglePassword.js' %}"></script>
+    {% include 'includes/script_mensajes.html' %}
+        
+{% endblock scripts %}
+    

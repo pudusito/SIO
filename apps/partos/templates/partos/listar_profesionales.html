@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Gestión de Profesionales - SIO
+{% endblock title %}
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/table.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    
+{% endblock estilos_personalizados %}
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+{% block content %}
+<main class="main-container">
+
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+        <a href="{% url 'profesionales:listar' %}" class="link-color">Profesionales</a>
+        <span>›</span>
+        <span>Listado del Personal</span>
+    </nav>
+
+    <div class="welcome-header">
+        <h1 class="main-title">Equipo Clínico y Administrativo</h1>
+        <p class="subtitle">
+            Gestione el personal habilitado en el sistema. 
+            Resultados: {{ page_obj.paginator.count|default:profesionales.count }} registros.
+        </p>
+    </div>
+
+    <div class="layout-split">
+
+        <aside class="filter-sidebar">
+            <div class="filter-card">
+                <h3 class="third-title">Búsqueda Rápida</h3>
+                <form method="GET" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="form-group" style="margin-bottom:0.5rem;">
+                        <input type="text" name="q" class="search-input" placeholder="RUT o Nombre..." value="{{ request.GET.q }}">
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Buscar</button>
+                    
+                    {% if request.GET.q or request.GET.rol or request.GET.estado %}
+                        <a href="{% url 'profesionales:listar' %}" class="btn-secondary" style="text-align:center; width: 100%;">Limpiar Filtros</a>
+                    {% endif %}
+                </form>
+            </div>
+
+            <div class="filter-card">
+                <h3 class="third-title">Filtrar por Estado</h3>
+                <form method="GET">
+                    {% if request.GET.q %}<input type="hidden" name="q" value="{{ request.GET.q }}">{% endif %}
+                    
+                    <label class="checkbox-card small">
+                        <input type="radio" name="estado" value="activo" {% if request.GET.estado == 'activo' %}checked{% endif %} onchange="this.form.submit()">
+                        <span>Solo Activos</span>
+                    </label>
+                    <label class="checkbox-card small">
+                        <input type="radio" name="estado" value="inactivo" {% if request.GET.estado == 'inactivo' %}checked{% endif %} onchange="this.form.submit()">
+                        <span>Inactivos / De baja</span>
+                    </label>
+                    <label class="checkbox-card small">
+                        <input type="radio" name="estado" value="todos" {% if not request.GET.estado or request.GET.estado == 'todos' %}checked{% endif %} onchange="this.form.submit()">
+                        <span>Todos</span>
+                    </label>
+                </form>
+            </div>
+        </aside>
+
+        <section class="list-content">
+
+            <div class="table-actions-bar">
+                <div class="search-pill">
+                    <img src="{% static 'svg/buscar.svg' %}" class="nav-svg" alt="Icono"/>
+                    <span class="text-sub">Filtre usando el panel izquierdo</span>
+                </div>
+
+                <a href="{% url 'profesionales:agregar' %}" class="btn-primary">
+                    Nuevo Profesional
+                </a>
+            </div>
+
+            <div class="table-container">
+                <table class="smart-table">
+                    <thead>
+                        <tr>
+                            <th>Profesional</th>
+                            <th>Cargo / Rol</th>
+                            <th>Contacto</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prof in profesionales %}
+                        <tr>
+                            <td>
+                                <span class="text-bold" style="color: var(--primary-color);">
+                                    {{ prof.nombre }} {{ prof.primer_apellido }} {{ prof.segundo_apellido }}
+                                </span>
+                                <br>
+                                <span class="text-sub">RUT: {{ prof.rut }}</span>
+                            </td>
+
+                            <td>
+                                <span class="role-pill">{{ prof.tipo|default:"Sin cargo" }}</span>
+                            </td>
+
+                            <td>
+                                <div style="display: flex; flex-direction: column; gap: 2px;">
+                                    {% if prof.correo %}
+                                        <span class="text-sub" style="display: flex; align-items: center; gap: 5px;">
+                                            📧 {{ prof.correo }}
+                                        </span>
+                                    {% endif %}
+                                    {% if prof.telefono %}
+                                        <span class="text-sub" style="display: flex; align-items: center; gap: 5px;">
+                                            📞 {{ prof.telefono }}
+                                        </span>
+                                    {% endif %}
+                                    {% if not prof.correo and not prof.telefono %}
+                                        <span class="text-sub" style="font-style: italic;">--</span>
+                                    {% endif %}
+                                </div>
+                            </td>
+
+                            <td>
+                                {% if prof.activo %}
+                                    <span class="status-badge status-active">Activo</span>
+                                {% else %}
+                                    <span class="status-badge status-inactive">Inactivo</span>
+                                {% endif %}
+                            </td>
+
+                            <td class="action-group">
+                                <div class="action-buttons">
+                                    <a href="#" class="action-btn" title="Editar Datos">
+                                        <img src="{% static 'svg/edit.svg' %}" alt="Editar" class="nav-svg">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" style="text-align: center; padding: 3rem;">
+                                <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                                    <p class="subtitle">No se encontraron profesionales registrados.</p>
+                                    <a href="{% url 'profesionales:crear' %}" class="btn-secondary">Registrar el primero</a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div class="table-pagination">
+                    {% if is_paginated %}
+                         {% include 'includes/paginacion.html' with page_obj=page_obj %}
+                    {% endif %}
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</main>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+    {% include 'includes/script_mensajes.html' %}
+{% endblock scripts %}

@@ -1,0 +1,150 @@
+[
+  {
+    "model": "pacientes.testvih",
+    "pk": 1,
+    "fields": {
+      "gestacion": 1,
+      "resultado": "negativo",
+      "fecha_toma": "2025-03-05",
+      "durante_parto": false,
+      "observaciones": "Primer test rutinario",
+      "antibiotico": false,
+      "lugar_toma": "preparto",
+      "orden": 1,
+      "n_aro": 10001,
+      "trimestre": "1"
+    }
+  },
+  {
+    "model": "pacientes.testsgb",
+    "pk": 2,
+    "fields": {
+      "gestacion": 1,
+      "resultado": "positivo",
+      "fecha_toma": "2025-04-10",
+      "durante_parto": false,
+      "observaciones": "Control de rutina",
+      "antibiotico": true,
+      "lugar_toma": "preparto",
+      "orden": 2
+    }
+  },
+  {
+    "model": "pacientes.testvdrl",
+    "pk": 3,
+    "fields": {
+      "gestacion": 2,
+      "resultado": "negativo",
+      "fecha_toma": "2025-02-20",
+      "durante_parto": false,
+      "observaciones": "Control inicial",
+      "antibiotico": false,
+      "lugar_toma": "preparto",
+      "orden": 1
+    }
+  },
+  {
+    "model": "pacientes.testhepatitisb",
+    "pk": 4,
+    "fields": {
+      "gestacion": 2,
+      "resultado": "positivo",
+      "fecha_toma": "2025-02-25",
+      "durante_parto": false,
+      "observaciones": "Se deriva a especialista",
+      "antibiotico": false,
+      "lugar_toma": "preparto",
+      "orden": 2,
+      "derivacion_especialista": true
+    }
+  },
+  {
+    "model": "pacientes.testvih",
+    "pk": 5,
+    "fields": {
+      "gestacion": 3,
+      "resultado": "negativo",
+      "fecha_toma": "2025-01-15",
+      "durante_parto": false,
+      "observaciones": "Primer trimestre",
+      "antibiotico": false,
+      "lugar_toma": "urgencia",
+      "orden": 1,
+      "n_aro": 10002,
+      "trimestre": "1"
+    }
+  },
+  {
+    "model": "pacientes.testsgb",
+    "pk": 6,
+    "fields": {
+      "gestacion": 3,
+      "resultado": "negativo",
+      "fecha_toma": "2025-03-05",
+      "durante_parto": false,
+      "observaciones": "Segundo control",
+      "antibiotico": false,
+      "lugar_toma": "preparto",
+      "orden": 2
+    }
+  },
+  {
+    "model": "pacientes.testvdrl",
+    "pk": 7,
+    "fields": {
+      "gestacion": 4,
+      "resultado": "positivo",
+      "fecha_toma": "2025-04-01",
+      "durante_parto": false,
+      "observaciones": "Control inicial",
+      "antibiotico": true,
+      "lugar_toma": "preparto",
+      "orden": 1
+    }
+  },
+  {
+    "model": "pacientes.testhepatitisb",
+    "pk": 8,
+    "fields": {
+      "gestacion": 4,
+      "resultado": "negativo",
+      "fecha_toma": "2025-04-10",
+      "durante_parto": false,
+      "observaciones": "Segundo control",
+      "antibiotico": false,
+      "lugar_toma": "preparto",
+      "orden": 2,
+      "derivacion_especialista": false
+    }
+  },
+  {
+    "model": "pacientes.testvih",
+    "pk": 9,
+    "fields": {
+      "gestacion": 5,
+      "resultado": "positivo",
+      "fecha_toma": "2025-01-25",
+      "durante_parto": false,
+      "observaciones": "Primer trimestre",
+      "antibiotico": true,
+      "lugar_toma": "preparto",
+      "orden": 1,
+      "n_aro": 10003,
+      "trimestre": "1"
+    }
+  },
+  {
+    "model": "pacientes.testsgb",
+    "pk": 10,
+    "fields": {
+      "gestacion": 5,
+      "resultado": "negativo",
+      "fecha_toma": "2025-03-01",
+      "durante_parto": false,
+      "observaciones": "Segundo control",
+      "antibiotico": false,
+      "lugar_toma": "preparto",
+      "orden": 2
+    }
+  }
+]

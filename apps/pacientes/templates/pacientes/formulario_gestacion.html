@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block title %}{{form.instance.pk|yesno:" Actualizar Gestacion, Añadir Gestacion"}}{% endblock title %}
+    
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+    
+
+
+{% block content %}
+
+<main class="main-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumbs">
+        <a href="../inicioMatrona.html" class="link-color">Inicio</a>
+        <span>›</span>
+        <a href="gestaciones.html" class="link-color">Gestaciones</a>
+        <span>›</span>
+        <span>{{form.instance.pk|yesno:"Actualizar, Añadir"}}</span>
+    </nav>
+
+<section class="form-card">
+    
+    <div class="form-header">
+        <h2 class="form-title">{{form.instance.pk|yesno:"Actualizar Gestación, Añadir Gestación"}}</h2>
+        <p class="form-subtitle">Ingrese los datos para iniciar el control prenatal.</p>
+    </div>
+    {{form.errors}}
+    <form method="POST" class="main-form">
+        {% csrf_token %}
+                
+        {% if form.instance.pk %}
+            <fieldset class="form-section">
+                <legend class="section-legend">Justificar Actualizacion</legend>
+                <div class="form-group {% if form.motivo.errors %} has-error {% endif %}">
+                    <label for="{{form.motivo.id_for_label}}">Motivo de actualización</label>
+                    {{form.motivo}}
+                {% if form.motivo.errors %}
+                        <div class="error-message">
+                        {% for error in form.motivo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+            </fieldset>
+        {% endif %}
+        
+        <fieldset class="form-section">
+            <legend class="section-legend">Vinculación y Estado</legend>
+
+            <div class="form-row">
+                <div class="form-group {% if form.paciente.errors %}has-error{% endif %}">
+                    <label for="{{form.paciente.id_for_label}}">{{form.paciente.label}} <span class="obligatorio">*</span></label>
+                    {{form.paciente}}
+                    <span class="field-help">{{form.paciente.help_text}}</span>
+                    {% if form.paciente.errors %}
+                        <div class="error-message">
+                        {% for error in form.paciente.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+
+                <div class="form-group {% if form.estado.errors %}has-error{% endif %}">
+                    <label for="{{form.estado.id_for_label}}">{{form.estado.label}} de la Gestación <span class="obligatorio">*</span></label>
+                    {{form.estado}}
+                    {% if form.estado.errors %}
+                        <div class="error-message">
+                        {% for error in form.estado.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group  {% if form.riesgo.errors %}has-error{% endif %}">
+                    <label for="{{form.riesgo.id_for_label}}">Riesgo del Embarazo/Gestación <span class="obligatorio">*</span></label>
+                    {{form.riesgo}}
+                    {% if form.riesgo.errors %}
+                        <div class="error-message">
+                        {% for error in form.riesgo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+
+                <div class="form-group {% if form.numero_fetos.errors %}has-error{% endif %}">
+                    <label for="{{form.numero_fetos.id_for_label}}">{{form.numero_fetos.label}} <span class="obligatorio">*</span></label>
+                    {{form.numero_fetos}}
+                    <span class="field-help">{{form.numero_fetos.help_text}}</span>
+
+                    {% if form.numero_fetos.errors %}
+                        <div class="error-message">
+                        {% for error in form.numero_fetos.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %} 
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Datación y Edad Gestacional</legend>
+
+            <div class="form-group {% if form.origen_datacion.errors %}has-error{% endif %}" style="margin-bottom: 1.5rem;">
+                <label for="{{form.origen_datacion.id_for_label}}">Origen de la Datación <span class="obligatorio">*</span></label>
+                {{form.origen_datacion}}
+                <span class="field-help">{{form.origen_datacion.help_text}}</span>
+                {% if form.origen_datacion.errors %}
+                    <div class="error-message">
+                    {% for error in form.origen_datacion.errors %}
+                        <p>{{ error }}</p> 
+                    {% endfor %}
+                    </div>                   
+                {% endif %} 
+            </div>
+
+            <div class="form-row">
+                <div class="form-group {% if form.fur.errors %}has-error{% endif %}">
+                    <label for="{{form.fur.id_for_label}}">Fecha Última Regla (FUR)</label>
+                   {{form.fur}}
+                {% if form.fur.errors %}
+                    <div class="error-message">
+                    {% for error in form.fur.errors %}
+                        <p>{{ error }}</p> 
+                    {% endfor %}
+                    </div>                   
+                {% endif %}
+                </div>
+                <div class="form-group"></div> 
+            </div>
+
+            <div class="form-row three-cols">
+                <div class="form-group {% if form.fecha_eco.errors %}has-error{% endif %}">
+                    <label for="{{form.fecha_eco.id_for_label}}">Fecha de la Ecografía</label>
+                    {{form.fecha_eco}}
+                {% if form.fecha_eco.errors %}
+                    <div class="error-message">
+                    {% for error in form.fecha_eco.errors %}
+                        <p>{{ error }}</p> 
+                    {% endfor %}
+                    </div>                   
+                {% endif %}
+                </div>
+
+                <div class="form-group  {% if form.semanas_eco.errors %}has-error{% endif %}">
+                    <label for="{{form.semanas_eco.id_for_label}}">Semanas (según Eco)</label>
+                    {{form.semanas_eco}}
+                {% if form.semanas_eco.errors %}
+                    <div class="error-message">
+                    {% for error in form.semanas_eco.errors %}
+                        <p>{{ error }}</p> 
+                    {% endfor %}
+                    </div>                   
+                {% endif %}
+                </div>
+
+                <div class="form-group  {% if form.dias_eco.errors %}has-error{% endif %}">
+                    <label for="{{form.dias_eco.id_for_label}}">Días (según Eco)</label>
+                    {{form.dias_eco}}
+                {% if form.dias_eco.errors %}
+                    <div class="error-message">
+                    {% for error in form.dias_eco.errors %}
+                        <p>{{ error }}</p> 
+                    {% endfor %}
+                    </div>                   
+                {% endif %}
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Factores de Riesgo y Antecedentes para esta gestación</legend>
+
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    {{form.hipertension}}
+                    <span class="checkbox-text">Hipertensión</span>
+                </label>
+
+                <label class="checkbox-card">
+                   {{form.diabetes}}
+                    <span class="checkbox-text">Diabetes</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.enfermedad_cardiaca}}
+                    <span class="checkbox-text">Enfermedad Cardíaca</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.multiple}}
+                    <span class="checkbox-text">Embarazo Múltiple</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <a  class="btn-secondary" href={{request.META.HTTP_REFERER}}>Cancelar</a>
+            <button type="submit" class="btn-primary">Registrar Gestación</button>
+        </div>
+
+    </form>
+</section>
+</main>
+{% endblock content %}
+    
+
+{% block scripts %}
+        <script src="{% static 'js/manejo-error-form.js' %}"></script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        {% comment %} El script para que el select2 de django-autocomplete implemente AJAX para el autocompletado {% endcomment %}
+        {{form.media}}
+{% endblock scripts %}
+    

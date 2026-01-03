@@ -1,0 +1,23 @@
+[
+  { "model": "pacientes.comuna", "pk": 1,  "fields": { "nombre": "Bulnes" } },
+  { "model": "pacientes.comuna", "pk": 2,  "fields": { "nombre": "Chillán" } },
+  { "model": "pacientes.comuna", "pk": 3,  "fields": { "nombre": "Chillán Viejo" } },
+  { "model": "pacientes.comuna", "pk": 4,  "fields": { "nombre": "El Carmen" } },
+  { "model": "pacientes.comuna", "pk": 5,  "fields": { "nombre": "Pemuco" } },
+  { "model": "pacientes.comuna", "pk": 6,  "fields": { "nombre": "Pinto" } },
+  { "model": "pacientes.comuna", "pk": 7,  "fields": { "nombre": "Quillón" } },
+  { "model": "pacientes.comuna", "pk": 8,  "fields": { "nombre": "San Ignacio" } },
+  { "model": "pacientes.comuna", "pk": 9,  "fields": { "nombre": "Yungay" } },
+  { "model": "pacientes.comuna", "pk": 10, "fields": { "nombre": "Cobquecura" } },
+  { "model": "pacientes.comuna", "pk": 11, "fields": { "nombre": "Coelemu" } },
+  { "model": "pacientes.comuna", "pk": 12, "fields": { "nombre": "Ninhue" } },
+  { "model": "pacientes.comuna", "pk": 13, "fields": { "nombre": "Portezuelo" } },
+  { "model": "pacientes.comuna", "pk": 14, "fields": { "nombre": "Quirihue" } },
+  { "model": "pacientes.comuna", "pk": 15, "fields": { "nombre": "Ránquil" } },
+  { "model": "pacientes.comuna", "pk": 16, "fields": { "nombre": "San Carlos" } },
+  { "model": "pacientes.comuna", "pk": 17, "fields": { "nombre": "Ñiquén" } },
+  { "model": "pacientes.comuna", "pk": 18, "fields": { "nombre": "San Fabián" } },
+  { "model": "pacientes.comuna", "pk": 19, "fields": { "nombre": "San Nicolás" } },
+  { "model": "pacientes.comuna", "pk": 20, "fields": { "nombre": "Treguaco" } },
+  { "model": "pacientes.comuna", "pk": 21, "fields": { "nombre": "Trehuaco" } }
+]

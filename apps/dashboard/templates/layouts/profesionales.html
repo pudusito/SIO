@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'includes/sidebar.html' %}
+{% include 'includes/topbar.html' %}
+
+<body class="bodydashboard-container">
+
+    {% include 'nav/nav.html' %}
+
+    <!-- ====================================================== -->
+    <!--                             KPIs                        -->
+    <!-- ====================================================== -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-[1rem] text-center">
+
+        <!-- KPI 1 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Profesionales en turno
+            </h3>
+            <p id="kpi_profesional_1" data-value="{{ kpiprofesional1|default:25 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+        <!-- KPI 2 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Total de Profesionales registrados
+            </h3>
+            <p id="kpi_profesional_2" data-value="{{kpiprofesional2|default:50 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+    </section>
+
+<!-- ====================================================== -->
+<!--           GRÁFICOS        -->
+<!-- ====================================================== -->
+    <section class="grid grid-cols-2 gap-[1rem]">
+        <div class="grid grid-row-1 gap-[1rem]">
+<!-- 2 -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c]  border border-white/10">
+                <h2 class="text-lg font-semibold text-center">
+                    Profesionales por Área
+                </h2>
+                <div id="chart_profesional_1" 
+                    data-value='{{ chartprofesional1 |safe }}'
+                    class="w-full h-80 rounded-xl"></div>
+            </div>
+        </div>
+<!-- 3 -->
+        <div class="grid grid-row-1 h-fit">
+            <!--TABLA -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c]   border border-white/10 mt-6">
+                <h2 class="text-[1rem] font-semibold  text-center border-2 rounded-t-xl">
+                    Últimos profesionals Registrados
+                </h2>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto rounded-xl text-[1rem] text-left">
+                        <thead class="bg-[#9471712c] text-[1rem] font-bold">
+                            <tr>
+                                <th class="p-3 border-x-2 text-center">Nombre</th>
+                                <th class="p-3 border-x-2 text-center">Area</th>
+                                <th class="p-3 border-x-2 text-center">Tipo profesional</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="tabla_profesional" data-value='{{ tablaprofesional }}'
+                            class="border-b-1 text-center">
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ====================================================== -->
+    <!--                   DATOS EMBEBIDOS                      -->
+    <!-- ====================================================== -->
+    <div id="data-values"
+         data-kpi1='{{ kpiprofesional1| safe}}'
+         data-kpi2='{{ kpiprofesional2| safe}}'
+         data-chart1='{{ chartprofesional1| safe }}'
+         data-tabla='{{ tablaprofesional| safe }}'
+>
+    </div>
+
+</body>
+
+{% block scripts %}
+<script src="{% static 'dashboard/js/profesionales.js' %}"></script>
+{% endblock scripts %}
+
+{% endblock %}

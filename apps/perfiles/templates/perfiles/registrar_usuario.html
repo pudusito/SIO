@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Crear Usuario Nuevo
+{% endblock title %}
+
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+
+{% endblock estilos_personalizados %}
+    
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+    
+
+{% block content %}
+     <!-- ===== Contenedor de las cards ===== -->
+<main class="main-container">
+
+        <nav class="breadcrumbs breadcrumbs-margin">
+            <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a> <span>›</span>
+            <a href="#" class="link-color">Usuarios</a> <span>›</span>
+            <span>Nuevo Usuario</span>
+        </nav>
+
+        <section class="form-card">
+            
+            <div class="form-header">
+                <h2 class="form-title">Registrar Nuevo Usuario</h2>
+                <p class="form-subtitle">Complete la ficha básica del personal.</p>
+            </div>
+
+            <form method="POST" class="main-form">
+                {% csrf_token %}
+                <fieldset class="form-section">
+                 
+
+                    <div class="form-row two-cols {% if form.username.errors %} has-error {% endif %}">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            {{form.username}}
+                        {% if form.username.errors %}
+                            <div class="error-message">
+                            {% for error in form.username.errors %}
+                                <p>{{ error }}</p> 
+                            {% endfor %}
+                            </div>                   
+                        {% endif %}
+                        </div>
+                    
+
+                    <div class="form-group {% if form.email.errors %} has-error {% endif %}">
+                            <label for="{{form.email.id_for_label}}">Correo Electrónico</label>
+                            {{form.email}}
+                        {% if form.email.errors %}
+                            <div class="error-message">
+                            {% for error in form.email.errors %}
+                                <p>{{ error }}</p> 
+                            {% endfor %}
+                            </div>                   
+                        {% endif %}
+                    </div>    
+                        
+                    
+                    <div class="form-row two-cols {% if form.first_name.errors %} has-error {% endif %}">
+                        <div class="form-group">
+                            <label for="{{form.first_name.id_for_label}}">Nombre</label>
+                            {{form.first_name}}    
+                              {% if form.first_name.errors %}
+                            <div class="error-message">
+                            {% for error in form.first_name.errors %}
+                                <p>{{ error }}</p> 
+                            {% endfor %}
+                            </div>                   
+                        {% endif %}
+                        </div>
+                        
+                        <div class="form-group {% if form.last_name.errors %} has-error {% endif %}">
+                            <label for="{{form.last_name.id_for_label}}">Primer Apellido</label>
+                            {{form.last_name}}
+                              {% if form.last_name.errors %}
+                            <div class="error-message">
+                            {% for error in form.last_name.errors %}
+                                <p>{{ error }}</p> 
+                            {% endfor %}
+                            </div>                   
+                        {% endif %}
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Asignación de Perfil</h3>
+                    </div>
+                    <p class="form-subtitle">Seleccione los roles que desempeñará el usuario.</p>
+                    
+                    <div class="checkbox-grid">
+                        
+                        <label class="checkbox-card {% if form.es_matrona.errors %} has-error {% endif %}">
+                            {{form.es_matrona}}
+                            <div class="dato-box-inner">
+                                <span class="checkbox-text">Matrona(ón)</span>
+                                <span class="field-help">Registro clínico y atención.</span>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card {% if form.es_supervisor.errors %} has-error {% endif %}">
+                            {{form.es_supervisor}}
+                            <div class="dato-box-inner">
+                                <span class="checkbox-text">Supervisor</span>
+                                <span class="field-help">Gestión y reportes.</span>
+                            </div>
+                        </label>
+
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+                    <button type="submit" class="btn-primary">Crear Usuario</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+{% endblock content %}
+    
+
+
+{% block scripts %}
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+{% endblock scripts %}
+    
+
+
+    

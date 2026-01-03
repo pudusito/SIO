@@ -1,0 +1,255 @@
+{% extends "wizard/wizard_form.html" %}
+
+
+
+{% block form_title %}
+    Ingrese el Recien Nacido
+{% endblock form_title %}
+    
+
+
+{% block form_fields %}
+     <fieldset class="form-section">
+            <legend class="section-legend">Datos Generales</legend>
+            <div class="form-group {% if form.fecha_hora.errors %} has-error{% endif %}">
+                    <label for="fecha_hora">Fecha y Hora de Nacimiento  <span class="obligatorio">*</span></label>
+                    {{form.fecha_hora}}
+                    {% if form.fecha_hora.errors %}
+                        <div class="error-message">
+                        {% for error in form.fecha_hora.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row three-cols">
+                <div class="form-group {% if form.codigo.errors %} has-error{% endif %}">
+                    <label for="codigo">Código Identificador  <span class="obligatorio">*</span></label>
+                    {{form.codigo}}
+                    {% if form.codigo.errors %}
+                        <div class="error-message">
+                        {% for error in form.codigo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}    
+                </div>
+
+                <div class="form-group {% if form.sexo.errors %} has-error{% endif %}">
+                    <label for="sexo">Sexo  <span class="obligatorio">*</span></label>
+                    {{form.sexo}}
+                    {% if form.sexo.errors %}
+                        <div class="error-message">
+                        {% for error in form.sexo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+
+                <div class="form-group {% if form.c_2480.errors %} has-error{% endif %}">
+                    <label for="c_2480">Código 2480</label>
+                    {{form.c_2480}} 
+                    {% if form.c_2480.errors %}
+                        <div class="error-message">
+                        {% for error in form.sexo.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}   
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Antropometría</legend>
+
+            <div class="form-row three-cols">
+                <div class="form-group {% if form.peso.errors %} has-error{% endif %}">
+                    <label for="peso">Peso (Gramos)  <span class="obligatorio">*</span></label>
+                    {{form.peso}}
+                    <span class="field-help">Ingrese el valor en gramos (enteros).</span>
+                    {% if form.peso.errors %}
+                        <div class="error-message">
+                        {% for error in form.peso.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+
+                <div class="form-group  {% if form.talla.errors %} has-error{% endif %}">
+                    <label for="talla">Talla (cm)</label>
+                   {{form.talla}}
+                   {% if form.talla.errors %}
+                        <div class="error-message">
+                        {% for error in form.talla.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+
+                <div class="form-group  {% if form.presentacion_fetal.errors %} has-error{% endif %}">
+                    <label for="presentacion_fetal">Presentación Fetal  <span class="obligatorio">*</span></label>
+                   {{form.presentacion_fetal}}
+                   {% if form.presentacion_fetal.errors %}
+                        <div class="error-message">
+                        {% for error in form.presentacion_fetal.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group {% if form.perimetro_cefalico.errors %} has-error{% endif %}">
+                    <label for="perimetro_cefalico">Perímetro Cefálico (cm)  <span class="obligatorio">*</span></label>
+                 {{form.perimetro_cefalico}}
+                    {% if form.perimetro_cefalico.errors %}
+                        <div class="error-message">
+                        {% for error in form.perimetro_cefalico.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+
+                <div class="form-group {% if form.perimetro_toraxico.errors %} has-error{% endif %}">
+                    <label for="perimetro_toraxico">Perímetro Torácico (cm)  <span class="obligatorio">*</span></label>
+                    {{form.perimetro_toraxico}}
+                     {% if form.perimetro_toraxico.errors %}
+                        <div class="error-message">
+                        {% for error in form.perimetro_toraxico.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Evaluación Clínica</legend>
+
+            <div class="form-row three-cols">
+                <div class="form-group {% if form.apgar_1.errors %} has-error{% endif %}">
+                    <label for="apgar_1">APGAR 1 min  <span class="obligatorio">*</span></label>
+                   {{form.apgar_1}}
+                   {% if form.apgar_1.errors %}
+                        <div class="error-message">
+                        {% for error in form.apgar_1.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+
+                <div class="form-group {% if form.apgar_5.errors %} has-error{% endif %}">
+                    <label for="apgar_5">APGAR 5 min  <span class="obligatorio">*</span></label>
+                    {{form.apgar_5}}
+                    {% if form.apgar_5.errors %}
+                        <div class="error-message">
+                        {% for error in form.apgar_5.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}   
+                </div>
+
+                <div class="form-group {% if form.destino.errors %} has-error{% endif %}">
+                    <label for="destino">Destino Final  <span class="obligatorio">*</span></label>
+                    {{form.destino}}
+                    {% if form.destino.errors %}
+                        <div class="error-message">
+                        {% for error in form.destino.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="form-group {% if form.destino_rn.errors %} has-error{% endif %}">
+                <label for="destino_rn">Detalle de Destino (Opcional)</label>
+                {{form.destino_rn}}
+                {% if form.destino_rn.errors %}
+                        <div class="error-message">
+                        {% for error in form.destino_rn.errors %}
+                            <p>{{ error }}</p> 
+                        {% endfor %}
+                        </div>                   
+                    {% endif %}
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Indicadores de Calidad</legend>
+
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    {{form.alojamiento_conjunto}}
+                    <span class="checkbox-text">Alojamiento Conjunto</span>
+                </label>
+
+                <label class="checkbox-card">
+                   {{form.apego_canguro}}
+                    <span class="checkbox-text">Apego Canguro</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.lactante_60}}
+                    <span class="checkbox-text">Lactancia < 60 min</span>
+                </label>
+
+                <label class="checkbox-card">
+                    {{form.apego_tunel}}
+                    <span class="checkbox-text">Apego Túnel</span>
+                </label>
+
+                <label class="checkbox-card">
+                   {{form.gases_de_cordon}}
+                    <span class="checkbox-text">Gases de Cordón</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Complicaciones</legend>
+             
+            <div class="checkbox-grid">   
+                {% for complicacion in form.complicaciones_postparto %}
+                    <label class="checkbox-card">
+                        {{complicacion.tag}}
+                    <span class="checkbox-text">{{complicacion.choice_label}}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </fieldset>
+
+        
+        <fieldset class="form-section">
+            <legend class="section-legend">Reanimaciones Neonatales</legend>
+             
+            <div class="checkbox-grid">   
+                {% for reanimacion in form.reanimaciones_neonatales %}
+                    <label class="checkbox-card">
+                        {{reanimacion.tag}}
+                    <span class="checkbox-text">{{reanimacion.choice_label}}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </fieldset>
+
+        
+        <fieldset class="form-section">
+            <div class="form-group" style="margin-top: 1rem;">
+                <label for="observaciones">Observaciones Generales</label>
+                {{form.observaciones}}
+            </div>
+        </fieldset>
+{% endblock form_fields %}
+    

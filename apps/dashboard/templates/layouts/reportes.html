@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block estilos_personalizados %}
+<link rel="stylesheet" href="{% static 'styles/form.css' %}">
+{% endblock estilos_personalizados %}
+
+{% block content %}
+{% include 'includes/sidebar.html' %}
+{% include 'includes/topbar.html' %}
+
+<body class="bodydashboard-container">
+
+    {% include 'nav/nav.html' %}
+
+    <!-- ====================================================== -->
+    <!--                             KPIs                        -->
+    <!-- ====================================================== -->
+    <section class="flex justify-center items-center gap-6 text-center">
+
+        <!-- KPI 1 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-red-500/40 to-pink-200/10
+                    backdrop-blur-xl border border-white/10">
+            <h3 class="text-sm font-medium">
+                Total reportes descargados esta semana
+            </h3>
+            <p id="kpi_reporte_1" data-value="{{ kpireporte1|default:25 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+    </section>
+
+<!-- ====================================================== -->
+<!--      CARDS          -->
+<!-- ====================================================== -->
+    <div class="text-center mt-10 mb-8">
+      <h2 class="text-[2rem] font-semibold tracking-tight text-gray-800 flex justify-center items-center gap-2">
+        Descargar reportes 
+      </h2>
+      <p class="text-[1rem] text-gray-500 mt-1">
+        Selecciona el tipo de reporte que deseas generar
+      </p>
+    </div>
+        
+    <section class="flex justify-center items-center gap-3">
+        <div class="card">
+            <button type="button" class="card-button open-modal" data-modal="modal-reporte-caracteristicas-parto">
+                <img alt="Estadística Partos" src="{% static 'icons/reporteicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Características Parto</h3>
+                <p class="subtitle">Detalle de características y tipos de parto.</p>
+            </button>
+        </div>
+
+        <div class="card">
+            <button type="button" class="card-button open-modal" data-modal="modal-reporte-eutocico">
+                <img alt="Vía Parto" src="{% static 'icons/reporteicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Partos Eutócicos</h3>
+                <p class="subtitle">Relación Eutócicos vs Distócicos.</p>
+            </button>
+        </div>
+
+        <div class="card">
+            <button type="button" class="card-button open-modal" data-modal="modal-reporte-d1">
+                <img alt="Reporte REM" src="{% static 'icons/reporteicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Reporte REM D1</h3>
+                <p class="subtitle">Estadística mensual D1 oficial.</p>
+            </button>
+        </div>
+
+        <div class="card">
+            <button type="button" class="card-button open-modal" data-modal="modal-reporte-d2">
+                <img alt="Reporte REM" src="{% static 'icons/reporteicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Reporte REM D2</h3>
+                <p class="subtitle">Estadística mensual D2 oficial.</p>
+            </button>
+        </div>
+
+        <div class="card">
+            <button type="button" class="card-button open-modal" data-modal="modal-reporte-esterilizaciones">
+                <img alt="Cirugía" src="{% static 'icons/reporteicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Esterilizaciones</h3>
+                <p class="subtitle">Reporte de esterilizaciones quirúrgicas.</p>
+            </button>
+        </div>
+        
+        <div class="card">
+            <button type="button" class="card-button open-modal" data-modal="modal-reporte-hepatitisb">
+                <img alt="Vacunas" src="{% static 'icons/reporteicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Hepatitis B</h3>
+                <p class="subtitle">Control y seguimiento de Hepatitis B.</p>
+            </button>
+        </div>
+
+        <div class="card">
+            <button type="button" class="card-button open-modal" data-modal="modal-reporte-modelo-atencion">
+                <img alt="Atención" src="{% static 'icons/reporteicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Modelo Atención</h3>
+                <p class="subtitle">Indicadores del modelo de atención integral.</p>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Modales para cada card -->
+    <div id="modal-reporte-caracteristicas-parto" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" role="dialog" aria-modal="true">
+      <div class="bg-[#ffffffd8] card rounded-lg p-6 max-w-lg w-full mx-4 relative h-auto">
+        <button type="button" class="modal-close absolute top-3 right-3 text-gray-700" aria-label="Cerrar">✕</button>
+        <h3 class="text-[1.2rem] font-semibold text-center">Características Parto</h3>
+          <p class="mt-2 text-[1rem] text-center">Detalle de características y tipos de parto.</p>
+
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <label class="block text-[1rem] text-center form-group form-group ">
+                  Fecha inicio
+                  <input type="date" id="start-modal-reporte-caracteristicas-parto" name="start" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+                <label class="block text-[1rem] text-center form-group form-group">
+                  Fecha fin
+                  <input type="date" id="end-modal-reporte-caracteristicas-parto" name="end" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+              </div>
+          
+
+        <div class="mt-4 flex gap-2 grid grid-cols-2">
+          <button type="button" class="modal-close px-2 py-2 border rounded text-center">Cerrar</button>
+          <a href="{% url 'reportes:crear_reporte_caracteristicas_parto' %}" class="btn-download px-4 py-2  border rounded text-center">Descargar</a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reporte-eutocico" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" role="dialog" aria-modal="true">
+      <div class="card rounded-lg p-6 max-w-lg w-full mx-4 relative h-auto">
+        <button type="button" class="modal-close absolute top-3 right-3 text-gray-700" aria-label="Cerrar">✕</button>
+        <h3 class="text-[1.2rem] font-semibold text-center">Partos Eutócicos</h3>
+          <p class="mt-2 text-[1rem] text-center">Relación Eutócicos vs Distócicos.</p>
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha inicio
+                  <input type="date" id="start-modal-reporte-eutocico" name="start" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha fin
+                  <input type="date" id="end-modal-reporte-eutocico" name="end" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+              </div>
+
+
+
+        <div class="mt-4 flex gap-2 grid grid-cols-2">
+          <button type="button" class="modal-close px-2 py-2 border rounded text-center">Cerrar</button>
+          <a href="{% url 'reportes:crear_reporte_eutocico_distocico' %}" class="btn-download px-4 py-2  border rounded text-center">Descargar</a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reporte-d1" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" role="dialog" aria-modal="true">
+      <div class="card rounded-lg p-6 max-w-lg w-full mx-4 relative h-auto">
+        <button type="button" class="modal-close absolute top-3 right-3 text-gray-700" aria-label="Cerrar">✕</button>
+        <h3 class="text-[1.2rem] font-semibold text-center">Reporte REM D1</h3>
+          <p class="mt-2 text-[1rem] text-center">Estadística mensual D1 oficial.</p>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="block text-[1rem] text-center form-group">
+                    Fecha inicio
+                    <input type="date" id="start-modal-reporte-d1" name="start" class="mt-1 w-full border rounded px-2 py-1">
+                  </label>
+                  <label class="block text-[1rem] text-center form-group">
+                    Fecha fin
+                    <input type="date" id="end-modal-reporte-d1" name="end" class="mt-1 w-full border rounded px-2 py-1">
+                  </label>
+                </div>
+
+
+
+        <div class="mt-4 flex gap-2 grid grid-cols-2">
+          <button type="button" class="modal-close px-2 py-2 border rounded text-center">Cerrar</button>
+          <a href="{% url 'reportes:crear_reporte_d1' %}" class="btn-download px-4 py-2  border rounded text-center">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reporte-d2" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" role="dialog" aria-modal="true">
+      <div class="card rounded-lg p-6 max-w-lg w-full mx-4 relative h-auto">
+        <button type="button" class="modal-close absolute top-3 right-3 text-gray-700" aria-label="Cerrar">✕</button>
+        <h3 class="text-[1.2rem] font-semibold text-center">Reporte REM D2</h3>
+          <p class="mt-2 text-[1rem] text-center">Estadística mensual D2 oficial.</p>
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha inicio
+                  <input type="date" id="start-modal-reporte-d2" name="start" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha fin
+                  <input type="date" id="end-modal-reporte-d2" name="end" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+              </div>
+
+        <div class="mt-4 flex gap-2 grid grid-cols-2">
+          <button type="button" class="modal-close px-2 py-2 border rounded text-center">Cerrar</button>
+          <a href="{% url 'reportes:crear_reporte_d2' %}" class="btn-download px-4 py-2  border rounded text-center">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reporte-esterilizaciones" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" role="dialog" aria-modal="true">
+      <div class="card rounded-lg p-6 max-w-lg w-full mx-4 relative h-auto">
+        <button type="button" class="modal-close absolute top-3 right-3 text-gray-700" aria-label="Cerrar">✕</button>
+        <h3 class="text-[1.2rem] font-semibold text-center">Esterilizaciones</h3>
+          <p class="mt-2 text-[1rem] text-center">Reporte de esterilizaciones quirúrgicas.</p>
+
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha inicio
+                  <input type="date" id="start-modal-reporte-esterilizaciones" name="start" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha fin
+                  <input type="date" id="end-modal-reporte-esterilizaciones" name="end" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+              </div>
+        <div class="mt-4 flex gap-2 grid grid-cols-2">
+          <button type="button" class="modal-close px-2 py-2 border rounded text-center">Cerrar</button>
+           <a href="{% url 'reportes:crear_reporte_esterilizaciones_quirurgicas' %}" class="btn-download px-4 py-2  border rounded text-center">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reporte-hepatitisb" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" role="dialog" aria-modal="true">
+      <div class="card rounded-lg p-6 max-w-lg w-full mx-4 relative h-auto">
+        <button type="button" class="modal-close absolute top-3 right-3 text-gray-700" aria-label="Cerrar">✕</button>
+        <h3 class="text-[1.2rem] font-semibold text-center">Hepatitis B</h3>
+          <p class="mt-2 text-[1rem] text-center">Control y seguimiento de Hepatitis B.</p>
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha inicio
+                  <input type="date" id="start-modal-reporte-hepatitisb" name="start" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha fin
+                  <input type="date" id="end-modal-reporte-hepatitisb" name="end" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+              </div>
+        <div class="mt-4 flex gap-2 grid grid-cols-2">
+          <button type="button" class="modal-close px-2 py-2 border rounded text-center">Cerrar</button>
+          <a href="{% url 'reportes:crear_reporte_hepatitis_b' %}" class="btn-download px-2 py-2  border rounded hover:bg-red-500/50">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reporte-modelo-atencion" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" role="dialog" aria-modal="true">
+      <div class="card rounded-lg p-6 max-w-lg w-full mx-4 relative h-auto">
+        <button type="button" class="modal-close absolute top-3 right-3 text-gray-700" aria-label="Cerrar">✕</button>
+        <h3 class="text-[1.2rem] font-semibold text-center text-center">Modelo Atención</h3>
+          <p class="mt-2 text-[1rem] text-center text-center">Indicadores del modelo de atención integral.</p>
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha inicio
+                  <input type="date" id="start-modal-reporte-modelo-atencion" name="start" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+                <label class="block text-[1rem] text-center form-group">
+                  Fecha fin
+                  <input type="date" id="end-modal-reporte-modelo-atencion" name="end" class="mt-1 w-full border rounded px-2 py-1">
+                </label>
+              </div>
+        <div class="mt-4 flex gap-2 grid grid-cols-2">
+          <button type="button" class="modal-close px-2 py-2 border rounded text-center">Cerrar</button>
+          <a href="{% url 'reportes:crear_reporte_modelo_atencion' %}" class="btn-download px-2 py-2 border rounded text-center">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+<!-- ====================================================== -->
+<!--                   DATOS EMBEBIDOS                      -->
+<!-- ====================================================== -->
+    <div id="data-values"
+         data-kpi1='{{ kpireporte1| safe}}'
+         data-kpi2='{{ kpireporte2| safe}}'
+         data-chart1='{{ chartreporte1| safe }}' >
+    </div>
+
+
+</body>
+
+{% block scripts %}
+<script src="{% static 'dashboard/js/modal.js' %}"></script>
+<script src="{% static 'dashboard/js/reportes.js' %}"></script>
+{% endblock scripts %}
+
+{% endblock %}

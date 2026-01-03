@@ -1,0 +1,74 @@
+[
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 1,
+    "fields": {
+      "nombre": "Sufrimiento fetal que persiste",
+      "descripcion": "Condición en la que el feto continúa mostrando signos de sufrimiento durante o después del parto, evidenciado por alteraciones en el monitoreo fetal."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 2,
+    "fields": {
+      "nombre": "Asfixia perinatal",
+      "descripcion": "Falta de oxígeno al nacer que puede causar daño a órganos y requiere intervención inmediata."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 3,
+    "fields": {
+      "nombre": "Hipotermia",
+      "descripcion": "Disminución anormal de la temperatura corporal del recién nacido que requiere medidas de calentamiento."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 4,
+    "fields": {
+      "nombre": "Hipoglicemia neonatal",
+      "descripcion": "Niveles bajos de glucosa en sangre del recién nacido, con riesgo de complicaciones neurológicas si no se trata."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 5,
+    "fields": {
+      "nombre": "Ictericia",
+      "descripcion": "Coloración amarilla de piel y mucosas del recién nacido debido a niveles elevados de bilirrubina."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 6,
+    "fields": {
+      "nombre": "Malformación congénita",
+      "descripcion": "Alteraciones estructurales o funcionales presentes al nacer, congénitas o hereditarias."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 7,
+    "fields": {
+      "nombre": "Sepsis",
+      "descripcion": "Infección sistémica grave en el recién nacido que requiere tratamiento antibiótico inmediato."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 8,
+    "fields": {
+      "nombre": "Riesgo de infección",
+      "descripcion": "Condición en la que el recién nacido presenta factores que aumentan la probabilidad de desarrollar infección."
+    }
+  },
+  {
+    "model": "recien_nacidos.complicacionpostparto",
+    "pk": 9,
+    "fields": {
+      "nombre": "Trauma neonatal",
+      "descripcion": "Lesiones físicas sufridas por el recién nacido durante el parto, como fracturas o contusiones."
+    }
+  }
+]

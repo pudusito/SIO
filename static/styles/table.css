@@ -1,0 +1,352 @@
+/* =========================================
+   LAYOUT SPLIT (Izquierda pequeña / Derecha grande)
+   ========================================= */
+.layout-split {
+    display: grid;
+    grid-template-columns: 18rem 1fr; /* Sidebar 280px aprox | Resto contenido */
+    gap: 2rem;
+    align-items: start;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .layout-split {
+        grid-template-columns: 1fr; /* En tablets se apila */
+    }
+    .filter-sidebar {
+        display: none; /* Opcional: Ocultar filtros en móvil o hacerlos acordeón */
+    }
+}
+
+     /* Estilo tipo 'Ticket' para el ID */
+.id-badge {
+    background-color: #edf2f7;
+    color: #4a5568;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace; /* Fuente monoespaciada para IDs */
+    font-weight: 700;
+    border: 1px solid #cbd5e0;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   SIDEBAR IZQUIERDO (Búsquedas)
+   ========================================= */
+.filter-sidebar .filter-card {
+    background: var(--bg-panel);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-m);
+    margin-bottom: 1rem;
+}
+
+.recent-list {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-list li a {
+    display: block;
+    padding: 0.8rem;
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.recent-list li a:hover {
+    background: var(--bg-input);
+    color: var(--primary);
+}
+
+/* =========================================
+   BARRA DE ACCIONES (Buscador + Botón)
+   ========================================= */
+.table-actions-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-pill {
+    flex: 1;
+    width: 100%;
+    background: var(--bg-panel);
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow-s);
+    gap: 0.8rem;
+}
+
+.search-pill input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: var(--text-main);
+}
+
+.form-flexbox {
+    display: flex;
+    width: 100%;
+}
+
+/* =========================================
+   SMART TABLE (La Joya de la Corona)
+   ========================================= */
+.table-container {
+    background: var(--bg-panel);
+    border-radius: 2rem;
+    padding: 1.3rem;
+    box-shadow: var(--shadow-m);
+    overflow-x: auto; /* Scroll horizontal si la tabla es muy ancha */
+}
+
+.smart-table {
+    width: 100%;
+    border-collapse: separate; /* Necesario para bordes redondeados en filas */
+    border-spacing: 0 0.5rem;  /* Espacio vertical entre filas */
+}
+
+/* Encabezados */
+.smart-table th {
+    font-family: system-ui;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 650;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+/* Celdas de Cuerpo */
+.smart-table td {
+    padding: 0.7rem 1rem;
+    background: var(--bg-input); /* Fondo de la fila (Gris suave) */
+    color: var(--text-main);
+    vertical-align: center;
+}
+
+/* Bordes redondeados para la fila completa */
+.smart-table tr td:first-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.smart-table tr td:last-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Efecto Hover en la fila */
+.smart-table tbody tr:hover td {
+    background: var(--bg-light);
+}
+
+
+.text-sub {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* Badges de Estado */
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Colores dinámicos según estado (Clases generadas por backend) */
+.status-badge.gestante {
+    background: #E3F2FD; color: #1976D2; /* Azul */
+}
+.status-badge.puerpera {
+    background: #FCE4EC; color: #C2185B; /* Rosa */
+}
+.status-badge.recién {
+    background: #E8F5E9; color: #388E3C; /* Verde */
+}
+
+/* Botones de Acción Pequeños */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.btn-icon-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.btn-icon-sm:hover {
+    background: var(--bg-body);
+}
+
+.btn-icon-sm img {
+    width: 18px;
+    height: 18px;
+    filter: var(--text-muted); /* Gris por defecto */
+}
+.btn-icon-sm:hover img {
+    filter: none; /* Color original al hover */
+}
+
+/* Excepción para eliminar (Rojo) */
+.btn-icon-sm.delete:hover {
+    background: #FFEBEE;
+}
+
+/* =========================================
+   PAGINACIÓN (Centrado Perfecto)
+   ========================================= */
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* <--- ESTO CENTRA TODO */
+    gap: 1.5rem;             /* Espacio elegante entre flechas y texto */
+    margin-top: 2rem;        /* Separación de la tabla */
+    padding-top: 1rem;
+}
+
+/* Texto "1 de 1" */
+.table-pagination span {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums; /* Números alineados */
+}
+
+.table-pagination span strong {
+    color: var(--text-main);
+}
+
+/* Botones de Flecha */
+.table-pagination .action-btn {
+    width: 36px;  /* Tamaño fijo para que sean círculos */
+    height: 36px;
+    padding: 0;   /* Reset del padding original de action-btn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-input); /* Botón gris suave */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.table-pagination .action-btn:hover {
+    background: var(--primary); /* Se pone naranja al hover */
+    box-shadow: var(--shadow-s);
+}
+
+/* Truco Pro: Cambiar color del SVG al hacer hover */
+.table-pagination .action-btn:hover img {
+    filter: brightness(0) invert(1); /* Vuelve blanco el icono negro */
+}
+
+/* Estado deshabilitado (opcional) */
+.table-pagination .action-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================================
+   AJUSTES FINOS DE TABLA
+   ========================================= */
+.smart-table td {
+    vertical-align: middle; /* Mejor alineación que "center" */
+}
+
+.action-buttons {
+    justify-content: center; /* Centrar los botones de acción en su celda */
+}
+
+
+/* Estilo base para la etiqueta (badge) */
+.estado-badge {
+    text-align: center;
+    padding: 5px 12px;
+    border-radius: 20px;       /* Bordes redondeados */
+    font-weight: bold;
+    font-size: 0.85em;
+    text-align: center;
+    display: inline-block;
+    color: white;              /* Texto blanco por defecto */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* --- Colores específicos según el estado --- */
+
+/* INGRESO: Azul informativo */
+.estado-ingreso {
+    background-color: #3498db !important; 
+}
+
+/* ACTIVO: Verde (Proceso normal en curso) */
+.estado-activo {
+    background-color: #2ecc71 !important; 
+}
+
+/* EXPULSIVO: Naranja/Rojo (Atención máxima requerida) */
+.estado-expulsivo {
+    background-color: #e67e22 !important; 
+    animation: palpitar 2s infinite; /* Opcional: animación suave */
+}
+
+/* ALUMBRAMIENTO: Morado (Etapa especial) */
+.estado-alumbramiento {
+    background-color: #9b59b6 !important; 
+}
+
+/* PUERPERIO: Cyan/Turquesa (Recuperación) */
+.estado-puerperio {
+    background-color: #1abc9c !important; 
+}
+
+/* TERMINADO: Gris (Finalizado/Histórico) */
+.estado-terminado {
+    background-color: #7f8c8d !important; 
+}
+
+/* TERMINADO: Gris (Finalizado/Histórico) */
+.estado-terminada {
+    background-color: #7f8c8d !important; 
+}
+
+.estado-curso {
+    background-color: #C2185B !important;
+    animation: palpitar2 2s infinite;
+}
+
+.estado-aborto {
+    background-color: #1976D2 !important;
+}
+
+/* Opcional: Animación para el estado crítico */
+@keyframes palpitar {
+    0% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(230, 126, 34, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0); }
+}
+
+/* Opcional: Animación para el estado crítico */
+@keyframes palpitar2 {
+    0% { box-shadow: 0 0 0 0 rgba(152, 34, 230, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(230, 126, 34, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0); }
+}

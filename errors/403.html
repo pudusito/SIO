@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Error 403 — Acceso Prohibido</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center p-6">
+  <main class="max-w-4xl w-full bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+
+    <!-- Icono -->
+    <div class="flex-shrink-0 w-40 h-40 md:w-56 md:h-56 rounded-xl bg-gradient-to-tr from-yellow-50 to-yellow-100 flex items-center justify-center border border-yellow-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-yellow-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <circle cx="12" cy="12" r="9" stroke-width="1.5" class="opacity-80" />
+        <path d="M9 10h6v7H9z" stroke-width="1.6" />
+        <path d="M9 10a3 3 0 1 1 6 0" stroke-width="1.6"/>
+      </svg>
+    </div>
+
+    <!-- Texto -->
+    <div class="flex-1 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Error 403</h1>
+      <p class="mt-2 text-yellow-600 font-semibold">Acceso prohibido</p>
+
+      <p class="mt-6 text-gray-600 leading-relaxed">
+        No tienes permisos para acceder a este recurso. Es posible que tu rol, sesión o nivel de acceso no sean suficientes.
+      </p>
+
+      <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+        <li class="flex items-start gap-3">
+          <span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600">1</span>
+          Verifica que hayas iniciado sesión.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600">2</span>
+          Confirma que tienes permisos suficientes.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600">3</span>
+          Consulta con un administrador para habilitar tu acceso.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600">4</span>
+          Intenta regresar a una página anterior.
+        </li>
+      </ul>
+
+      <div class="mt-8 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 justify-center md:justify-start">
+        <a href="/" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-yellow-600 text-white font-medium shadow hover:shadow-md transition">Volver al inicio</a>
+        <button onclick="navigator.clipboard.writeText(window.location.href)" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition">
+          Copiar URL
+        </button>
+      </div>
+
+      <p class="mt-6 text-xs text-gray-400">Código de error: <span class="text-gray-600 font-medium">403</span> — Generated at <span id="ts" class="font-mono">—</span></p>
+    </div>
+
+  </main>
+
+  <script>
+    document.getElementById('ts').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

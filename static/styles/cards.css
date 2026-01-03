@@ -1,0 +1,300 @@
+/* =========================================
+   LAYOUT GRID (El Padre que divide la pantalla)
+   ========================================= */
+.layout-grid {
+    display: grid;
+    /* MAGIA AQUÍ: 
+       1fr = Todo el espacio sobrante para las tarjetas
+       22rem = Un ancho fijo (aprox 350px) para la barra lateral derecha 
+    */
+    grid-template-columns: 1fr 22rem; 
+    gap: 2rem; /* Espacio entre la isla de tarjetas y la isla de stats */
+    align-items: start; /* Para que ambas columnas empiecen arriba */
+    width: 100%;
+}
+
+/* Responsive: En tablets/móviles, que se ponga uno debajo de otro */
+@media (max-width: 1100px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   ISLA DE TARJETAS (Izquierda)
+   ========================================= */
+.cards-container {
+    background: var(--bg-panel);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-m);
+    
+    /* Grid Interno de las tarjetas */
+    display: grid;
+    /* Esto hace que las tarjetas se acomoden solas (mínimo 150px de ancho cada una) */
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); 
+    gap: 1.3rem;
+}
+
+/* =========================================
+   ISLA DE DASHBOARD (Derecha)
+   ========================================= */
+.dashboard-panel {
+    background: var(--bg-panel);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-m);
+    height: 100%; /* Para que ocupe altura si lo necesitas */
+    min-height: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estilos simples para tus datos de resumen */
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.8rem;
+}
+.stat-item:last-child {
+    border-bottom: none;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* =========================================
+   CARD INDIVIDUAL (Ajustes)
+   ========================================= */
+.card {
+    background: var(--bg-input); /* Un gris muy suave o blanco off-white */
+    border-radius: 1.5rem;
+    transition: var(--transition);
+    border: 1px solid transparent; /* Para evitar saltos al hacer hover con borde */
+    overflow: hidden; /* Mantiene las esquinas redondas */
+}
+
+/* Quitamos estilos por defecto del botón para que llene la card */
+.card-button {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    background: var(--bg-panel); /* Se vuelve blanco puro al flotar */
+    box-shadow: var(--shadow-s);
+}
+
+/* Control de imágenes para que no rompan el layout */
+.card-icon {
+    height: 100px; /* Ajuste visual para que quepan bien */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 0;
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   ESTILOS DE DETALLE (Lectura de Datos - Modales)
+   ========================================= */
+
+/* Grid de 3 columnas para datos rápidos (Tiempos, Fechas) */
+.detalle-grid-3 {
+    display: grid;
+    /* Usamos minmax para que no se aplasten, similar a tu form-row */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Caja de Dato Individual (Imita visualmente a tus inputs) */
+.dato-box {
+    background: #fff;   /* CLAVE: Mismo fondo que tus inputs */
+    padding: 1rem;
+    border-radius: 1rem;           /* Curva Finexy (igual que inputs) */
+    text-align: center;
+    border: 1px solid transparent; /* Mantiene la consistencia de tamaño */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.dato-box:hover {
+    background: var(--bg-panel);   /* Efecto sutil al pasar el mouse */
+    box-shadow: var(--shadow-s);
+}
+
+.dato-label {
+    font-family: var(--ff);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);      /* Gris suave global */
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;        /* Un toque de elegancia */
+}
+
+.dato-big {
+    font-family: var(--ff);
+    font-size: 1.4rem;
+    font-weight: 800;
+    /* CORRECCIÓN: Usamos tu variable --primary, no --primary-color */
+    color: var(--primary);         
+    line-height: 1.2;
+}
+
+/* Chips Visuales (Estilo "Checked" de tus formularios) */
+.chip-dato {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    
+    /* ESTÉTICA SOFT ORANGE (Coincide con tus checkboxes activos) */
+    background: var(--bg-input);   /* Fondo base */
+    color: var(--text-main);       /* Texto normal por defecto */
+    
+    border: 1px solid var(--border-subtle);
+    border-radius: 50px;           /* Píldora completa */
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+/* Modificador para cuando queremos resaltar el chip (ej: procedimientos realizados) */
+.chip-dato.active {
+    background: rgba(255, 87, 34, 0.08); /* Naranja muy muy suave (transparencia manual) */
+    color: var(--primary);               /* Texto Naranja */
+    border-color: var(--primary);        /* Borde Naranja */
+}
+
+/* Lista limpia (Para profesionales o historial) */
+.lista-clean {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.lista-clean li {
+    padding: 0.8rem 0.5rem;
+    /* CORRECCIÓN: Usamos --border-subtle para líneas más suaves */
+    border-bottom: 1px solid var(--border-subtle); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-main);
+}
+
+.lista-clean li:last-child {
+    border-bottom: none;
+}
+
+/* Utilidad para textos dentro de listas */
+.dato-valor {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* =========================================
+   ACORDEÓN FINEXY (Para Modales)
+   ========================================= */
+
+details.finexy-accordion {
+    background: var(--bg-panel); /* O bg-input para contraste */
+    border: 1px solid var(--border-subtle);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+details.finexy-accordion[open] {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: var(--primary); /* Se ilumina al abrir */
+}
+
+summary.finexy-summary {
+    list-style: none; /* Quita el triángulo feo por defecto */
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    transition: background 0.2s;
+}
+
+summary.finexy-summary:hover {
+    background: rgba(0,0,0,0.02);
+}
+
+/* El icono de flecha personalizado */
+summary.finexy-summary::after {
+    content: '+'; 
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+details[open] summary.finexy-summary::after {
+    content: '−'; /* Cambia a menos al abrir */
+    color: var(--primary);
+    transform: rotate(180deg);
+}
+
+/* El contenido que se despliega */
+.accordion-content {
+    padding: 1rem;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-body); /* Ligeramente diferente para contraste */
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ocultar el marker default en Chrome/Safari */
+summary.finexy-summary::-webkit-details-marker {
+    display: none;
+}

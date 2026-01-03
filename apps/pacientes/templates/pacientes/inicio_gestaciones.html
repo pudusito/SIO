@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Inicio Gestaciones
+{% endblock title %}
+
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+
+
+
+{% block content %}
+   <main class="main-container">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+        <span>Gestaciones</span>
+    </nav>
+
+    <nav class="welcome-header">
+        <h1 class="main-title">Control de gestaciones</h1>
+        <p class="subtitle">Aquí puedes ver y gestionar todas las gestaciones registradas.</p>
+    </nav>
+
+    <section class="cards-container">
+        <div class="card">
+            <a href="{% url 'gestacion:listar_gestaciones' %}" class="card-button">
+                <img alt="Imagen listado de gestaciones" src="{% static 'icons/listargestaciones.png' %}" class="card-icon"/>
+                <h3 class="third-title">Ver gestaciones</h3>
+                <p class="subtitle">Gestiona a tus pacientes registrados</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{% url 'gestacion:agregar_gestacion' %}" class="card-button">
+                <img alt="Imagen agregar gestacion" src="{% static 'icons/agregargestacion.png' %}" class="card-icon"/>
+                <h3 class="third-title">Agregar gestación</h3>
+                <p class="subtitle">Registra una nueva gestación en el sistema.</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <button onclick="location.href='detallarGestacion.html'" class="card-button">
+                <img alt="generar excel" src="{% static 'icons/excelicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Generar excel</h3>
+                <p class="subtitle">Exporta la información de gestaciones en archivo Excel.</p>
+            </button>
+        </div>
+
+        <div class="card">
+            <button onclick="location.href=''" class="card-button">
+                <img alt="Proximamente" src="{% static 'icons/eyesicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Proximamente</h3>
+                <p class="subtitle"></p>
+            </button>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
+    
+    
+    

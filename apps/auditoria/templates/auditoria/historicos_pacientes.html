@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Historicos Paciente
+{% endblock title %}
+    
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/auditoria.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/table.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <style>
+        /* Estilo tipo 'Ticket' para el ID */
+        .id-badge {
+            background-color: #edf2f7;
+            color: #4a5568;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace; /* Fuente monoespaciada para IDs */
+            font-weight: 700;
+            border: 1px solid #cbd5e0;
+            font-size: 0.9rem;
+        }
+    </style>
+{% endblock estilos_personalizados %}
+    
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+
+
+{% block content %}
+    <main class="main-container">
+
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+         <span>Historicos Paciente</span>
+    </nav>
+
+    <div class="welcome-header">
+        <h1 class="main-title">Historicos Paciente</h1>
+        <p class="subtitle">Gestione los expedientes clínicos registrados en el sistema. Resultados: {{page_obj.paginator.count}} pacientes totales</p>
+    </div>
+
+    <div class="content-centered">
+        <div class="table-actions-bar">
+            <form method="get" class="filter-form-inline">
+                <div class="form-group">
+                    <label for="id_query">Filtrar por Usuario</label>
+                    <input type="text" name="username" placeholder="Nombre de usuario" id="id_query" value="{{username}}">
+                </div>
+                <div class="form-group">
+                    <label for="id_start_date">Fecha Desde</label>
+                    <input type="date" name="start_date" id="id_start_date" value="{{start_date}}">
+                </div>
+                <div class="form-group">
+                    <label for="id_end_date">Fecha Hasta</label>
+                    <input type="date" name="end_date" id="id_end_date" value="{{end_date}}">
+                </div>
+                <div class="form-group">
+                    <label for="id_tipo">Tipo</label>
+                    <select name="tipo" id="id_tipo">
+                        <option value="" {% if tipo == '' %} selected {%endif%}>.....</option>
+                        <option value="+" {% if tipo == '+' %} selected {%endif%}>Creacion</option>
+                        <option value="~" {% if tipo == '~' %} selected {%endif%}>Actualizacion</option>
+                        <option value="-" {% if tipo == '-' %} selected {%endif%}>Eliminacion</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Filtrar</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <table class="smart-table">
+                <thead>
+                    <tr>
+                        <th>ID Objeto Gestacion</th>
+                        <th>Usuario</th>
+                        <th>Fecha y Hora</th>
+                        <th>Tipo de Cambio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                   {% for historico in historicos %}
+                        <tr class="{% if historico.history_type == '+' %}creacion{% elif historico.history_type == '~' %}actualizacion{% else %}eliminacion{% endif %}">
+                            <td><span class="id-badge" style="font-weight: 500; color: #2d3748;">#{{historico.id}}</span></td>
+                            <td>
+                                <span class="text-bold">{{historico.history_user|default:"Sistema"}}</span>
+                                <span class="text-sub">{{historico.history_user.username}}</span>
+                            </td>
+                            <td>{{historico.history_date}}</td>
+                            {% if historico.history_type == '+' %}
+                            <td>
+                                <span class="badge-creacion">Creación</span>
+                            </td>
+                            <td class="action-group">
+                                <div class="action-buttons">
+                                    <button class="action-btn" 
+                                            title="Ver Detalles" 
+                                            data-modal-target="#base-modal"
+                                            hx-get="{% url 'auditoria:historico_creacion' model_name='paciente' history_id=historico.history_id %}"
+                                            hx-target="#modal-details-content"
+                                            hx-swap="innerHTML">
+                                        <img src="{% static 'svg/view.svg' %}" alt="Ver Detalles" class="nav-svg">
+                                    </button>
+                                </div>
+                           </td>
+                            {% elif historico.history_type == '~'%}
+                            <td class="action-group">
+                                <span class="badge-actualizacion">Actualización</span>
+                           </td>
+
+                           <td>
+                            
+                                <div class="action-buttons">
+                                    <button class="action-btn" 
+                                            title="Ver Detalles" 
+                                            data-modal-target="#base-modal"
+                                            hx-get="{% url 'auditoria:historico_actualizacion' model_name='paciente' history_id=historico.history_id %}"
+                                            hx-target="#modal-details-content"
+                                            hx-swap="innerHTML">
+                                        <img src="{% static 'svg/view.svg' %}" alt="Ver Detalles" class="nav-svg">
+                                    </button>
+                                </div>
+                           </td>
+                            {% else %}
+                                <td class="action-group">
+                                    <span class="badge-eliminacion">Eliminación</span>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-btn" 
+                                                title="Ver Detalles" 
+                                                data-modal-target="#base-modal"
+                                                hx-get="{% url 'auditoria:historico_eliminacion' model_name='paciente' history_id=historico.history_id %}"
+                                                hx-target="#modal-details-content"
+                                                hx-swap="innerHTML">
+                                            <img src="{% static 'svg/view.svg' %}" alt="Ver Detalles" class="nav-svg">
+                                        </button>
+                                    </div>
+                                </td>
+                            {% endif %}
+                            </td>
+                           
+                        </tr>
+                   {% endfor %}
+                    
+                </tbody>
+            </table>
+            
+        <div class="table-pagination">
+           {% if is_paginated %}
+                 {% include 'includes/paginacion.html' with page_obj=page_obj query_string=query_string%}
+            {% endif %}
+           </div>
+    </div>
+
+    <!-- Modal Base para Detalles -->
+    <div class="modal" id="base-modal">
+        <div class="modal-dialog">
+            <div class="modal-content" id="modal-details-content">
+                <!-- El contenido se cargará aquí a través de HTMX -->
+                <div class="modal-header">
+                    <h3 class="modal-title">Cargando...</h3>
+                    <button class="modal-close" data-modal-close>&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Por favor espere mientras se cargan los detalles.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" data-modal-close>Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}
+    
+
+
+
+{% block scripts %}
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+    {% include 'includes/script_mensajes.html' %}
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('base-modal');
+
+        // Delegación de eventos para abrir el modal
+        document.body.addEventListener('click', function(e) {
+            const trigger = e.target.closest('[data-modal-target]');
+            if (trigger) {
+                const modalTarget = document.querySelector(trigger.dataset.modalTarget);
+                if (modalTarget) {
+                    openModal(modalTarget);
+                }
+            }
+        });
+
+        // Delegación de eventos para cerrar el modal
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target.closest('[data-modal-close]')) {
+                    closeModal(modal);
+                }
+            });
+        }
+
+        function openModal(modal) {
+            if (modal == null) return;
+            modal.classList.add('active');
+        }
+
+        function closeModal(modal) {
+            if (modal == null) return;
+            modal.classList.remove('active');
+
+            // Resetea el contenido del modal para la próxima vez que se abra
+            const content = modal.querySelector('#modal-details-content');
+            if (content) {
+                // Usamos un timeout para que el contenido no desaparezca bruscamente
+                setTimeout(() => {
+                    content.innerHTML = `
+                    <div class="modal-header">
+                        <h3 class="modal-title">Cargando...</h3>
+                        <button class="modal-close" data-modal-close>&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Por favor espere mientras se cargan los detalles.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-secondary" data-modal-close>Cerrar</button>
+                    </div>`;
+                }, 300);
+            }
+        }
+    });
+    </script>
+{% endblock scripts %}
+    

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Wizard Form
+{% endblock title %}
+    
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+{% endblock estilos_personalizados %}
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+    
+
+{% block content %}
+    <main class="main-container">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumbs">
+            <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+            <span>›</span>
+            <span>Wizard Form</span>
+
+        </nav>
+
+        <section class="form-card">
+            
+            <div class="form-header">
+                <h2 class="form-title">
+                {% block form_title %}
+                    
+                {% endblock form_title %}
+                    </h2>
+                <p class="form-subtitle">Los campos marcados con <span class="obligatorio">*</span> son obligatorios</p>
+            </div>
+            {{ wizard.form.errors }}
+            <form method="POST" class="main-form">
+                {% csrf_token %}
+                {{wizard.management_form}}
+                
+                {% comment %} Fields Here !!!! {% endcomment %}
+                <!--JAJAJA CUANDO ALGO SE COLOQUE FUERA DEL BLOQUE USAR UN DIV Y AHI SE COLOCA SIN PROBLEMA
+                -->
+                <div>
+                    {% block form_fields %}
+                    
+                    {% endblock form_fields %}
+                </div>
+                    
+
+                <div class="form-actions">
+                    {% if wizard.steps.prev %}
+                        <button class="btn-secondary" value={{wizard.steps.prev}} name="wizard_goto_step" type="submit">Anterior</button>
+                    {% endif %}
+                    
+                    {% if wizard.steps.current == wizard.steps.last %}
+                        <button type="submit" class="btn-primary">Enviar</button>
+                    {% else %}
+                        <button type="submit" class="btn-primary">Siguiente</button>
+                    {% endif %}
+                </div>
+            </form>
+        </section>
+    </main>
+
+{% endblock content %}
+    

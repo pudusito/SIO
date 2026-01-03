@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Registrar Profesional - SIO
+{% endblock title %}
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+{% endblock estilos_personalizados %}
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+{% block content %}
+<main class="main-container">
+
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+        <a href="{% url 'profesionales:inicio' %}" class="link-color">Profesionales</a>
+        <span>›</span>
+        <span>Registrar Nuevo</span>
+    </nav>
+
+    <section class="form-card">
+        
+        <div class="form-header">
+            <h2 class="form-title">Nuevo Profesional</h2>
+            <p class="form-subtitle">Ingrese los datos del personal médico o administrativo para habilitarlo en el sistema.</p>
+        </div>
+
+        {% if form.non_field_errors %}
+            <div class="alert-box error">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <form method="POST" class="main-form" novalidate>
+            {% csrf_token %}
+            
+            <fieldset class="form-section">
+                <legend class="section-legend">Identificación y Cargo</legend>
+                
+                <div class="form-row">
+                    <div class="form-group {% if form.rut.errors %}has-error{% endif %}">
+                        <label for="{{ form.rut.id_for_label }}">RUT / Run <span class="obligatorio">*</span></label>
+                        {{ form.rut }}
+                        {% if form.rut.help_text %}
+                            <span class="field-help">{{ form.rut.help_text }}</span>
+                        {% endif %}
+                        {% if form.rut.errors %}
+                            <div class="error-message">
+                                {% for error in form.rut.errors %}<p>{{ error }}</p>{% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group {% if form.tipo.errors %}has-error{% endif %}">
+                        <label for="{{ form.tipo.id_for_label }}">Cargo / Rol Clínico <span class="obligatorio">*</span></label>
+                        {{ form.tipo }} {% if form.tipo.errors %}
+                            <div class="error-message">
+                                {% for error in form.tipo.errors %}<p>{{ error }}</p>{% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-legend">Datos Personales</legend>
+
+                <div class="form-group {% if form.nombre.errors %}has-error{% endif %}" style="margin-bottom: 1.5rem;">
+                    <label for="{{ form.nombre.id_for_label }}">Nombres <span class="obligatorio">*</span></label>
+                    {{ form.nombre }}
+                    {% if form.nombre.errors %}
+                        <div class="error-message">
+                            {% for error in form.nombre.errors %}<p>{{ error }}</p>{% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group {% if form.primer_apellido.errors %}has-error{% endif %}">
+                        <label for="{{ form.primer_apellido.id_for_label }}">Primer Apellido <span class="obligatorio">*</span></label>
+                        {{ form.primer_apellido }}
+                        {% if form.primer_apellido.errors %}
+                            <div class="error-message">
+                                {% for error in form.primer_apellido.errors %}<p>{{ error }}</p>{% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group {% if form.segundo_apellido.errors %}has-error{% endif %}">
+                        <label for="{{ form.segundo_apellido.id_for_label }}">Segundo Apellido</label>
+                        {{ form.segundo_apellido }}
+                        {% if form.segundo_apellido.errors %}
+                            <div class="error-message">
+                                {% for error in form.segundo_apellido.errors %}<p>{{ error }}</p>{% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-legend">Información de Contacto</legend>
+                
+                <div class="form-row">
+                    <div class="form-group {% if form.telefono.errors %}has-error{% endif %}">
+                        <label for="{{ form.telefono.id_for_label }}">Teléfono</label>
+                        {{ form.telefono }}
+                        {% if form.telefono.errors %}
+                            <div class="error-message">
+                                {% for error in form.telefono.errors %}<p>{{ error }}</p>{% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group {% if form.correo.errors %}has-error{% endif %}">
+                        <label for="{{ form.correo.id_for_label }}">Correo Electrónico</label>
+                        {{ form.correo }}
+                        {% if form.correo.errors %}
+                            <div class="error-message">
+                                {% for error in form.correo.errors %}<p>{{ error }}</p>{% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="checkbox-card small" style="margin-top: 1rem;">
+                    {{ form.activo }}
+                    <label for="{{ form.activo.id_for_label }}" class="checkbox-text">Profesional Activo en el Servicio</label>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <a href="{% url 'profesionales:listar' %}" class="btn-secondary">Cancelar</a>
+                <button type="submit" class="btn-primary">Guardar Profesional</button>
+            </div>
+
+        </form>
+    </section>
+
+</main>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/manejo-error-form.js' %}"></script>
+{% endblock scripts %}

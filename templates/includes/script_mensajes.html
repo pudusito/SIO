@@ -1,0 +1,35 @@
+ {% if messages %}
+        {% for message in messages %}
+            <script>
+                let backgroundColor;
+                {% if message.tags == 'success' %}
+                    // Gradiente verde para éxito
+                    backgroundColor = 'linear-gradient(to right, #00b09b, #96c93d)';
+                {% elif message.tags == 'error' %}
+                    // Gradiente rojo/naranja para error
+                    backgroundColor = 'linear-gradient(to right, #ff5f6d, #ffc371)';
+                {% elif message.tags == 'warning' %}
+                    // Gradiente naranja/amarillo para advertencia
+                    backgroundColor = 'linear-gradient(to right, #f7971e, #ffd200)';
+                {% else %}
+                    // Gradiente azul para información
+                    backgroundColor = 'linear-gradient(to right, #4facfe, #00f2fe)';
+                    console.log(message);
+                {% endif %}
+
+                Toastify({
+                    text: "{{ message }}",
+                    duration: 5000, // Un poco más de tiempo para leer
+                    close: true, // Muestra un botón para cerrar
+                    gravity: "top", 
+                    position: "right", 
+                    stopOnFocus: true, // La notificación no desaparece si el usuario pasa el mouse sobre ella
+                    style: {
+                        background: backgroundColor,
+                        borderRadius: "10px",
+                        boxShadow: "0 5px 15px rgba(0,0,0,0.2)"
+                    },
+                }).showToast();
+            </script>
+        {% endfor %}
+{% endif %}

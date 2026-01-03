@@ -1,0 +1,47 @@
+[
+  {
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 1,
+    "fields": {
+      "nombre": "Estimulación",
+      "descripcion": "Frotar suavemente al recién nacido para estimular respiración y tono muscular.",
+      "tipo": "basica"
+    }
+  },
+  {
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 2,
+    "fields": {
+      "nombre": "Aspiración",
+      "descripcion": "Aspirar secreciones de la vía aérea para asegurar ventilación efectiva.",
+      "tipo": "basica"
+    }
+  },
+  {
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 3,
+    "fields": {
+      "nombre": "Oxígeno suplementario",
+      "descripcion": "Administración de oxígeno cuando la respiración del recién nacido es insuficiente.",
+      "tipo": "basica"
+    }
+  },
+  {
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 4,
+    "fields": {
+      "nombre": "Ventilación / compresiones torácicas",
+      "descripcion": "Uso de ventilación con presión positiva y compresiones torácicas si no hay respiración efectiva o bradicardia.",
+      "tipo": "avanzada"
+    }
+  },
+  {
+    "model": "recien_nacidos.reanimacionneonatal",
+    "pk": 5,
+    "fields": {
+      "nombre": "Medicación",
+      "descripcion": "Administración de fármacos específicos como adrenalina si persiste bradicardia o falla respiratoria.",
+      "tipo": "avanzada"
+    }
+  }
+]

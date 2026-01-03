@@ -1,0 +1,18 @@
+[
+  { "model": "partos.tipoanalgesia", "pk": 1, "fields": { "nombre": "Histerectomía Obstétrica" } },
+  { "model": "partos.tipoanalgesia", "pk": 2, "fields": { "nombre": "Transfusión Sanguínea" } },
+  { "model": "partos.tipoanalgesia", "pk": 3, "fields": { "nombre": "Anestesia Neuroaxial" } },
+  { "model": "partos.tipoanalgesia", "pk": 4, "fields": { "nombre": "Óxido nitroso" } },
+  { "model": "partos.tipoanalgesia", "pk": 5, "fields": { "nombre": "Analgesia endovenosa" } },
+  { "model": "partos.tipoanalgesia", "pk": 6, "fields": { "nombre": "Anestesia General" } },
+  { "model": "partos.tipoanalgesia", "pk": 7, "fields": { "nombre": "Anestesia Local" } },
+  { "model": "partos.tipoanalgesia", "pk": 8, "fields": { "nombre": "Analgesia NO farmacológica" } },
+  { "model": "partos.tipoanalgesia", "pk": 9, "fields": { "nombre": "Balón Kinesico" } },
+  { "model": "partos.tipoanalgesia", "pk": 10, "fields": { "nombre": "Lenteja de Parto" } },
+  { "model": "partos.tipoanalgesia", "pk": 11, "fields": { "nombre": "Rebozo" } },
+  { "model": "partos.tipoanalgesia", "pk": 12, "fields": { "nombre": "Aromaterapia" } },
+  { "model": "partos.tipoanalgesia", "pk": 13, "fields": { "nombre": "Anest. Peridural Solicitada por paciente" } },
+  { "model": "partos.tipoanalgesia", "pk": 14, "fields": { "nombre": "Anest. Peridural indicada por médico GO" } },
+  { "model": "partos.tipoanalgesia", "pk": 15, "fields": { "nombre": "Anest. Peridural administrada" } },
+  { "model": "partos.tipoanalgesia", "pk": 16, "fields": { "nombre": "Tiempo de espera entre indicación médica y administración Anest. Peridural" } }
+]

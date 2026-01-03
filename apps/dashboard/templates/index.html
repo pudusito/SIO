@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- CUSTOM CSS -->
+<link rel="stylesheet" href="{% static 'dashboard/css/index.css' %}">
+<!----------------------------------------------->
+{% block content %}
+{% include 'includes/sidebar.html' %}
+{% include 'includes/topbar.html' %}
+<body class="bodydashboard-container">
+    
+    {% include 'layouts/pacientes.html' %}
+
+    </div>
+        <!-- CUSTOM SCRIPT -->
+        {% block scripts %}
+        <!-- Cargar primero los scripts que definen las funciones globales de los gráficos -->
+        <script src="{% static 'dashboard/js/pacientes.js' %}"></script>
+        <script src="{% static 'dashboard/js/partos.js' %}"></script>
+        <script src="{% static 'dashboard/js/recien_nacidos.js' %}"></script>
+        <script src="{% static 'dashboard/js/reportes.js' %}"></script>
+        <script src="{% static 'dashboard/js/profesionales.js' %}"></script>
+        <script src="{% static 'dashboard/js/ej.js' %}"></script>
+
+        <!-- Finalmente el controlador que llama a esas funciones -->
+        <script type="module" src="{% static 'dashboard/js/dashboard.js' %}"></script>
+        {% endblock scripts %}
+
+    </div>
+</body>
+{% endblock content %}
+ 
+
+<!--Made By:       _     
+                  | |
+ _ __   _   _   __| | _   _
+|  _ \ | | | | / _  || | | |
+| |_) || |_| || (_| || |_| |
+|  __/  \__ _| \__ _| \__ _|
+| |
+|_| @Benjamin Maldonado -->

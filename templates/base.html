@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {%  endblock title %}</title>
+    <link rel="shortcut icon" href="{% static 'svg/pregnant.svg' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'styles/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/global.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/topbar.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/htmx.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+
+    
+    {% block estilos_personalizados %}
+    <!----------------------------------------------->
+    <!-- CSS APP DASHBOARD -->
+    <link rel="stylesheet" href="{% static 'dashboard/css/index.css' %}">
+        <!----------------------------------------------->
+        <!----------------------------------------------->
+    <!-- CDN (respaldo por si falla el local)
+        (ya instaladas en django(eliminar en produccion))-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@6.0.0/dist/echarts.min.js"></script>
+    {% endblock estilos_personalizados %}
+        
+</head>
+<body>
+
+
+
+
+    {% block menus_navegacion %}
+    {% endblock menus_navegacion %}
+    
+    <div id="menu-inicio" class="fade-transition">
+        {% block content %}
+            
+        {% endblock content %}
+    </div>    
+
+
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+
+
+
+    <span id="iconos-ruta" data-sun="{% static 'svg/sun.svg' %}" data-moon="{% static 'svg/moon.svg' %}"></span>
+    
+    <script src="{% static 'js/theme-toggle.js' %}" defer></script>
+    <script src="{% static 'js/profile-dropdown.js' %}" defer></script>
+    <!-------------------   JS DASHBOARD ----------------------------------------------------->
+    <script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+    <!--------------------------------------------------------------------------------------->
+
+</body>
+</html>

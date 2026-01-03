@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Inicio RN
+{% endblock title %}
+
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+
+
+
+{% block content %}
+<main class="main-container">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+        <span>Recién Nacidos</span>
+    </nav>
+
+    <nav class="welcome-header">
+        <h1 class="main-title">Gestión de recién nacidos</h1>
+        <p class="subtitle">Aquí puedes ver y gestionar todos los recién nacidos registrados.</p>
+    </nav>
+
+    <section class="cards-container">
+        <div class="card">
+            <a href="{% url 'recien_nacido:listar_recien_nacidos' %}" class="card-button">
+                <img alt="Imagen listado de recién nacidos" src="{% static 'icons/listarreciennacidos.png' %}" class="card-icon"/>
+                <h3 class="third-title">Ver recién nacidos</h3>
+                <p class="subtitle">Confirma a tus recién nacidos registrados</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{% url 'recien_nacido:agregar_recien_nacido' %}" class="card-button">
+                <img alt="Imagen agregar recién nacido" src="{% static 'icons/agregarreciennacido.png' %}" class="card-icon"/>
+                <h3 class="third-title">Agregar recién nacido</h3>
+                <p class="subtitle">Registra un nuevo recién nacido en el sistema.</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <button onclick="location.href=''" class="card-button">
+                <img alt="Proximamente" src="{% static 'icons/eyesicon.png' %}" class="card-icon"/>
+                <h3 class="third-title">Proximamente</h3>
+                <p class="subtitle"></p>
+            </button>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
+    
+    
+    

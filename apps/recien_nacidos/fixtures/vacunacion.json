@@ -1,0 +1,81 @@
+[
+  {
+    "model": "recien_nacidos.tipovacuna",
+    "pk": 1,
+    "fields": {
+      "nombre": "BCG",
+      "descripcion": "Vacuna contra tuberculosis, se aplica al nacimiento"
+    }
+  },
+  {
+    "model": "recien_nacidos.tipovacuna",
+    "pk": 2,
+    "fields": {
+      "nombre": "Hepatitis B",
+      "descripcion": "Vacuna contra hepatitis B, primera dosis al nacimiento"
+    }
+  },
+  {
+    "model": "recien_nacidos.tipovacuna",
+    "pk": 3,
+    "fields": {
+      "nombre": "Polio",
+      "descripcion": "Vacuna contra poliomielitis, primera dosis al nacimiento"
+    }
+  },
+  {
+    "model": "recien_nacidos.vacunacion",
+    "pk": 1,
+    "fields": {
+      "recien_nacido": 1,
+      "profesional": 6,
+      "fecha": "2025-12-02",
+      "reaccion_adversa": "Ninguna",
+      "tipo": 1
+    }
+  },
+  {
+    "model": "recien_nacidos.vacunacion",
+    "pk": 2,
+    "fields": {
+      "recien_nacido": 2,
+      "profesional": 6,
+      "fecha": "2025-12-02",
+      "reaccion_adversa": "Leve enrojecimiento",
+      "tipo": 1
+    }
+  },
+  {
+    "model": "recien_nacidos.vacunacion",
+    "pk": 3,
+    "fields": {
+      "recien_nacido": 3,
+      "profesional": 7,
+      "fecha": "2025-12-02",
+      "reaccion_adversa": "Ninguna",
+      "tipo": 2
+    }
+  },
+  {
+    "model": "recien_nacidos.vacunacion",
+    "pk": 4,
+    "fields": {
+      "recien_nacido": 4,
+      "profesional": 8,
+      "fecha": "2025-12-02",
+      "reaccion_adversa": "Fiebre leve",
+      "tipo": 2
+    }
+  },
+  {
+    "model": "recien_nacidos.vacunacion",
+    "pk": 5,
+    "fields": {
+      "recien_nacido": 5,
+      "profesional": 6,
+      "fecha": "2025-12-02",
+      "reaccion_adversa": "Ninguna",
+      "tipo": 3
+    }
+  }
+]

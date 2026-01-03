@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'includes/sidebar.html' %}
+{% include 'includes/topbar.html' %}
+
+<body class="bodydashboard-container">
+
+    {% include 'nav/nav.html' %}
+
+    <!-- ====================================================== -->
+    <!--                             KPIs                        -->
+    <!-- ====================================================== -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-[1rem] text-center">
+
+        <!-- KPI 1 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Total de partos en el año
+            </h3>
+            <p id="kpi_parto_1" data-value="{{ kpiparto1|default:25 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+        <!-- KPI 2 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Porcentaje de cesáreas en partos
+            </h3>
+            <p id="kpi_parto_2" data-value="{{kpiparto2|default:50 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+        <!-- KPI 3 -->
+        <div class="p-4 rounded-2xl shadow-xl
+                    bg-gradient-to-br from-[#ffb3b32c] via-[#ffc6c617]  to-[#ffb3b32c]
+                    backdrop-blur-xl border border-white/10 hover:bg-red-600/30 transition-all duration-300">
+            <h3 class="text-sm font-medium">
+                Complicaciones en partos totales
+            </h3>
+            <p id="kpi_parto_3" data-value="{{ kpiparto3|default:10 }}"
+               class="text-4xl font-bold mt-3">0</p>
+        </div>
+
+    </section>
+
+<!-- ====================================================== -->
+<!--           GRÁFICOS        -->
+<!-- ====================================================== -->
+    <section class="grid grid-cols-2 gap-[1rem]">
+        <div class="grid grid-row-1 gap-[1rem]">
+<!-- 1 -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c] border border-white/10">
+                <h2 class="text-[1rem] font-semibold text-center">
+                    Número de Partos durante el año:<br/>2025
+                </h2>
+                <div id="chart_parto_1" 
+                     data-value='{{ chartparto1|safe }}'
+                    class="w-full h-80 rounded-xl"></div>
+            </div>
+<!-- 2 -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c] border border-white/10">
+                <h2 class="text-[1rem] font-semibold text-center">
+                    Porcentaje de Cesáreas vs Partos Naturales
+                </h2>
+                <div id="chart_parto_2" 
+                    data-value='{{ chartparto2 |safe }}'
+                    class="w-full h-80 rounded-xl"></div>
+            </div>
+        </div>
+<!-- 3 -->
+        <div class="grid grid-row-1 h-50">
+            <div class="rounded-2xl shadow-xl bg-[#9471712c] border border-white/10">
+                <h2 class="text-[1rem] font-semibold text-center">
+                    Complicaciones por Tipo <!-- (%) = (nº partos con complicación materna o neonatal en detalle_parto/puerperio / total partos) × 100. -->
+                </h2>
+                <div id="chart_parto_3" 
+                    data-value='{{ chartparto3|safe }}'
+                    class="w-full h-80 rounded-xl"></div>
+            </div>
+            <!--TABLA -->
+            <div class="rounded-2xl shadow-xl bg-[#9471712c]   border border-white/10 mt-6">
+                <h2 class="text-[1rem] font-semibold  text-center border-2 rounded-t-xl">
+                    Últimos Partos Registrados
+                </h2>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto rounded-xl text-left">
+                        <thead class="bg-[#9471712c] text-[1rem] font-bold">
+                            <tr>
+                                <th class="p-3 border-x-2 text-center">Profesional a cargo</th>
+                                <th class="p-3 border-x-2 text-center">Tipo Parto</th>
+                                <th class="p-3 border-x-2 text-center">Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla_parto" data-value='{{ tablaparto }}'
+                            class="border-b-1 text-center">
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ====================================================== -->
+    <!--                   DATOS EMBEBIDOS                      -->
+    <!-- ====================================================== -->
+    <div id="data-values"
+         data-kpi1='{{ kpiparto1| safe}}'
+         data-kpi2='{{ kpiparto2| safe}}'
+         data-kpi3='{{ kpiparto3| safe}}'
+         data-tabla='{{ tablaparto| safe }}'
+         data-chart1='{{ chartparto1| safe }}'
+         data-chart2='{{ chartparto2| safe }}'
+         data-chart3='{{ chartparto3| safe }}'>
+    </div>
+
+</body>
+
+{% block scripts %}
+<script src="{% static 'dashboard/js/partos.js' %}"></script>
+{% endblock scripts %}
+
+{% endblock %}

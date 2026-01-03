@@ -1,0 +1,6 @@
+[
+  { "model": "partos.vianacimiento", "pk": 1, "fields": { "tipo": "CES.ELECTIVA", "descripcion": "Cesárea electiva programada" } },
+  { "model": "partos.vianacimiento", "pk": 2, "fields": { "tipo": "CES. URGENCIA", "descripcion": "Cesárea de urgencia" } },
+  { "model": "partos.vianacimiento", "pk": 3, "fields": { "tipo": "EUTOCICO", "descripcion": "Parto vaginal normal sin complicaciones" } },
+  { "model": "partos.vianacimiento", "pk": 4, "fields": { "tipo": "DISTOCICO", "descripcion": "Parto vaginal con dificultades o instrumental" } }
+]

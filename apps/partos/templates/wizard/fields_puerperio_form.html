@@ -1,0 +1,70 @@
+{% extends "wizard/wizard_form.html" %}
+
+
+{% block form_title %}
+    Puerperio del Parto
+{% endblock form_title %}
+    
+
+
+{% block form_fields %}
+    <div class="form-section">
+                <h3 class="section-legend">Estado del Canal del Parto</h3>
+                    <div class="form-group {% if form.estado_perine.errors %} has-error{% endif %}">
+                        <label for="{{ form.estado_perine.id_for_label }}">Estado del Periné <span class="obligatorio">*</span></label>
+                        {{ form.estado_perine }}
+                        
+                        {% if form.estado_perine.errors %}
+                            <div class="error-message">
+                                {% for error in form.estado_perine.errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                  </div>
+            </div>
+                <fieldset class="form-section">
+                    <legend class="section-legend">Intervenciones y Hallazgos</legend>
+                     <p class="form-subtitle" style="margin-top: -1rem; margin-bottom: 1.5rem;">
+                    Seleccione todas las condiciones que apliquen al caso.
+                    </p>
+                    <div class="checkbox-grid">
+                        
+                        <label class="checkbox-card">
+                            {{ form.esterilizacion }}
+                            <span class="checkbox-text">Esterilización Quirúrgica</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            {{ form.revision }}
+                            <span class="checkbox-text">Revisión Instrumental</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            {{ form.manejo_qirurgico_inercia_ut }}
+                            <span class="checkbox-text">Manejo Qx. Inercia</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            {{ form.inercia_uterina }}
+                            <span class="checkbox-text">Inercia Uterina</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            {{ form.restos_placenta }}
+                            <span class="checkbox-text">Restos Placenta</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            {{ form.trauma }}
+                            <span class="checkbox-text">Trauma</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            {{ form.alteracion_coagulacion }}
+                            <span class="checkbox-text">Alt. Coagulación</span>
+                        </label>
+                    </div>
+                </fieldset>
+{% endblock form_fields %}
+    

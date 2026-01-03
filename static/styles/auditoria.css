@@ -1,0 +1,196 @@
+/* Estilos para centrar contenido */
+.content-centered {
+    width: 100%;
+    max-width: 1100px; /* Ancho máximo para la tabla en pantallas grandes */
+    margin: 20px auto; /* Centra el contenedor y añade espacio vertical */
+    padding: 0 15px; /* Añade un poco de espacio a los lados */
+}
+
+/* Estilos para la tabla de históricos */
+.smart-table tbody tr.creacion {
+    border-left: 5px solid #28a745; /* Verde */
+}
+
+.smart-table tbody tr.actualizacion {
+    border-left: 5px solid #ffc107; /* Amarillo */
+}
+
+.smart-table tbody tr.eliminacion {
+    border-left: 5px solid #dc3545; /* Rojo */
+}
+
+.badge-creacion, .badge-actualizacion, .badge-eliminacion {
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-creacion {
+    background-color: #28a745;
+}
+
+.badge-actualizacion {
+    background-color: #ffc107;
+    color: #212529; /* Texto oscuro para mejor contraste con amarillo */
+}
+
+.badge-eliminacion {
+    background-color: #dc3545;
+}
+
+/* Estilos para el modal (mejorado, estilo Bootstrap) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+.modal.active {
+    display: block; /* Mostrar modal */
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 1.75rem auto;
+    pointer-events: none;
+    max-width: 600px; /* Ancho del modal */
+}
+
+.modal.active .modal-dialog {
+    transform: none;
+    transition: transform .3s ease-out;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .5rem; /* Bootstrap usa 0.5rem */
+    outline: 0;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.5rem - 1px);
+    border-top-right-radius: calc(.5rem - 1px);
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.modal-close {
+    padding: .5rem .5rem;
+    margin: -.5rem -.5rem -.5rem auto;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    opacity: .75;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(.5rem - 1px);
+    border-bottom-left-radius: calc(.5rem - 1px);
+}
+
+.modal-footer > * {
+    margin: .25rem;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+/* Estilos para el formulario de filtros */
+.content-centered .table-actions-bar {
+    background: var(--bg-panel);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-m);
+    /* Sobrescribe el display:flex de table.css */
+    display: block;
+}
+
+.filter-form-inline {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.filter-form-inline .form-group {
+    flex: 1;
+    min-width: 200px;
+}

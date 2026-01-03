@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block title %}Inicio{% endblock title %}
+    
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+{% endblock estilos_personalizados %}
+    
+
+
+
+{% block menus_navegacion %}
+     {% comment %} HEADER {% endcomment %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+    
+
+
+{% block content %}
+
+
+    {% comment %} AQUI SE IRAN CARGANDO LOS MENU DE INICIO {% endcomment %}
+       <!-- ===== Contenedor de las cards ===== -->
+        <main class="main-container">
+
+            <div class="welcome-header">
+                <h1 class="main-title">Bienvenida, 
+                    
+                    {% if request.user.es_matrona %}
+                        Matrona
+                    {% elif request.user.es_supervisor %}
+                        Supervisor
+
+                    {% else %}
+                        Admin TI
+
+                    {% endif %}
+                        
+                    
+                    {{request.user.get_full_name}}</h1>
+                <p class="subtitle-desc">Ponte cómoda y al día con tus actividades.</p>
+            </div>
+
+            <div class="layout-grid">
+
+                <section class="left-column">
+                    <h2 class="second-title">Accesos rápidos</h2>
+                    
+                    {% if request.user.es_matrona or request.user.es_supervisor %}
+                    <div class="cards-container">
+                        <div class="card">
+                            <a href="{% url 'paciente:listar_pacientes' %}" class="card-button">
+                                <img alt="Pacientes" src="{% static 'icons/pacienteicon.png' %}" class="card-icon"/>
+                                <h3 class="third-title">Pacientes</h3>
+                                <p>Gestiona a tus pacientes</p>
+                            </a>
+                        </div>
+                        
+                        <div class="card">
+                            <a href="{% url 'gestacion:listar_gestaciones' %}" class="card-button">
+                                <img alt="Gestaciones" src="{% static 'icons/gestacionicon.png' %}" class="card-icon"/>
+                                <h3 class="third-title">Gestaciones</h3>
+                                <p>Mira tus gestaciones</p>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="{% url 'parto:listar_partos' %}" class="card-button">
+                                <img alt="Partos" src="{% static 'icons/partoicon.png' %}" class="card-icon"/>
+                                <h3 class="third-title">Partos</h3>
+                                <p>Gestiona tus partos</p>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="{% url 'recien_nacido:listar_recien_nacidos' %}" class="card-button">
+                                <img alt="Recién Nacidos" src="{% static 'icons/reciennacidoicon.png' %}" class="card-icon"/>
+                                <h3 class="third-title">Recién Nacidos</h3>
+                                <p>Gestiona recién nacidos</p>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="{% url 'parto:wizard_form' %}" class="card-button">
+                                <img alt="Reportes" src="{% static 'icons/wizardicon.png' %}" class="card-icon"/>
+                                <h3 class="third-title">Wizard-Form</h3>
+                                <p>Ingresa un completo flujo de datos en un unico formulario</p>
+                            </a>
+                        </div>
+                        {% endif %}
+                        {% if request.user.es_supervisor %}                        
+                            <div class="card">
+                                <a href='../Reportes/reportes.html' class="card-button">
+                                    <img alt="Reportes" src="{% static 'icons/auditoriaicon.png' %}" class="card-icon"/>
+                                    <h3 class="third-title">Turnos</h3>
+                                    <p>Gestiona tus próximos turnos</p>
+                                </a>
+                            </div>
+                            
+                        <div class="card">
+                            <a href="{% url 'dashboard_index' %}" class="card-button">
+                                <img alt="Reportes" src="{% static 'icons/dashboardicon.png' %}" class="card-icon"/>
+                                <h3 style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Dashboard Y Reportes</h3>
+                                <p>Analisis y descarga de archivos</p>
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        
+                    </div>
+                </section>
+                    </div>
+                </aside>
+
+            </div>
+        </main>
+{% endblock content %}
+    
+
+
+
+{% block scripts %}
+    <script src="{% static 'js/contador.js' %}"></script>
+    <script src="{% static 'js/toastify.min.js' %}"></script>
+    {% include 'includes/script_mensajes.html' %}
+
+{% endblock scripts %}

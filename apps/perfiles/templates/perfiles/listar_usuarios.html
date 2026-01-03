@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Gestión de Usuarios
+{% endblock title %}
+
+
+{% block estilos_personalizados %}
+    <link rel="stylesheet" href="{% static 'styles/toastify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/table.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/global.css' %}">
+{% endblock estilos_personalizados %}
+
+
+
+{% block menus_navegacion %}
+    {% include 'includes/topbar.html' %}
+    {% include 'includes/sidebar.html' %}
+{% endblock menus_navegacion %}
+
+
+{% block content %}
+
+<main class="main-container">
+
+    <nav class="breadcrumbs">
+        <a href="{% url 'pantalla_principal' %}" class="link-color">Inicio</a>
+        <span>›</span>
+        <a href="{% url 'perfiles:listar_usuarios' %}" class="link-color">Usuarios</a>
+        <span>›</span>
+        <span>Listar Usuarios</span>
+    </nav>
+
+    <div class="welcome-header">
+        <h1 class="main-title">Gestión de Usuarios</h1>
+        <p class="subtitle">Administre el acceso y roles del personal clínico. Resultados: {{ page_obj.paginator.count }} usuarios totales</p>
+    </div>
+
+    <div class="layout-split">
+
+        <aside class="filter-sidebar">
+            <div class="filter-card">
+                <h3 class="third-title">Búsquedas Recientes</h3>
+                <ul class="recent-list">
+                    <li><a href="#">Matrona Ana María</a></li>
+                    <li><a href="#">Supervisor Carlos</a></li>
+                    <li><a href="#">TENS María</a></li>
+                    <button class="btn-primary">Limpiar todo</button>
+                </ul>
+            </div>
+
+            <div class="filter-card">
+                <h3 class="third-title">Filtrar por Rol</h3>
+                <form method="GET">
+                    <label class="checkbox-card small">
+                        <input type="checkbox" name="rol" value="matrona" {% if 'matrona' in request.GET.rol %}checked{% endif %}>
+                        <span>Matrona(ón)</span>
+                    </label>
+                    <label class="checkbox-card small">
+                        <input type="checkbox" name="rol" value="supervisor" {% if 'supervisor' in request.GET.rol %}checked{% endif %}>
+                        <span>Supervisor</span>
+                    </label>
+                     <label class="checkbox-card small">
+                        <input type="checkbox" name="rol" value="tens" {% if 'tens' in request.GET.rol %}checked{% endif %}>
+                        <span>TENS</span>
+                    </label>
+                    <button type="submit" class="btn-secondary">Aplicar Filtros</button>
+                </form>
+            </div>
+        </aside>
+
+        <section class="list-content">
+
+            <div class="table-actions-bar">
+                <div class="search-pill">
+                    <form class="form-flexbox" method="GET">
+                        <input type="text" class="search-input" name="query" placeholder="Filtre por Identificacion del paciente o Nombre completo del paciente"
+                        {% if query %}
+                            value="{{query}}"
+                        {% endif %}>
+                        
+                        <button type="submit" class="btn-reset"><img src="{% static 'svg/buscar.svg' %}" class="nav-svg" alt="Buscar"/></button>
+                    </form>
+                </div>
+                
+                <a href="{% url 'perfiles:crear_usuario' %}"
+                class="btn-primary">Agregar Usuario</a>
+            </div>
+
+            <div class="table-container">
+                <table class="smart-table">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th> <th>Correo Electrónico</th>
+                            <th>Roles Asignados</th>
+                            <th>Fecha Registro</th>
+                            <th>Último Acceso</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for usuario in usuarios %}
+                            <tr>
+                                <td>
+                                    <span class="text-bold" style="color: var(--primary-color);">{{ usuario.username }}</span>
+                                    <br>
+                                    <span class="text-sub">{{ usuario.get_full_name|default:"-- Sin Nombre --" }}</span>
+                                </td>
+
+                                <td>
+                                    {{ usuario.email }}
+                                </td>
+
+                                <td>
+                                    {% if usuario.is_superuser %}
+                                        <span class="role-badge role-admin">Admin</span>
+                                    {% endif %}
+                                    {% if usuario.is_matrona %}
+                                        <span class="role-badge role-matrona">Matrona</span>
+                                    {% endif %}
+                                    {% if usuario.is_supervisor %}
+                                        <span class="role-badge role-supervisor">Supervisor</span>
+                                    {% endif %}
+                                    {% if usuario.is_tens %}
+                                        <span class="role-badge role-tens">TENS</span>
+                                    {% endif %}
+                                </td>
+
+                                <td>
+                                    {{ usuario.date_joined|date:"d M Y" }}
+                                </td>
+
+                                <td>
+                                    {% if usuario.last_login %}
+                                        <span class="text-sub">{{ usuario.last_login|date:"d/m/Y H:i" }}</span>
+                                    {% else %}
+                                        <span class="subtitle">Nunca</span>
+                                    {% endif %}
+                                </td>
+
+                                <td class="action-group">
+                                <div class="action-buttons">
+                                    <a href="#{{gestacion.paciente.pk}}" class="action-btn" title="Editar Usuario">
+                                        <img src="{% static 'svg/edit.svg' %}" alt="Editar" class="nav-svg">
+                                    </a>
+                                    <a href="#{{gestacion.paciente.pk}}" class="action-btn" title="Eliminar Usuario">
+                                        <img src="{% static 'svg/delete.svg' %}" alt="Eliminar" class="nav-svg">
+                                    </a>
+                                </div>
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="6" style="text-align: center; padding: 3rem;">
+                                    <p class="subtitle">No se encontraron usuarios con esos criterios.</p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        
+                    </tbody>
+                </table>
+                
+            <div class="table-pagination">
+            {% if is_paginated %}
+                 {% include 'includes/paginacion.html' with page_obj=page_obj query_string=query_string%}
+            {% endif %}
+            </div>
+        </section>
+    </div>
+</main>
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script src="{% static 'js/htmx.min.js' %}"></script>
+<script src="{% static 'js/toastify.min.js' %}"></script>
+{% include 'includes/script_mensajes.html' %}
+
+{% endblock scripts %}

@@ -1,0 +1,144 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* =========================================================
+   VARIABLES GLOBALES — MODO CLARO (DEFAULT)
+========================================================= */
+:root {
+    --ff: "Inter", sans-serif;
+
+    /* Tipografías */
+    --h1: 700 2.5rem/1.2em var(--ff);
+    --h2: 700 2rem/1.3em var(--ff);
+    --h3: 600 1rem/1.4em var(--ff);
+    --p: 450 1rem/1.6em var(--ff);
+    --small: 450 0.85rem/1.4em var(--ff);
+
+    --transition: 0.25s ease;
+
+    /* ===== MODO CLARO ===== */
+    --primary: oklch(68.71% 0.202 24.112);
+
+    --bg-dark: oklch(97.015% 0.00011 271.152);   /* Body */
+    --bg: oklch(100% 0.00011 271.152);           /* Cards, contenedores */
+    --bg-light: oklch(97.015% 0.00011 271.152);   /* Hover */
+
+    --text: oklch(0% 0 0);
+    --text-muted: oklch(40% 0.05 264);
+
+    /* Sombras suaves (estética principal del sistema) */
+    --shadow-s: 
+        inset 0 1px 2px #ffffffd0,
+        0 1px 2px #00000020,
+        0 2px 4px #00000010;
+
+    --shadow-m: 
+        inset 0 1px 2px #ffffffb0,
+        0 2px 4px #00000025,
+        0 4px 8px #00000015;
+
+    --shadow-l: 
+        inset 0 1px 2px #ffffff90,
+        0 4px 6px #00000030,
+        0 10px 20px #00000020;
+}
+
+/* =========================================================
+   MODO OSCURO (ACTIVO SI <body> TIENE LA CLASE .dark)
+========================================================= */
+body.dark {
+    --primary: oklch(68.423% 0.21027 39.191);
+
+    --bg-dark: oklch(0.1 0 264);
+    --bg: oklch(0.2 0 264);
+    --bg-light: oklch(0.3 0 264);
+
+    --text: oklch(96.115% 0.00011 271.152);
+    --text-muted: oklch(76% 0 264);
+}
+
+/* BASE DEL SISTEMA */
+
+body {
+    background: var(--bg-dark);
+    color: var(--text);
+    transition: var(--transition);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTÓN DE TEMA */
+.action-btn {
+    background: var(--bg);
+    padding: 0.45rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-s);
+}
+
+.action-btn:hover {
+    background: var(--bg-light);
+    box-shadow: var(--shadow-m);
+}
+
+.action-btn img {
+    width: 25px;
+    height: 25px;
+}
+
+/* =========================================================
+   TÍTULO PRINCIPAL DE PÁGINA
+========================================================= */
+.main-title {
+    font: var(--h1);
+    color: var(--text);
+    margin-top: 0.7rem;
+    margin-bottom: 0.8rem;
+}
+
+.second-title {
+    font: var(--h2);
+    color: var(--text);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.third-title {
+    font: var(--h3);
+    color: var(--text);
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.subtitle {
+    font: var(--p);
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.span-text {
+    color: var(--text);
+    font: var(--p);
+    margin-bottom: 0.5rem;
+}
+
+.link-color {
+    color: rgb(255, 43, 43);
+}
+
+.login-error {
+    text-align: left;           /* Centrar el texto */
+    color: #c21b22;               /* Rojo intermedio de tu paleta */
+    font-size: 0.8rem;
+    margin-top: -0.5rem;          /* Muy leve ajuste para que quede pegadito al input */
+    margin-bottom: 0.5rem;        /* Espacio antes del botón */              /* Oculto por defecto */
+}

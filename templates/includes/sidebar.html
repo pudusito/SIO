@@ -1,0 +1,77 @@
+{% load static %}
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+
+
+        <a href="{% url 'pantalla_principal' %}" class="nav-link">
+        <img src="{% static 'svg/inicio.svg' %}" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
+        
+        {% if request.user.es_matrona or request.user.es_supervisor %}
+            <a  href="{% url 'paciente:inicio' %}" class="nav-link">
+                <img src="{% static 'svg/paciente.svg' %}" class="nav-svg" />
+                <span class="nav-text">Pacientes</span>
+            </a>
+
+            <a href="{% url 'gestacion:inicio' %}" class="nav-link">
+                <img src="{% static 'svg/gestacion.svg' %}" class="nav-svg" />
+                <span class="nav-text">Gestaciones</span>
+            </a>
+
+            <a href="{% url 'parto:inicio' %}" 
+            class="nav-link {% if '/partos/' in request.path %}active{% endif %}">
+                <img src="{% static 'svg/parto.svg' %}" class="nav-svg" />
+                <span class="nav-text">Partos</span>
+            </a>
+
+            <a href="{% url 'recien_nacido:inicio' %}" class="nav-link">
+                <img src="{% static 'svg/reciennacido.svg' %}" class="nav-svg" />
+                <span class="nav-text">Recién Nacidos</span>
+            </a>
+
+            <a href="{% url 'profesionales:inicio' %}" class="nav-link {% if '/profesionales/' in request.path %}active{% endif %}">
+                <img src="{% static 'svg/profesional.svg' %}" class="nav-svg" />
+                <span class="nav-text">Profesionales</span>
+            </a>
+        {% endif %}
+        
+
+        
+        {% if request.user.es_supervisor %}
+            <a href="{% url 'reportes:inicio_reportes' %}" class="nav-link">
+                <img src="{% static 'svg/reporte.svg' %}" class="nav-svg" />
+                <span class="nav-text">Reportes</span>
+            </a>
+
+            <a href="../Turnos/turnos.html" class="nav-link">
+                <img src="{% static 'svg/turnos.svg' %}" class="nav-svg" />
+                <span class="nav-text">Turnos</span>
+                
+            </a>
+
+            <a href="{% url 'auditoria:inicio' %}" class="nav-link">
+                <img src="{% static 'svg/auditoria.svg' %}" class="nav-svg" />
+                <span class="nav-text">Auditoría</span>
+            </a>
+
+        {% endif %}
+            
+        
+        
+        {% if request.user.is_staff %}
+
+            <a href="{% url 'perfiles:listar_usuarios' %}" class="nav-link">
+                <img src="{% static 'svg/usuarios.svg' %}" class="nav-svg" />
+                <span class="nav-text">Usuarios</span>
+            </a>     
+            <a href="../Usuarios/usuarios.html" class="nav-link">
+                <img src="{% static 'svg/hosts.svg' %}" class="nav-svg" />
+                <span class="nav-text">Hosts</span>
+            </a>     
+        {% endif %}
+
+
+       
+    </nav>
+</aside>
