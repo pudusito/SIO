@@ -1,9 +1,0 @@
-SECRET_KEY=django-insecure-m_&c$%)+5ni*rgz#+pkdj3^hy^+*e%w6*329h+sowc)^%j5^ai
-ALLOWED_HOSTS=localhost,127.0.0.1
-DEBUG=True
-NPM_BIN_PATH=C:\Program Files\nodejs\npm.cmd
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=daniel.desarrollador98@gmail.com
-EMAIL_HOST_PASSWORD=ldbd ript hcud liei

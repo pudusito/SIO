@@ -39,11 +39,6 @@
 
         
         {% if request.user.es_supervisor %}
-            <a href="{% url 'reportes:inicio_reportes' %}" class="nav-link">
-                <img src="{% static 'svg/reporte.svg' %}" class="nav-svg" />
-                <span class="nav-text">Reportes</span>
-            </a>
-
             <a href="../Turnos/turnos.html" class="nav-link">
                 <img src="{% static 'svg/turnos.svg' %}" class="nav-svg" />
                 <span class="nav-text">Turnos</span>
