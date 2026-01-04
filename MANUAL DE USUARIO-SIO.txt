@@ -1,0 +1,318 @@
+===========================================================
+		MANUAL DE USUARIO
+===========================================================
+	SIO – SISTEMA DE INFORMACIÓN OBSTÉTRICA
+===========================================================
+
+Institución  : Hospital Clínico Herminda Martín – Región de Ñuble
+Sistema      : SIO – Sistema de Información Obstétrica
+Versión      : 1.0
+Autores       : -Bryan Riquelme
+		-Benjamin Maldonado
+		-Alejandro Linares
+		-Daniel Valdebenito
+Fecha        : 2025
+Tipo         : Manual de Usuario
+===========================================================
+
+
+-----------------------------------------------------------
+		ÍNDICE
+-----------------------------------------------------------
+1. Introducción
+2. Objetivo del sistema
+3. Usuarios del sistema
+4. Requisitos para utilizar el sistema
+5. Acceso al sistema
+6. Roles y permisos
+7. Estructura general del sistema
+8. Módulo Pacientes
+9. Módulo Gestaciones
+10. Módulo Partos
+11. Módulo Recién Nacidos
+12. Generación de Reportes y PDF
+13. Seguridad y auditoría
+14. Cierre de sesión
+15. Buenas prácticas de uso
+16. Soporte del sistema
+-----------------------------------------------------------
+
+
+===========================================================
+1. INTRODUCCIÓN
+===========================================================
+El presente Manual de Usuario tiene como finalidad orientar a los
+usuarios finales en el uso correcto del Sistema de Información
+Obstétrica (SIO).
+
+Este documento describe de manera clara y ordenada las
+funcionalidades del sistema, explicando paso a paso cómo acceder,
+registrar información clínica, consultar datos y generar reportes,
+sin necesidad de conocimientos técnicos o informáticos avanzados.
+
+El sistema SIO está orientado a apoyar los procesos clínicos
+relacionados con la atención obstétrica y neonatal, mejorando la
+trazabilidad, seguridad y disponibilidad de la información.
+
+
+===========================================================
+2. OBJETIVO DEL SISTEMA
+===========================================================
+El objetivo principal del sistema SIO es:
+
+- Digitalizar el registro clínico obstétrico
+- Centralizar la información de pacientes, gestaciones, partos y
+  recién nacidos
+- Mejorar la trazabilidad de la atención clínica
+- Facilitar la generación de reportes y documentos en formato PDF
+- Apoyar la toma de decisiones clínicas y administrativas
+
+
+===========================================================
+3. USUARIOS DEL SISTEMA
+===========================================================
+El sistema está diseñado para ser utilizado por personal autorizado
+del establecimiento de salud, principalmente:
+
+- Matronas
+- Supervisores clínicos
+- Administradores del sistema
+
+Cada usuario cuenta con un rol específico que determina las
+funcionalidades a las que puede acceder dentro del sistema.
+
+
+===========================================================
+4. REQUISITOS PARA UTILIZAR EL SISTEMA
+===========================================================
+Para utilizar el sistema SIO se requiere:
+
+- Computador conectado a la intranet del hospital
+- Navegador web actualizado (Google Chrome, Microsoft Edge o Firefox)
+- Usuario y contraseña asignados por el administrador
+- Permisos activos según el rol del usuario
+
+
+===========================================================
+5. ACCESO AL SISTEMA
+===========================================================
+Para ingresar al sistema, el usuario debe seguir los siguientes pasos:
+
+1. Abrir el navegador web
+2. Ingresar la dirección del sistema SIO
+3. Visualizar la pantalla de inicio de sesión
+4. Ingresar:
+   - Nombre de usuario
+   - Contraseña
+5. Presionar el botón "Iniciar sesión"
+
+Si las credenciales son correctas, el sistema permitirá el acceso y
+redirigirá al menú principal según el rol del usuario.
+
+En caso de error, el sistema mostrará un mensaje indicando que los
+datos ingresados no son válidos.
+
+
+===========================================================
+6. ROLES Y PERMISOS
+===========================================================
+El sistema cuenta con control de acceso basado en roles:
+
+-----------------------------------------------------------
+ROL: MATRONA
+-----------------------------------------------------------
+- Registrar pacientes
+- Registrar gestaciones
+- Registrar partos
+- Registrar recién nacidos
+- Consultar información clínica
+- Generar reportes PDF
+
+-----------------------------------------------------------
+ROL: SUPERVISOR
+-----------------------------------------------------------
+- Visualizar información clínica
+- Consultar reportes
+- Revisar registros ingresados
+- Acceso a estadísticas y reportes generales
+
+-----------------------------------------------------------
+ROL: ADMINISTRADOR
+-----------------------------------------------------------
+- Crear y gestionar usuarios
+- Asignar roles y permisos
+- Acceso completo al sistema
+- Supervisar auditoría de acciones
+
+
+===========================================================
+7. ESTRUCTURA GENERAL DEL SISTEMA
+===========================================================
+El sistema SIO se organiza en módulos, accesibles desde un menú
+principal:
+
+- Pacientes
+- Gestaciones
+- Partos
+- Recién Nacidos
+- Reportes
+- Cerrar sesión
+
+Cada módulo representa un proceso clínico específico y se encuentra
+relacionado con los demás, asegurando la continuidad y trazabilidad
+de la información.
+
+
+===========================================================
+8. MÓDULO PACIENTES
+===========================================================
+Este módulo permite gestionar la información básica de las pacientes.
+
+-----------------------------------------------------------
+8.1 Registrar paciente
+-----------------------------------------------------------
+Pasos:
+1. Ingresar al menú "Pacientes"
+2. Seleccionar la opción "Nuevo paciente"
+3. Completar el formulario con los datos solicitados:
+   - RUN
+   - Nombres
+   - Apellidos
+   - Fecha de nacimiento
+   - Otros datos clínicos relevantes
+4. Presionar el botón "Guardar"
+
+El sistema validará que los campos obligatorios estén completos.
+
+-----------------------------------------------------------
+8.2 Listar y buscar pacientes
+-----------------------------------------------------------
+- Se muestra un listado con todas las pacientes registradas
+- Es posible buscar por RUN o nombre
+- Se puede acceder al detalle de cada paciente
+
+
+===========================================================
+9. MÓDULO GESTACIONES
+===========================================================
+Este módulo permite registrar y gestionar las gestaciones asociadas a
+una paciente.
+
+-----------------------------------------------------------
+9.1 Registrar gestación
+-----------------------------------------------------------
+Pasos:
+1. Seleccionar una paciente
+2. Ingresar al módulo "Gestaciones"
+3. Seleccionar "Nueva gestación"
+4. Ingresar información como:
+   - Fecha de inicio
+   - Edad gestacional
+   - Estado de la gestación
+5. Guardar los datos
+
+Cada gestación queda asociada directamente a una paciente.
+
+
+===========================================================
+10. MÓDULO PARTOS
+===========================================================
+Este módulo permite registrar la información del parto.
+
+-----------------------------------------------------------
+10.1 Registrar parto
+-----------------------------------------------------------
+Pasos:
+1. Seleccionar una gestación activa
+2. Ingresar al módulo "Partos"
+3. Registrar:
+   - Fecha y hora del parto
+   - Tipo de parto
+   - Profesional responsable
+4. Guardar la información
+
+Cada parto queda asociado a una gestación específica.
+
+
+===========================================================
+11. MÓDULO RECIÉN NACIDOS
+===========================================================
+Este módulo permite registrar los datos clínicos del recién nacido.
+
+-----------------------------------------------------------
+11.1 Registrar recién nacido
+-----------------------------------------------------------
+Pasos:
+1. Seleccionar un parto registrado
+2. Ingresar al módulo "Recién Nacidos"
+3. Registrar:
+   - Peso
+   - Talla
+   - Puntaje APGAR
+   - Estado de salud
+4. Guardar los datos
+
+El sistema mantiene la relación entre madre, gestación, parto y recién
+nacido, asegurando la trazabilidad clínica.
+
+
+===========================================================
+12. GENERACIÓN DE DASHBOARD, REPORTES Y PDF
+===========================================================
+El sistema permite generar reportes en formato PDF, los cuales pueden
+ser descargados o impresos,tambien cuenta con un dashboard para ver datos
+de manera visual.
+
+Los reportes incluyen:
+- Información clínica de pacientes
+- Datos de gestaciones, partos y recién nacidos
+- Reportes estadísticos según criterios definidos
+- Graficos visuales
+
+La generación de reportes facilita el respaldo documental y la
+entrega de información clínica.
+
+
+===========================================================
+13. SEGURIDAD Y AUDITORÍA
+===========================================================
+El sistema cuenta con medidas de seguridad orientadas a proteger la
+información clínica:
+
+- Acceso restringido mediante usuario y contraseña
+- Control de permisos según rol
+- Registro de acciones (auditoría)
+- Trazabilidad de quién registra o modifica información
+
+
+===========================================================
+14. CIERRE DE SESIÓN
+===========================================================
+Para cerrar sesión correctamente:
+
+1. Seleccionar la opción "Cerrar sesión"
+2. El sistema redirige a la pantalla de login
+
+Se recomienda cerrar sesión al finalizar el uso del sistema para
+proteger la información.
+
+
+===========================================================
+15. BUENAS PRÁCTICAS DE USO
+===========================================================
+- No compartir credenciales de acceso
+- Verificar los datos antes de guardarlos
+- Cerrar sesión al terminar el trabajo
+- Utilizar el sistema únicamente para fines clínicos autorizados
+
+
+===========================================================
+16. SOPORTE DEL SISTEMA
+===========================================================
+Ante dudas o problemas con el sistema, el usuario debe contactar al
+administrador del sistema o al equipo de soporte designado por la
+institución.
+
+===========================================================
+FIN DEL MANUAL DE USUARIO
+===========================================================
